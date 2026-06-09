@@ -1,0 +1,1147 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-09T15:01:22",
+  "project_root": "D:\\AAA中药cv\\yolo12_tcm_project",
+  "environment": {
+    "python_executable": "D:\\AAA中药cv\\yolo12_tcm_project\\.venv\\Scripts\\python.exe",
+    "python_version": "3.13.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.6.0+cu124",
+      "ultralytics": "8.4.60",
+      "fastapi": "0.136.3",
+      "uvicorn": "0.49.0",
+      "playwright": "1.60.0",
+      "pillow": "12.2.0",
+      "PyYAML": "6.0.3",
+      "python-docx": "1.2.0",
+      "pytest": "9.0.3"
+    }
+  },
+  "dataset": {
+    "strict_summary": {
+      "classes": 92,
+      "train_images": 7826,
+      "val_images": 1741,
+      "test_images": 0,
+      "total_images": 9567,
+      "verified_images": 9567,
+      "errors": 0,
+      "warnings": 0
+    },
+    "strict_duplicate_audit_summary": {
+      "status": "needs_leakage_review",
+      "total_images": 9567,
+      "unique_hashes": 9014,
+      "duplicate_hashes": 546,
+      "duplicate_images": 1099,
+      "duplicate_extra_images": 553,
+      "cross_split_duplicate_hashes": 34,
+      "train_val_leak_hashes": 34,
+      "cross_class_duplicate_hashes": 52,
+      "classes": 92,
+      "splits": {
+        "train": 7826,
+        "val": 1741
+      },
+      "reported_groups": 80
+    },
+    "classification_leakage_review_summary": {
+      "status": "complete_review_package",
+      "source_audit_status": "needs_leakage_review",
+      "source_total_images": 9567,
+      "leakage_groups": 34,
+      "expected_leakage_groups": 34,
+      "leakage_records": 69,
+      "train_records": 35,
+      "val_records": 34,
+      "same_class_leakage_groups": 16,
+      "cross_class_leakage_groups": 18,
+      "classes_involved": 27,
+      "shared_with_reference_leak_hashes": 34,
+      "figure": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_train_val_leakage_contact_sheet.png"
+    },
+    "classification_leakage_clean_candidate_summary": {
+      "status": "leakage_val_duplicates_removed",
+      "strategy": "copy_all_except_val_exact_duplicates_from_review_package",
+      "source_images": 9567,
+      "output_images": 9533,
+      "removed_images": 34,
+      "requested_val_removals": 34,
+      "missing_requested_removals": 0,
+      "leakage_groups_from_review": 34,
+      "classes": 92,
+      "source_split_counts": {
+        "train": 7826,
+        "val": 1741
+      },
+      "output_split_counts": {
+        "train": 7826,
+        "val": 1707
+      },
+      "removed_split_counts": {
+        "val": 34
+      }
+    },
+    "classification_leakage_clean_candidate_inspection_summary": {
+      "classes": 92,
+      "train_images": 7826,
+      "val_images": 1707,
+      "test_images": 0,
+      "total_images": 9533,
+      "verified_images": 9533,
+      "errors": 0,
+      "warnings": 0
+    },
+    "classification_leakage_clean_candidate_duplicate_audit_summary": {
+      "status": "needs_leakage_review",
+      "total_images": 9533,
+      "unique_hashes": 9014,
+      "duplicate_hashes": 513,
+      "duplicate_images": 1032,
+      "duplicate_extra_images": 519,
+      "cross_split_duplicate_hashes": 0,
+      "train_val_leak_hashes": 0,
+      "cross_class_duplicate_hashes": 34,
+      "classes": 92,
+      "splits": {
+        "train": 7826,
+        "val": 1707
+      },
+      "reported_groups": 80
+    },
+    "classification_cross_class_review_summary": {
+      "status": "complete_review_package",
+      "source_audit_status": "needs_leakage_review",
+      "source_total_images": 9533,
+      "cross_class_groups": 34,
+      "expected_cross_class_groups": 34,
+      "cross_class_records": 68,
+      "train_records": 62,
+      "val_records": 6,
+      "cross_split_groups": 0,
+      "train_val_leak_groups": 0,
+      "classes_involved": 22,
+      "shared_with_reference_cross_class_hashes": 34,
+      "figure": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_cross_class_contact_sheet.png"
+    },
+    "classification_cross_class_decision_table_summary": {
+      "status": "ready_for_manual_decision",
+      "source_review_status": "complete_review_package",
+      "groups": 34,
+      "records": 68,
+      "pending_decisions": 34,
+      "decided_groups": 0,
+      "needs_expert_review_groups": 0,
+      "deferred_groups": 0,
+      "validation_errors": 0
+    },
+    "classification_cross_class_cleanup_plan_summary": {
+      "status": "waiting_for_manual_decisions",
+      "groups": 34,
+      "records": 68,
+      "pending_decisions": 34,
+      "decided_groups": 0,
+      "needs_expert_review_groups": 0,
+      "deferred_groups": 0,
+      "validation_errors": 0,
+      "planned_operations": 0,
+      "planned_remove_operations": 0,
+      "planned_move_operations": 0,
+      "keep_all_as_is_groups": 0
+    },
+    "class_consistency_summary": {
+      "status": "needs_class_completion",
+      "raw_classes": 93,
+      "raw_train_classes": 92,
+      "raw_val_classes": 93,
+      "strict_classes": 92,
+      "classes_missing_from_strict": [
+        "大腹皮"
+      ],
+      "extra_classes_in_strict": [],
+      "train_only_classes": [],
+      "val_only_classes": [
+        "大腹皮"
+      ],
+      "zero_train_classes": [
+        "大腹皮"
+      ],
+      "zero_val_classes": [],
+      "raw_train_images": 7847,
+      "raw_val_images": 1767,
+      "raw_total_images": 9614,
+      "strict_train_images": 7826,
+      "strict_val_images": 1741,
+      "strict_total_images": 9567,
+      "strict_verified_images": 9567,
+      "strict_errors": 0,
+      "strict_warnings": 0,
+      "skipped_images": 28,
+      "converted_to_jpeg": 122,
+      "copied_jpeg": 9445
+    },
+    "completed_93class_summary": {
+      "status": "complete",
+      "raw_classes": 93,
+      "output_classes": 93,
+      "train_images": 7841,
+      "val_images": 1745,
+      "total_images": 9586,
+      "skipped_images": 28,
+      "excluded_classes": [],
+      "rebalanced_classes": [
+        "大腹皮"
+      ],
+      "val_only_rebalanced_classes": [
+        "大腹皮"
+      ],
+      "train_only_rebalanced_classes": [],
+      "actions": {
+        "convert_to_jpeg": 122,
+        "copy_jpeg": 9464
+      },
+      "source_formats": {
+        "jpeg": 9464,
+        "png": 122
+      },
+      "strategy_counts": {
+        "preserve_raw_split": 92,
+        "rebalance_val_only": 1
+      }
+    },
+    "completed_93class_inspection_summary": {
+      "classes": 93,
+      "train_images": 7841,
+      "val_images": 1745,
+      "test_images": 0,
+      "total_images": 9586,
+      "verified_images": 9586,
+      "errors": 0,
+      "warnings": 0
+    },
+    "completed_93class_duplicate_audit_summary": {
+      "status": "needs_leakage_review",
+      "total_images": 9586,
+      "unique_hashes": 9033,
+      "duplicate_hashes": 546,
+      "duplicate_images": 1099,
+      "duplicate_extra_images": 553,
+      "cross_split_duplicate_hashes": 34,
+      "train_val_leak_hashes": 34,
+      "cross_class_duplicate_hashes": 52,
+      "classes": 93,
+      "splits": {
+        "train": 7841,
+        "val": 1745
+      },
+      "reported_groups": 80
+    },
+    "completed_93class_leakage_clean_candidate_summary": {
+      "status": "leakage_val_duplicates_removed",
+      "strategy": "copy_all_except_val_exact_duplicates_from_review_package",
+      "source_images": 9586,
+      "output_images": 9552,
+      "removed_images": 34,
+      "requested_val_removals": 34,
+      "missing_requested_removals": 0,
+      "leakage_groups_from_review": 34,
+      "classes": 93,
+      "source_split_counts": {
+        "train": 7841,
+        "val": 1745
+      },
+      "output_split_counts": {
+        "train": 7841,
+        "val": 1711
+      },
+      "removed_split_counts": {
+        "val": 34
+      }
+    },
+    "completed_93class_leakage_clean_candidate_inspection_summary": {
+      "classes": 93,
+      "train_images": 7841,
+      "val_images": 1711,
+      "test_images": 0,
+      "total_images": 9552,
+      "verified_images": 9552,
+      "errors": 0,
+      "warnings": 0
+    },
+    "completed_93class_leakage_clean_candidate_duplicate_audit_summary": {
+      "status": "needs_leakage_review",
+      "total_images": 9552,
+      "unique_hashes": 9033,
+      "duplicate_hashes": 513,
+      "duplicate_images": 1032,
+      "duplicate_extra_images": 519,
+      "cross_split_duplicate_hashes": 0,
+      "train_val_leak_hashes": 0,
+      "cross_class_duplicate_hashes": 34,
+      "classes": 93,
+      "splits": {
+        "train": 7841,
+        "val": 1711
+      },
+      "reported_groups": 80
+    },
+    "detection_annotation_package_summary": {
+      "status": "pending_bbox_annotation",
+      "classes": 93,
+      "images": 279,
+      "samples_per_class": 3,
+      "train_per_class": 2,
+      "val_per_class": 1,
+      "labels_expected": 279,
+      "labels_completed": 0,
+      "min_samples_per_class": 3,
+      "max_samples_per_class": 3,
+      "source_split_counts": {
+        "train": 186,
+        "val": 93
+      }
+    },
+    "detection_annotation_validation_summary": {
+      "status": "pending_bbox_annotation",
+      "require_complete": false,
+      "classes": 93,
+      "manifest_classes": 93,
+      "images_expected": 279,
+      "images_present": 279,
+      "missing_images": 0,
+      "labels_expected": 279,
+      "labels_completed": 0,
+      "labels_missing": 279,
+      "labels_empty": 0,
+      "orphan_labels": 0,
+      "boxes": 0,
+      "classes_with_boxes": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "detection_annotation_contact_sheet_summary": {
+      "samples": 279,
+      "classes": 93,
+      "labels_expected": 279,
+      "labels_completed": 0,
+      "annotation_status": "pending_bbox_annotation"
+    }
+  },
+  "training": {
+    "config_path": "configs/train_cls_strict_cpu_5e.yaml",
+    "config": {
+      "project": "runs/train",
+      "name": "strict_classify_yolo12n_cls_cpu_5e",
+      "model": "yolo12n-cls.yaml",
+      "data": "data/classification_strict_jpeg",
+      "epochs": 5,
+      "batch": 16,
+      "imgsz": 224,
+      "optimizer": "AdamW",
+      "lr0": 0.001,
+      "weight_decay": 0.0005,
+      "patience": 3,
+      "device": "cpu",
+      "seed": 42,
+      "workers": 0,
+      "pretrained": false,
+      "cache": false,
+      "plots": true,
+      "save": true
+    },
+    "weights_dir": "runs/train/strict_classify_yolo12n_cls_cpu_5e/weights",
+    "note": "CPU 5 epoch strict 分类阶段实验；不是目标检测训练。",
+    "completed_93class": {
+      "config_path": "configs/train_cls_93class_smoke.yaml",
+      "config": {
+        "project": "runs/train",
+        "name": "strict_93class_yolo12n_cls_cpu_smoke",
+        "model": "yolo12n-cls.yaml",
+        "data": "data/classification_strict_jpeg_93class",
+        "epochs": 1,
+        "batch": 16,
+        "imgsz": 224,
+        "optimizer": "AdamW",
+        "lr0": 0.001,
+        "weight_decay": 0.0005,
+        "patience": 1,
+        "device": "cpu",
+        "seed": 42,
+        "workers": 0,
+        "pretrained": false,
+        "cache": false,
+        "plots": true,
+        "save": true
+      },
+      "weights_dir": "runs/train/strict_93class_yolo12n_cls_cpu_smoke/weights",
+      "note": "CPU 1 epoch 93 类补齐覆盖实验；大腹皮由原始 val-only 样本确定性重划 train/val。"
+    }
+  },
+  "evaluation": {
+    "metrics": {
+      "top1": 0.17690981924533844,
+      "top5": 0.4956921339035034,
+      "fitness": 0.33630097657442093
+    },
+    "completed_93class_metrics": {
+      "top1": 0.06647564470767975,
+      "top5": 0.20859599113464355,
+      "fitness": 0.13753581792116165
+    },
+    "error_analysis_summary": {
+      "images": 1741,
+      "classes": 92,
+      "top1_correct": 308,
+      "top5_correct": 863,
+      "top1_accuracy": 0.17690982194141297,
+      "top5_accuracy": 0.4956921309592188
+    },
+    "review_samples": {
+      "confusion_samples": 18,
+      "worst_class_samples": 18,
+      "figures": {
+        "confusion_contact_sheet": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\strict_confusion_contact_sheet.png",
+        "worst_class_contact_sheet": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\strict_worst_class_contact_sheet.png"
+      }
+    },
+    "benchmark": {
+      "model": "runs\\train\\strict_classify_yolo12n_cls_cpu_5e\\weights\\best.pt",
+      "device": "cpu",
+      "imgsz": 224,
+      "images": 20,
+      "latency_ms_mean": 9.75544999964768,
+      "latency_ms_median": 9.247549999599869,
+      "latency_ms_min": 7.40369999948598,
+      "latency_ms_max": 14.799399999901652,
+      "fps_mean": 102.50680389281018,
+      "rss_delta_mb": 2.26953125,
+      "sample_top1_accuracy": 0.0,
+      "sample_top5_accuracy": 0.15
+    },
+    "backend_qa": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "frontend_qa": {
+      "checks_total": 6,
+      "checks_passed": 6,
+      "relevant_console_errors": 0
+    },
+    "smoke_check": {
+      "total": 161,
+      "passed": 161,
+      "failed": 0
+    }
+  },
+  "reproduction_commands": [
+    ".\\.venv\\Scripts\\python.exe scripts\\prepare_strict_classification_dataset.py --source ..\\data --output data\\classification_strict_jpeg --overwrite",
+    ".\\.venv\\Scripts\\python.exe scripts\\inspect_classification_dataset.py --source data\\classification_strict_jpeg --verify-images --output reports\\strict_classification_dataset_inspection.json",
+    ".\\.venv\\Scripts\\python.exe scripts\\audit_classification_duplicates.py --source data\\classification_strict_jpeg --output reports\\strict_classification_duplicate_audit.json --markdown reports\\strict_classification_duplicate_audit.md --max-groups 80",
+    ".\\.venv\\Scripts\\python.exe scripts\\audit_class_consistency.py --source ..\\data --output reports\\class_consistency_audit.json --markdown reports\\class_consistency_audit.md",
+    ".\\.venv\\Scripts\\python.exe scripts\\prepare_completed_classification_dataset.py --source ..\\data --output data\\classification_strict_jpeg_93class --overwrite --report reports\\classification_93class_completion_report.json --markdown reports\\classification_93class_completion_report.md",
+    ".\\.venv\\Scripts\\python.exe scripts\\inspect_classification_dataset.py --source data\\classification_strict_jpeg_93class --verify-images --output reports\\classification_93class_dataset_inspection.json --markdown reports\\classification_93class_dataset_inspection.md",
+    ".\\.venv\\Scripts\\python.exe scripts\\audit_classification_duplicates.py --source data\\classification_strict_jpeg_93class --output reports\\classification_93class_duplicate_audit.json --markdown reports\\classification_93class_duplicate_audit.md --max-groups 80",
+    ".\\.venv\\Scripts\\python.exe scripts\\generate_classification_leakage_review_package.py --audit reports\\strict_classification_duplicate_audit.json --reference-audit reports\\classification_93class_duplicate_audit.json --output reports\\classification_leakage_review_package.json --figure reports\\figures\\classification_train_val_leakage_contact_sheet.png",
+    ".\\.venv\\Scripts\\python.exe scripts\\prepare_leakage_clean_classification_dataset.py --source data\\classification_strict_jpeg --review-package reports\\classification_leakage_review_package.json --output data\\classification_strict_jpeg_leakage_clean_candidate --report reports\\classification_leakage_clean_candidate_report.json --markdown reports\\classification_leakage_clean_candidate_report.md --overwrite",
+    ".\\.venv\\Scripts\\python.exe scripts\\inspect_classification_dataset.py --source data\\classification_strict_jpeg_leakage_clean_candidate --verify-images --output reports\\classification_leakage_clean_candidate_inspection.json --markdown reports\\classification_leakage_clean_candidate_inspection.md",
+    ".\\.venv\\Scripts\\python.exe scripts\\audit_classification_duplicates.py --source data\\classification_strict_jpeg_leakage_clean_candidate --output reports\\classification_leakage_clean_candidate_duplicate_audit.json --markdown reports\\classification_leakage_clean_candidate_duplicate_audit.md --max-groups 80",
+    ".\\.venv\\Scripts\\python.exe scripts\\prepare_leakage_clean_classification_dataset.py --source data\\classification_strict_jpeg_93class --review-package reports\\classification_leakage_review_package.json --output data\\classification_strict_jpeg_93class_leakage_clean_candidate --report reports\\classification_93class_leakage_clean_candidate_report.json --markdown reports\\classification_93class_leakage_clean_candidate_report.md --overwrite",
+    ".\\.venv\\Scripts\\python.exe scripts\\inspect_classification_dataset.py --source data\\classification_strict_jpeg_93class_leakage_clean_candidate --verify-images --output reports\\classification_93class_leakage_clean_candidate_inspection.json --markdown reports\\classification_93class_leakage_clean_candidate_inspection.md",
+    ".\\.venv\\Scripts\\python.exe scripts\\audit_classification_duplicates.py --source data\\classification_strict_jpeg_93class_leakage_clean_candidate --output reports\\classification_93class_leakage_clean_candidate_duplicate_audit.json --markdown reports\\classification_93class_leakage_clean_candidate_duplicate_audit.md --max-groups 80",
+    ".\\.venv\\Scripts\\python.exe scripts\\generate_classification_cross_class_review_package.py --audit reports\\classification_leakage_clean_candidate_duplicate_audit.json --reference-audit reports\\classification_93class_leakage_clean_candidate_duplicate_audit.json --output reports\\classification_cross_class_review_package.json --figure reports\\figures\\classification_cross_class_contact_sheet.png",
+    ".\\.venv\\Scripts\\python.exe scripts\\generate_classification_cross_class_decision_table.py --review-package reports\\classification_cross_class_review_package.json --output reports\\classification_cross_class_decision_table.json --csv reports\\classification_cross_class_decision_table.csv --markdown reports\\classification_cross_class_decision_table.md",
+    ".\\.venv\\Scripts\\python.exe scripts\\generate_classification_cross_class_decision_review_html.py --review-package reports\\classification_cross_class_review_package.json --decision-table reports\\classification_cross_class_decision_table.json --decision-csv reports\\classification_cross_class_decision_table.csv --output reports\\classification_cross_class_decision_review.html",
+    ".\\.venv\\Scripts\\python.exe scripts\\generate_classification_cross_class_cleanup_plan.py --decision-table reports\\classification_cross_class_decision_table.json --decision-csv reports\\classification_cross_class_decision_table.csv --output reports\\classification_cross_class_cleanup_plan.json --operations-csv reports\\classification_cross_class_cleanup_plan.csv --markdown reports\\classification_cross_class_cleanup_plan.md",
+    ".\\.venv\\Scripts\\python.exe scripts\\prepare_detection_annotation_package.py --source data\\classification_strict_jpeg_93class --output data\\detection_annotation_package --overwrite --samples-per-class 3 --train-per-class 2 --val-per-class 1 --report reports\\detection_annotation_package_report.json --markdown reports\\detection_annotation_package_report.md",
+    ".\\.venv\\Scripts\\python.exe scripts\\generate_detection_annotation_contact_sheet.py --manifest data\\detection_annotation_package\\annotation_manifest.json --output reports\\detection_annotation_contact_sheet.json --figure reports\\figures\\detection_annotation_contact_sheet.png",
+    ".\\.venv\\Scripts\\python.exe scripts\\validate_detection_annotation_package.py --package data\\detection_annotation_package --output reports\\detection_annotation_package_validation.json --markdown reports\\detection_annotation_package_validation.md",
+    ".\\.venv\\Scripts\\python.exe scripts\\train_yolo12_cls.py --config configs\\train_cls_93class_smoke.yaml",
+    ".\\.venv\\Scripts\\python.exe scripts\\evaluate_yolo12_cls.py --model runs\\train\\strict_93class_yolo12n_cls_cpu_smoke\\weights\\best.pt --data data\\classification_strict_jpeg_93class --imgsz 224 --device cpu --output reports\\classification_93class_evaluation_metrics.json",
+    ".\\.venv\\Scripts\\python.exe scripts\\train_yolo12_cls.py --config configs\\train_cls_strict_cpu_5e.yaml",
+    ".\\.venv\\Scripts\\python.exe scripts\\evaluate_yolo12_cls.py --model runs\\train\\strict_classify_yolo12n_cls_cpu_5e\\weights\\best.pt --data data\\classification_strict_jpeg --imgsz 224 --device cpu --output reports\\strict_classification_evaluation_metrics.json",
+    ".\\.venv\\Scripts\\python.exe scripts\\analyze_classification_errors.py --model runs\\train\\strict_classify_yolo12n_cls_cpu_5e\\weights\\best.pt --data data\\classification_strict_jpeg\\val --imgsz 224 --device cpu --output reports\\strict_classification_error_analysis.json",
+    ".\\.venv\\Scripts\\python.exe scripts\\generate_error_review_contact_sheet.py --analysis reports\\strict_classification_error_analysis.json --output reports\\strict_classification_review_samples.json",
+    ".\\.venv\\Scripts\\python.exe scripts\\infer_image_cls.py --model runs\\train\\strict_classify_yolo12n_cls_cpu_5e\\weights\\best.pt --source data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo117.jpg --imgsz 224 --device cpu --topk 5 --output reports\\strict_classification_sample_prediction.json",
+    ".\\.venv\\Scripts\\python.exe scripts\\benchmark_cls.py --model runs\\train\\strict_classify_yolo12n_cls_cpu_5e\\weights\\best.pt --images data\\classification_strict_jpeg\\val --imgsz 224 --device cpu --warmup 3 --iterations 20 --output runs\\benchmarks\\strict_classification_latency_20.json",
+    ".\\.venv\\Scripts\\python.exe scripts\\export_model.py --model runs\\train\\strict_classify_yolo12n_cls_cpu_5e\\weights\\best.pt --format onnx --imgsz 224 --simplify",
+    ".\\.venv\\Scripts\\python.exe scripts\\generate_repro_manifest.py --output reports\\repro_manifest.json --markdown reports\\repro_manifest.md",
+    ".\\.venv\\Scripts\\python.exe scripts\\smoke_check.py --output reports\\smoke_check.json"
+  ],
+  "artifacts": [
+    {
+      "path": "configs/train_cls_strict_cpu_5e.yaml",
+      "exists": true,
+      "bytes": 301,
+      "sha256": "0e0f6d19447fcf9c168c5017af825668dbb087d55a72cf9acd9651941ea488a4",
+      "modified_time": "2026-06-07T00:40:02"
+    },
+    {
+      "path": "configs/train_cls_93class_smoke.yaml",
+      "exists": true,
+      "bytes": 311,
+      "sha256": "0be5f2e046dd8e343d245dc2ff432a1143af37bcdb6f852ad723d8b617552be7",
+      "modified_time": "2026-06-07T03:01:26"
+    },
+    {
+      "path": "configs/train_cls_strict_cpu_30e.yaml",
+      "exists": true,
+      "bytes": 303,
+      "sha256": "62a369037deae11a61c0e6abd0aa38971b3c8e7d52aa27d9146b9e199b83a152",
+      "modified_time": "2026-06-09T13:28:25"
+    },
+    {
+      "path": "configs/train_cls_strict_gpu_100e.yaml",
+      "exists": true,
+      "bytes": 303,
+      "sha256": "1e452d8c0f22aaab7ff6fda5910391960ddbd78b8ea85cf4a8f4f297420944f9",
+      "modified_time": "2026-06-09T13:28:25"
+    },
+    {
+      "path": "data/classification_strict_jpeg/strict_classification_report.json",
+      "exists": true,
+      "bytes": 19027,
+      "sha256": "84fdcd6a9ac74a9730f09ff4d5fcdd1164a6fd722fe525954a93d01230d31729",
+      "modified_time": "2026-06-07T00:42:33"
+    },
+    {
+      "path": "data/classification_strict_jpeg_93class/classification_93class_completion_report.json",
+      "exists": true,
+      "bytes": 39505,
+      "sha256": "68160981c7c01c21b9664b40bae65a44f56fc274474bf73de743c2e1ce6d2328",
+      "modified_time": "2026-06-07T03:03:42"
+    },
+    {
+      "path": "data/classification_strict_jpeg_93class/classification_93class_completion_report.md",
+      "exists": true,
+      "bytes": 4832,
+      "sha256": "1879491febf22d0d11759459364b3c080b7a3fb7bb02fbe661de1e5eac4be9af",
+      "modified_time": "2026-06-07T03:03:42"
+    },
+    {
+      "path": "data/detection_annotation_package/ANNOTATION_GUIDE.md",
+      "exists": true,
+      "bytes": 1895,
+      "sha256": "e3f00540a11bca3b973f783f67c7fe7562953368ac6f860fe4436238766cccd9",
+      "modified_time": "2026-06-07T03:37:18"
+    },
+    {
+      "path": "data/detection_annotation_package/annotation_manifest.csv",
+      "exists": true,
+      "bytes": 129443,
+      "sha256": "77ee10bbf2163f2e231f3c11fa1ce3d7c41b839f3b2912356b44ed601e7b46e4",
+      "modified_time": "2026-06-07T03:37:18"
+    },
+    {
+      "path": "data/detection_annotation_package/annotation_manifest.json",
+      "exists": true,
+      "bytes": 214667,
+      "sha256": "8a4a187fd1770ecf13f823fb6d9872ae0acf68bf5c6738b4df93cfe1be7d4c9f",
+      "modified_time": "2026-06-07T03:37:18"
+    },
+    {
+      "path": "data/detection_annotation_package/annotation_summary.md",
+      "exists": true,
+      "bytes": 1408,
+      "sha256": "e8fec620bfc7f6c3031c30aff78843a4563bccfbd32d85e88a91ed1d1fdb2075",
+      "modified_time": "2026-06-07T03:37:18"
+    },
+    {
+      "path": "data/detection_annotation_package/classes.txt",
+      "exists": true,
+      "bytes": 909,
+      "sha256": "e76fec830f76735df00a41065e9b67b098764d0e9c0ad911ae5d260c850537aa",
+      "modified_time": "2026-06-07T03:37:18"
+    },
+    {
+      "path": "data/detection_annotation_package/data_template.yaml",
+      "exists": true,
+      "bytes": 1597,
+      "sha256": "dc85a482a66ab419c385691929fbd5d7162950ffafd6461ef7f7922bfdd1215b",
+      "modified_time": "2026-06-07T03:37:18"
+    },
+    {
+      "path": "data/detection_annotation_package/labels/README.md",
+      "exists": true,
+      "bytes": 126,
+      "sha256": "c1bc28b6098fd5adbaca0a3e5ec831f8608ff9586e2bb38fc1bdafa3e6444663",
+      "modified_time": "2026-06-07T03:37:17"
+    },
+    {
+      "path": "scripts/validate_detection_annotation_package.py",
+      "exists": true,
+      "bytes": 11888,
+      "sha256": "365a2d75d4a968167b7f530bf26c3e53115fc286f50eea154ccc0f411bf771a8",
+      "modified_time": "2026-06-07T03:46:28"
+    },
+    {
+      "path": "scripts/generate_detection_annotation_contact_sheet.py",
+      "exists": true,
+      "bytes": 6535,
+      "sha256": "6f4b885ea9a18409da2cbfccbdaf6c41ac6e36b36f69e1306fcd2ce71232ea9d",
+      "modified_time": "2026-06-07T03:55:22"
+    },
+    {
+      "path": "scripts/audit_classification_duplicates.py",
+      "exists": true,
+      "bytes": 7445,
+      "sha256": "e1d43414e8423ac2f0cdbc82abe9537c4b6f53a10ae415f23b667fa72cdcdc56",
+      "modified_time": "2026-06-07T04:13:29"
+    },
+    {
+      "path": "scripts/generate_classification_leakage_review_package.py",
+      "exists": true,
+      "bytes": 12575,
+      "sha256": "20576651d0f908c926dae88555f6e116a22a24568360a876ec24d4cff46f7bf1",
+      "modified_time": "2026-06-07T04:30:33"
+    },
+    {
+      "path": "scripts/prepare_leakage_clean_classification_dataset.py",
+      "exists": true,
+      "bytes": 8948,
+      "sha256": "ff31e0d1b35e669da21f41553246e4c278830fa59cf15c2d8899d9dde0498f19",
+      "modified_time": "2026-06-07T05:07:27"
+    },
+    {
+      "path": "scripts/generate_classification_cross_class_review_package.py",
+      "exists": true,
+      "bytes": 12554,
+      "sha256": "e6dffe412200291795913948857ed0ab067dec8506b079b791b400a1a6e9bf4b",
+      "modified_time": "2026-06-07T05:14:00"
+    },
+    {
+      "path": "scripts/generate_classification_cross_class_decision_table.py",
+      "exists": true,
+      "bytes": 11853,
+      "sha256": "9472e4167e6cc4b2aa3eafe95a96a6421dceb6b7139104ff5fb7d91d86eb7615",
+      "modified_time": "2026-06-07T05:34:52"
+    },
+    {
+      "path": "scripts/generate_classification_cross_class_decision_review_html.py",
+      "exists": true,
+      "bytes": 18893,
+      "sha256": "e2013b3d4564c1a89c27ec1b054e9de00e7a8a44be7a72719fdff1df4932101d",
+      "modified_time": "2026-06-07T06:49:10"
+    },
+    {
+      "path": "scripts/generate_classification_cross_class_cleanup_plan.py",
+      "exists": true,
+      "bytes": 15479,
+      "sha256": "e4576515998900fe562ce291758585853efd3e2f21e3b814948d93da03fb670b",
+      "modified_time": "2026-06-07T05:57:15"
+    },
+    {
+      "path": "scripts/apply_classification_cross_class_cleanup_plan.py",
+      "exists": true,
+      "bytes": 14993,
+      "sha256": "d2a8555bc637389d4f4cfbdb33dd95b7bb693ea308b618e044ae1684c3b3785b",
+      "modified_time": "2026-06-07T06:17:18"
+    },
+    {
+      "path": "reports/strict_classification_dataset_inspection.json",
+      "exists": true,
+      "bytes": 6149,
+      "sha256": "84a0ffb1c6120400cb279a4aecd576426dc379b6c1dde6223e029939836b9f5b",
+      "modified_time": "2026-06-07T00:42:57"
+    },
+    {
+      "path": "reports/strict_classification_duplicate_audit.json",
+      "exists": true,
+      "bytes": 103852,
+      "sha256": "db2159b578600538cc9d94e462231ff35e32891400c9cefd6460a6a0deb95322",
+      "modified_time": "2026-06-07T04:13:47"
+    },
+    {
+      "path": "reports/strict_classification_duplicate_audit.md",
+      "exists": true,
+      "bytes": 12680,
+      "sha256": "ec06b9078443248189b6952714d8e95c2ca373367cdff908f403283c478f5d0b",
+      "modified_time": "2026-06-07T04:13:47"
+    },
+    {
+      "path": "reports/classification_leakage_review_package.json",
+      "exists": true,
+      "bytes": 53315,
+      "sha256": "6e275e1ac49745c461d890225b4b6875a5a17b49962f9cf91dd5d0bdb746afe4",
+      "modified_time": "2026-06-07T04:30:58"
+    },
+    {
+      "path": "reports/classification_leakage_review_package.md",
+      "exists": true,
+      "bytes": 9748,
+      "sha256": "a49265537a79cccaf015c9cef0df16f9215b8208838bfa15f472b6d51b3813ed",
+      "modified_time": "2026-06-07T04:30:58"
+    },
+    {
+      "path": "reports/classification_leakage_clean_candidate_report.json",
+      "exists": true,
+      "bytes": 16406,
+      "sha256": "93423f86c8abf9de9a652d8490928dc7236562665bde59e2931f9669ded68c0d",
+      "modified_time": "2026-06-07T05:08:23"
+    },
+    {
+      "path": "reports/classification_leakage_clean_candidate_report.md",
+      "exists": true,
+      "bytes": 4090,
+      "sha256": "86be4f1bcee4390b7de1521a423848de0c3d872fa695798a5984b9060e41e938",
+      "modified_time": "2026-06-07T05:08:23"
+    },
+    {
+      "path": "reports/classification_leakage_clean_candidate_inspection.json",
+      "exists": true,
+      "bytes": 6173,
+      "sha256": "c87a4f30bb6cff9885881e76dfbf40a83cef737272dba457413c49f4eb3a4487",
+      "modified_time": "2026-06-07T05:08:25"
+    },
+    {
+      "path": "reports/classification_leakage_clean_candidate_inspection.md",
+      "exists": true,
+      "bytes": 3295,
+      "sha256": "cc0f4134e42f8f6e07cd4b3810869618aa4f71360023a7aa8aeaa0618b5a7eb5",
+      "modified_time": "2026-06-07T05:08:25"
+    },
+    {
+      "path": "reports/classification_leakage_clean_candidate_duplicate_audit.json",
+      "exists": true,
+      "bytes": 107970,
+      "sha256": "fccc88bd7a96789c0d38fbe5e97d1f9e50ffca096bd59dc37da353de9e7b1934",
+      "modified_time": "2026-06-07T05:08:33"
+    },
+    {
+      "path": "reports/classification_leakage_clean_candidate_duplicate_audit.md",
+      "exists": true,
+      "bytes": 12826,
+      "sha256": "54a4489c9b1a026fe754d181b20faa350bef070810aa8a89490296ae217606db",
+      "modified_time": "2026-06-07T05:08:33"
+    },
+    {
+      "path": "reports/classification_cross_class_review_package.json",
+      "exists": true,
+      "bytes": 56973,
+      "sha256": "b0e9cc40d73082cbeab3338fb8c61e3f8c25cdcbf4092a82fe5d96d6d29b396a",
+      "modified_time": "2026-06-07T05:14:29"
+    },
+    {
+      "path": "reports/classification_cross_class_review_package.md",
+      "exists": true,
+      "bytes": 11413,
+      "sha256": "57ae8ba1ed5f5fe1615f66ececa4546cc3506e56c31424c4263b5ce7b20ab033",
+      "modified_time": "2026-06-07T05:14:29"
+    },
+    {
+      "path": "reports/classification_cross_class_decision_table.json",
+      "exists": true,
+      "bytes": 55659,
+      "sha256": "9ba28b3a0bb3d8008894343c177ce33958d5e2f7ca08516bff504122fa1c770e",
+      "modified_time": "2026-06-07T05:47:08"
+    },
+    {
+      "path": "reports/classification_cross_class_decision_table.csv",
+      "exists": true,
+      "bytes": 10633,
+      "sha256": "2e1e13816ee8c64780bc0786cc9c0c53a07815f0f3d466e379b2df4d18862bf8",
+      "modified_time": "2026-06-07T05:47:08"
+    },
+    {
+      "path": "reports/classification_cross_class_decision_table.md",
+      "exists": true,
+      "bytes": 6030,
+      "sha256": "1d4075b688ea75a02e3a39f7b9e7ad9bf78e21b9c0dc07ffcc3813a16da0cfd8",
+      "modified_time": "2026-06-07T05:47:08"
+    },
+    {
+      "path": "reports/classification_cross_class_decision_review.html",
+      "exists": true,
+      "bytes": 163474,
+      "sha256": "b18f99e590b96866b3b8bd75dccce9ece2fa83c9200e23a0d80ee98685c9f45b",
+      "modified_time": "2026-06-07T06:51:18"
+    },
+    {
+      "path": "reports/classification_cross_class_cleanup_plan.json",
+      "exists": true,
+      "bytes": 1289,
+      "sha256": "e86b1b9801b05f90e0303def47198630ccdf49f410a161f4883206bbc0065b84",
+      "modified_time": "2026-06-07T06:09:09"
+    },
+    {
+      "path": "reports/classification_cross_class_cleanup_plan.csv",
+      "exists": true,
+      "bytes": 123,
+      "sha256": "af7c4e96b4901b62bb3fd3f2f4351dd89e23b6a3e84c171942fa7d9e5e78b95f",
+      "modified_time": "2026-06-07T06:09:09"
+    },
+    {
+      "path": "reports/classification_cross_class_cleanup_plan.md",
+      "exists": true,
+      "bytes": 1190,
+      "sha256": "a7a6f5b8c65dbfa1759b4f2026a4a0c18e2d6a2f3bf9b9c578c8eaf23fb7878c",
+      "modified_time": "2026-06-07T06:09:09"
+    },
+    {
+      "path": "reports/class_consistency_audit.json",
+      "exists": true,
+      "bytes": 38828,
+      "sha256": "36a3cc46ce19e7045714d3bafdf9578a3845161f087f5811f567c148ae179fcf",
+      "modified_time": "2026-06-07T02:30:39"
+    },
+    {
+      "path": "reports/class_consistency_audit.md",
+      "exists": true,
+      "bytes": 3820,
+      "sha256": "59147b8feb22a0e5c952aead884b0de6a5bd5a16d9dc0ae19bd498190f8bc71b",
+      "modified_time": "2026-06-07T02:30:39"
+    },
+    {
+      "path": "reports/classification_93class_completion_report.json",
+      "exists": true,
+      "bytes": 39505,
+      "sha256": "68160981c7c01c21b9664b40bae65a44f56fc274474bf73de743c2e1ce6d2328",
+      "modified_time": "2026-06-07T03:03:42"
+    },
+    {
+      "path": "reports/classification_93class_completion_report.md",
+      "exists": true,
+      "bytes": 4832,
+      "sha256": "1879491febf22d0d11759459364b3c080b7a3fb7bb02fbe661de1e5eac4be9af",
+      "modified_time": "2026-06-07T03:03:42"
+    },
+    {
+      "path": "reports/classification_93class_dataset_inspection.json",
+      "exists": true,
+      "bytes": 6222,
+      "sha256": "4798d43b3e44708998b104ad4ebbc553494d93cdf3698773d8dc1f27cb3e9216",
+      "modified_time": "2026-06-07T03:03:55"
+    },
+    {
+      "path": "reports/classification_93class_dataset_inspection.md",
+      "exists": true,
+      "bytes": 3312,
+      "sha256": "7fcbbff805fe4edc0539e4d21fec7a88130c2042e410e3a4710673593cb97d1b",
+      "modified_time": "2026-06-07T03:03:55"
+    },
+    {
+      "path": "reports/classification_93class_duplicate_audit.json",
+      "exists": true,
+      "bytes": 105196,
+      "sha256": "e933819eaa2ab6ede34b5501da6cba1d6e3db9ea968e4673a0c9b43491119378",
+      "modified_time": "2026-06-07T04:13:47"
+    },
+    {
+      "path": "reports/classification_93class_duplicate_audit.md",
+      "exists": true,
+      "bytes": 12688,
+      "sha256": "2d786c7b5bce600fb95d1b0aa32e02204945325dc034dc79d991868cf18153ae",
+      "modified_time": "2026-06-07T04:13:47"
+    },
+    {
+      "path": "reports/classification_93class_leakage_clean_candidate_report.json",
+      "exists": true,
+      "bytes": 16741,
+      "sha256": "815b51ad11c117086a73ebe5722af52adb016086d1a4310ee167b0c6af3e1cfb",
+      "modified_time": "2026-06-07T05:08:23"
+    },
+    {
+      "path": "reports/classification_93class_leakage_clean_candidate_report.md",
+      "exists": true,
+      "bytes": 4106,
+      "sha256": "baf0b1cb052b4973a54a31a727bf1fc4bc4b63ba5e3dacd60449a49e937eb3eb",
+      "modified_time": "2026-06-07T05:08:23"
+    },
+    {
+      "path": "reports/classification_93class_leakage_clean_candidate_inspection.json",
+      "exists": true,
+      "bytes": 6246,
+      "sha256": "773a90aa0b3530c18f68e9d8a0d43442b1170bf69e7953f526895233e73ca998",
+      "modified_time": "2026-06-07T05:08:25"
+    },
+    {
+      "path": "reports/classification_93class_leakage_clean_candidate_inspection.md",
+      "exists": true,
+      "bytes": 3336,
+      "sha256": "7c63ddc24e941638942ce09b899493953ffe86d811131709fe547d2c07544295",
+      "modified_time": "2026-06-07T05:08:25"
+    },
+    {
+      "path": "reports/classification_93class_leakage_clean_candidate_duplicate_audit.json",
+      "exists": true,
+      "bytes": 109306,
+      "sha256": "f75ce3a1541f23e58f87fb40534097e855e5e054b223d6386c72d57935b80e32",
+      "modified_time": "2026-06-07T05:08:33"
+    },
+    {
+      "path": "reports/classification_93class_leakage_clean_candidate_duplicate_audit.md",
+      "exists": true,
+      "bytes": 12834,
+      "sha256": "4e9c386fad95e2a0bf8e0bc2f23168a483c45a782839e4a74f5c7168c62ebdc6",
+      "modified_time": "2026-06-07T05:08:33"
+    },
+    {
+      "path": "reports/classification_93class_training_report.md",
+      "exists": true,
+      "bytes": 3635,
+      "sha256": "1ba41da897777ac1f008fa416b278eac39c0be9554ed3a06fbe329fca432f619",
+      "modified_time": "2026-06-07T03:17:18"
+    },
+    {
+      "path": "reports/classification_93class_evaluation_metrics.json",
+      "exists": true,
+      "bytes": 102,
+      "sha256": "35c1437c94415bca08357eb715f57b842b0f8eb02a9bd24c86a1a2d4e9528427",
+      "modified_time": "2026-06-07T03:08:36"
+    },
+    {
+      "path": "reports/detection_annotation_package_report.json",
+      "exists": true,
+      "bytes": 214667,
+      "sha256": "8a4a187fd1770ecf13f823fb6d9872ae0acf68bf5c6738b4df93cfe1be7d4c9f",
+      "modified_time": "2026-06-07T03:37:18"
+    },
+    {
+      "path": "reports/detection_annotation_package_report.md",
+      "exists": true,
+      "bytes": 1408,
+      "sha256": "e8fec620bfc7f6c3031c30aff78843a4563bccfbd32d85e88a91ed1d1fdb2075",
+      "modified_time": "2026-06-07T03:37:18"
+    },
+    {
+      "path": "reports/detection_annotation_package_validation.json",
+      "exists": true,
+      "bytes": 5407,
+      "sha256": "1ed6d963c4e8b8dc893d65c70f341a2552940d3d96eeb4445f041a0365972736",
+      "modified_time": "2026-06-07T03:46:57"
+    },
+    {
+      "path": "reports/detection_annotation_package_validation.md",
+      "exists": true,
+      "bytes": 3140,
+      "sha256": "4a42b01df37f35351a3c133e632c0fe9156fe0bd448a9b5a4f216911dca7dc49",
+      "modified_time": "2026-06-07T03:46:57"
+    },
+    {
+      "path": "reports/detection_annotation_contact_sheet.json",
+      "exists": true,
+      "bytes": 210372,
+      "sha256": "ee4e87311330032b52337964e933d4fd86469793d92b1957c74007261d639deb",
+      "modified_time": "2026-06-07T04:01:15"
+    },
+    {
+      "path": "reports/detection_annotation_contact_sheet.md",
+      "exists": true,
+      "bytes": 30357,
+      "sha256": "f3ea359ddc6d1dd8ae2f70f86c072a33bfb957d5d3b8b0f477077389aaaadafd",
+      "modified_time": "2026-06-07T04:01:15"
+    },
+    {
+      "path": "reports/strict_classification_evaluation_metrics.json",
+      "exists": true,
+      "bytes": 101,
+      "sha256": "83f4d61e6f019ca89eb1c3661ebe638261313ce90ceb37e828c90cb8452d2952",
+      "modified_time": "2026-06-07T01:00:50"
+    },
+    {
+      "path": "reports/strict_classification_error_analysis.json",
+      "exists": true,
+      "bytes": 188719,
+      "sha256": "8b5d9bb07103bbac2656c5911845827aab302c845020b26cea24681f48f986e4",
+      "modified_time": "2026-06-07T02:13:46"
+    },
+    {
+      "path": "reports/strict_classification_error_analysis.md",
+      "exists": true,
+      "bytes": 6953,
+      "sha256": "e2a4a03a616acbbf0db7483f8f1b8e9d07df3c50927e37c4759ca6e476d7be58",
+      "modified_time": "2026-06-07T02:13:46"
+    },
+    {
+      "path": "reports/strict_classification_review_samples.json",
+      "exists": true,
+      "bytes": 33522,
+      "sha256": "ba219d79ca0db435aa1eac0c9c18b9be13afe72e755cacfbfe03ff4425539792",
+      "modified_time": "2026-06-07T02:14:21"
+    },
+    {
+      "path": "reports/strict_classification_review_samples.md",
+      "exists": true,
+      "bytes": 6802,
+      "sha256": "c55c57f664ed50544deffb6dde0b5c4a4545a7d6c7603b6ef3bb7debfbeb4496",
+      "modified_time": "2026-06-07T02:14:21"
+    },
+    {
+      "path": "reports/strict_classification_sample_prediction.json",
+      "exists": true,
+      "bytes": 1286,
+      "sha256": "de47fb2d288ed6cfe1f1df991f1f4101daa0f8a738edc216795388c0eca8f38d",
+      "modified_time": "2026-06-07T01:13:29"
+    },
+    {
+      "path": "runs/benchmarks/strict_classification_latency_20.json",
+      "exists": true,
+      "bytes": 432,
+      "sha256": "c4a9f1ce37f974096633997accdaaac36839e56edf3ddcbb9e4d2f097a515397",
+      "modified_time": "2026-06-07T01:13:30"
+    },
+    {
+      "path": "reports/backend_qa.json",
+      "exists": true,
+      "bytes": 1141,
+      "sha256": "d68609ffc014deb4b701130d4246c6a2f95423d1c2987ad5151bc5135f9a7b91",
+      "modified_time": "2026-06-07T01:32:43"
+    },
+    {
+      "path": "reports/frontend_qa.json",
+      "exists": true,
+      "bytes": 2910,
+      "sha256": "0b3e66ae12653314de5b62c7bc73bd6f11165b17da13311ce03dd91bba326baf",
+      "modified_time": "2026-06-07T01:32:44"
+    },
+    {
+      "path": "runs/train/strict_classify_yolo12n_cls_cpu_5e/weights/best.pt",
+      "exists": true,
+      "bytes": 3873085,
+      "sha256": "bfa3307e6fcd53897b4cbcf981c616bf242eb1bdadd0f278dd3188a377e0b514",
+      "modified_time": "2026-06-07T00:59:11"
+    },
+    {
+      "path": "runs/train/strict_classify_yolo12n_cls_cpu_5e/weights/last.pt",
+      "exists": true,
+      "bytes": 3873085,
+      "sha256": "bfa3307e6fcd53897b4cbcf981c616bf242eb1bdadd0f278dd3188a377e0b514",
+      "modified_time": "2026-06-07T00:59:11"
+    },
+    {
+      "path": "runs/train/strict_classify_yolo12n_cls_cpu_5e/weights/best.onnx",
+      "exists": true,
+      "bytes": 7410316,
+      "sha256": "54b59063690688a344d9f4668e019b5b375be74391442708008bb7b4ffb8ecf5",
+      "modified_time": "2026-06-07T01:14:07"
+    },
+    {
+      "path": "runs/train/strict_93class_yolo12n_cls_cpu_smoke/results.csv",
+      "exists": true,
+      "bytes": 172,
+      "sha256": "b7407a62d6000f25606b26003d0aef81ed362d2a3409b8efcc4e0c0969e3274b",
+      "modified_time": "2026-06-07T03:07:37"
+    },
+    {
+      "path": "runs/train/strict_93class_yolo12n_cls_cpu_smoke/weights/best.pt",
+      "exists": true,
+      "bytes": 3875389,
+      "sha256": "5fa052ed074ad619438cc88565a4ff6435bebedce642e756a161019ce7a0860d",
+      "modified_time": "2026-06-07T03:07:37"
+    },
+    {
+      "path": "runs/train/strict_93class_yolo12n_cls_cpu_smoke/weights/last.pt",
+      "exists": true,
+      "bytes": 3875389,
+      "sha256": "5fa052ed074ad619438cc88565a4ff6435bebedce642e756a161019ce7a0860d",
+      "modified_time": "2026-06-07T03:07:37"
+    },
+    {
+      "path": "reports/test_report.md",
+      "exists": true,
+      "bytes": 26273,
+      "sha256": "093cf04937a1ff5059206493f8436d2d6dac45f8ee572f1540ce06b17e857822",
+      "modified_time": "2026-06-07T06:24:06"
+    },
+    {
+      "path": "reports/test_report.docx",
+      "exists": true,
+      "bytes": 3009722,
+      "sha256": "340b4a969171f6e6eec77f5f5a0a482da95274ac1f316adb30197af6e068af5e",
+      "modified_time": "2026-06-07T06:40:58"
+    },
+    {
+      "path": "reports/strict_classification_training_report.md",
+      "exists": true,
+      "bytes": 16862,
+      "sha256": "ec5d2f1f2588bfa0ea7eb8984bc53105c77f7259e4a08a4ba1e78e0272ddf716",
+      "modified_time": "2026-06-07T06:25:12"
+    },
+    {
+      "path": "reports/submission_checklist.md",
+      "exists": true,
+      "bytes": 20417,
+      "sha256": "3c765fc226517bc6b44151002805da84edd358b173e186d6e51d36a3c031320a",
+      "modified_time": "2026-06-07T06:40:49"
+    },
+    {
+      "path": "reports/overview_design.pptx",
+      "exists": true,
+      "bytes": 303916,
+      "sha256": "35078399d33d3bdacfcc4502fd017cf69fc0e3c3fe4cf093cc004666f62c9eff",
+      "modified_time": "2026-06-07T06:40:58"
+    },
+    {
+      "path": "reports/figures/strict_confusion_contact_sheet.png",
+      "exists": true,
+      "bytes": 1450407,
+      "sha256": "5e9f800002f9fdfa5811f59850b05be36a424372c77e165754caef8fedb3a1a0",
+      "modified_time": "2026-06-07T02:14:20"
+    },
+    {
+      "path": "reports/figures/strict_worst_class_contact_sheet.png",
+      "exists": true,
+      "bytes": 1516732,
+      "sha256": "259b2add3c54aaafba4054cdb7a1992cc3fa6ff97d74c5335330e824532872c5",
+      "modified_time": "2026-06-07T02:14:21"
+    },
+    {
+      "path": "reports/figures/classification_train_val_leakage_contact_sheet.png",
+      "exists": true,
+      "bytes": 2518389,
+      "sha256": "1c33b8fa4da07b6881734c92b7ccffe38975dc7b002b740842299099e2a98c97",
+      "modified_time": "2026-06-07T04:30:58"
+    },
+    {
+      "path": "reports/figures/classification_cross_class_contact_sheet.png",
+      "exists": true,
+      "bytes": 2415251,
+      "sha256": "0d05c7bed87fbbfacf29822e8dbf807a17e3a99a52ec035376268b39cca17030",
+      "modified_time": "2026-06-07T05:14:29"
+    },
+    {
+      "path": "reports/figures/detection_annotation_contact_sheet.png",
+      "exists": true,
+      "bytes": 13246218,
+      "sha256": "e83042cd8d1fc22d8129e0dcfcc58d2b0bf82725a91f2c8ea5cc3421bb62a574",
+      "modified_time": "2026-06-07T04:01:15"
+    },
+    {
+      "path": "README.md",
+      "exists": true,
+      "bytes": 21818,
+      "sha256": "f69a7f0ae0159695e3d6c8e6c54e3dcfcfb989632c5050578ca489fed15c8dd9",
+      "modified_time": "2026-06-07T06:26:32"
+    },
+    {
+      "path": "docs/README.md",
+      "exists": true,
+      "bytes": 18319,
+      "sha256": "15f5eea63e710ab6f85713d58ea2f733417cdc011466bba2e8ffb1e1d60627b8",
+      "modified_time": "2026-06-07T06:23:22"
+    },
+    {
+      "path": "scripts/prepare_detection_annotation_package.py",
+      "exists": true,
+      "bytes": 13582,
+      "sha256": "2e7559ea214c404ee1371a76e8389ef24c52f2fa03e6a411f0f8f7a1f6cd1138",
+      "modified_time": "2026-06-07T03:24:02"
+    }
+  ],
+  "boundaries": [
+    "当前真实实验是分类任务，只能汇报 Top-1 / Top-5、每类误判分析、推理延迟和工程 QA。",
+    "原始数据不含真实 bbox 标注，不能汇报检测 Precision、Recall、mAP 或定位能力。",
+    "strict 5 epoch 基准保持 92 类原始 train/val 交集；93 类补齐实验仅用于证明大腹皮已可进入训练链路。",
+    "93 类补齐实验将大腹皮 19 张原始 val-only 样本按确定性顺序拆为 15 train / 4 val，不应与原始 92 类 strict 指标直接等价比较。",
+    "检测标注准备包只包含待人工标注图片、类别顺序和 manifest；当前校验报告为 pending_bbox_annotation，labels/ 仍为空，不能据此训练检测模型或汇报检测指标。",
+    "重复与泄漏审计只检查文件字节级 SHA256 完全重复；已发现 train/val exact duplicate 和跨类别 exact duplicate，需人工复核后再删除或重划。",
+    "classification_leakage_review_package 是删除或重划前的人工复核包，只提供复核清单和对照图，不改变数据集。",
+    "leakage_clean_candidate 数据集只移除 val 侧 train/val exact duplicate 副本，不自动裁决跨类别标签；重新训练前仍需单独审计和报告新指标。",
+    "classification_cross_class_review_package 只提供跨类别 exact duplicate 人工复核清单和对照图，不自动删除、移动、重命名或重标图片。",
+    "classification_cross_class_decision_table 是跨类别标签冲突的人工决策输入表，当前默认 pending，不自动执行任何数据修改。",
+    "classification_cross_class_decision_review.html 是本地静态复核页，只辅助人工查看图片和复制决策字段，不写回 CSV，也不自动裁决类别。",
+    "classification_cross_class_cleanup_plan 是人工决策 CSV 的执行前校验报告；只在校验通过时生成可审计操作清单，本身不修改数据集。",
+    "apply_classification_cross_class_cleanup_plan 是人工决策和计划校验通过后的非破坏性执行入口；当前计划未就绪时会阻断，真正执行也只写入新的输出目录。"
+  ]
+}

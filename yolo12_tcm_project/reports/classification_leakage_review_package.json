@@ -1,0 +1,1537 @@
+{
+  "source_audit": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\strict_classification_duplicate_audit.json",
+  "reference_audit": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_duplicate_audit.json",
+  "summary": {
+    "status": "complete_review_package",
+    "source_audit_status": "needs_leakage_review",
+    "source_total_images": 9567,
+    "leakage_groups": 34,
+    "expected_leakage_groups": 34,
+    "leakage_records": 69,
+    "train_records": 35,
+    "val_records": 34,
+    "same_class_leakage_groups": 16,
+    "cross_class_leakage_groups": 18,
+    "classes_involved": 27,
+    "shared_with_reference_leak_hashes": 34,
+    "figure": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_train_val_leakage_contact_sheet.png"
+  },
+  "reference_summary": {
+    "status": "needs_leakage_review",
+    "total_images": 9586,
+    "unique_hashes": 9033,
+    "duplicate_hashes": 546,
+    "duplicate_images": 1099,
+    "duplicate_extra_images": 553,
+    "cross_split_duplicate_hashes": 34,
+    "train_val_leak_hashes": 34,
+    "cross_class_duplicate_hashes": 52,
+    "classes": 93,
+    "splits": {
+      "train": 7841,
+      "val": 1745
+    },
+    "reported_groups": 80
+  },
+  "groups": [
+    {
+      "group_id": "leak_001",
+      "sha256": "e8ec1480e293cc8ec5288ab0b5f38b2a4dbbffbbea755b480320a1bdcd445635",
+      "sha256_short": "e8ec1480e293cc8e",
+      "record_count": 3,
+      "train_records": 2,
+      "val_records": 1,
+      "classes": [
+        "苍术",
+        "黄芩"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "黄芩",
+          "filename": "HuangqinHuangqinHuangqinHuangqin_60(1).jpg",
+          "relative_path": "train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60(1).jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60(1).jpg",
+          "exists": true,
+          "bytes": 36098,
+          "image_size": [
+            500,
+            375
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "黄芩",
+          "filename": "HuangqinHuangqinHuangqinHuangqin_60.jpg",
+          "relative_path": "train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60.jpg",
+          "exists": true,
+          "bytes": 36098,
+          "image_size": [
+            500,
+            375
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "苍术",
+          "filename": "CangzhuCangzhuCangzhuCangzhu_59.jpg",
+          "relative_path": "val\\苍术\\CangzhuCangzhuCangzhuCangzhu_59.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\苍术\\CangzhuCangzhuCangzhuCangzhu_59.jpg",
+          "exists": true,
+          "bytes": 36098,
+          "image_size": [
+            500,
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_002",
+      "sha256": "0163d12c17a4be39508f18423c45ba8c2c3249012c36d0c532b8230e6a6299ed",
+      "sha256_short": "0163d12c17a4be39",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya54.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya54.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\谷芽\\GuyaGuya54.jpg",
+          "exists": true,
+          "bytes": 19668,
+          "image_size": [
+            293,
+            220
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya19.jpg",
+          "relative_path": "val\\稻芽\\DaoyaDaoya19.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\稻芽\\DaoyaDaoya19.jpg",
+          "exists": true,
+          "bytes": 19668,
+          "image_size": [
+            293,
+            220
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_003",
+      "sha256": "0b4c4ca0209b329e3491373ca7968a77ef08b835e467a7686c65e080dd838ee9",
+      "sha256_short": "0b4c4ca0209b329e",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "湖北贝母",
+        "白前"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "白前",
+          "filename": "BaiqianBaiqianBaiqian110.jpg",
+          "relative_path": "train\\白前\\BaiqianBaiqianBaiqian110.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\白前\\BaiqianBaiqianBaiqian110.jpg",
+          "exists": true,
+          "bytes": 39583,
+          "image_size": [
+            500,
+            331
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "湖北贝母",
+          "filename": "Hubeibeimu17.jpg",
+          "relative_path": "val\\湖北贝母\\Hubeibeimu17.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\湖北贝母\\Hubeibeimu17.jpg",
+          "exists": true,
+          "bytes": 39583,
+          "image_size": [
+            500,
+            331
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_004",
+      "sha256": "2ca364e9c60a46cdf6bb954384d54d8cac9b4bdc17eb8631b51786282db41d21",
+      "sha256_short": "2ca364e9c60a46cd",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya49.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya49.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\谷芽\\GuyaGuya49.jpg",
+          "exists": true,
+          "bytes": 49445,
+          "image_size": [
+            500,
+            333
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya20.jpg",
+          "relative_path": "val\\稻芽\\DaoyaDaoya20.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\稻芽\\DaoyaDaoya20.jpg",
+          "exists": true,
+          "bytes": 49445,
+          "image_size": [
+            500,
+            333
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_005",
+      "sha256": "34855067dee8b1f1c1068d7925699b4d0aafb499416305556da8abcd6d7bad68",
+      "sha256_short": "34855067dee8b1f1",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya54.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya54.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\稻芽\\DaoyaDaoya54.jpg",
+          "exists": true,
+          "bytes": 51581,
+          "image_size": [
+            320,
+            320
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya2.jpg",
+          "relative_path": "val\\谷芽\\GuyaGuya2.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\谷芽\\GuyaGuya2.jpg",
+          "exists": true,
+          "bytes": 51581,
+          "image_size": [
+            320,
+            320
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_006",
+      "sha256": "384cc040bd9760381907e6a0d00883ac249cee2b2f76461d68abcac7f5d2db87",
+      "sha256_short": "384cc040bd976038",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "川木香",
+        "瓦楞子"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "川木香",
+          "filename": "ChuanmuxiangChuanmuxiang108.jpg",
+          "relative_path": "train\\川木香\\ChuanmuxiangChuanmuxiang108.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\川木香\\ChuanmuxiangChuanmuxiang108.jpg",
+          "exists": true,
+          "bytes": 64754,
+          "image_size": [
+            400,
+            400
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "瓦楞子",
+          "filename": "Walengzi119.jpg",
+          "relative_path": "val\\瓦楞子\\Walengzi119.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\瓦楞子\\Walengzi119.jpg",
+          "exists": true,
+          "bytes": 64754,
+          "image_size": [
+            400,
+            400
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_007",
+      "sha256": "448aa866aff27437ba58d995767be9b8f22c709e91be207455063cf5f5ff3590",
+      "sha256_short": "448aa866aff27437",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "合欢皮",
+        "川牛膝"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "合欢皮",
+          "filename": "HehuanpiHehuanpi48.jpg",
+          "relative_path": "train\\合欢皮\\HehuanpiHehuanpi48.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\合欢皮\\HehuanpiHehuanpi48.jpg",
+          "exists": true,
+          "bytes": 51994,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "川牛膝",
+          "filename": "ChuanniuxiChuanniuxi13.jpg",
+          "relative_path": "val\\川牛膝\\ChuanniuxiChuanniuxi13.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\川牛膝\\ChuanniuxiChuanniuxi13.jpg",
+          "exists": true,
+          "bytes": 51994,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_008",
+      "sha256": "455bc1c3ba114097e16f3b71e3da8f3f66abf6b067549dd0ed2440beab7da7a5",
+      "sha256_short": "455bc1c3ba114097",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "白前",
+        "金果榄"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "白前",
+          "filename": "BaiqianBaiqianBaiqian92.jpg",
+          "relative_path": "train\\白前\\BaiqianBaiqianBaiqian92.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\白前\\BaiqianBaiqianBaiqian92.jpg",
+          "exists": true,
+          "bytes": 39514,
+          "image_size": [
+            500,
+            375
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "金果榄",
+          "filename": "Jinguolan91.jpg",
+          "relative_path": "val\\金果榄\\Jinguolan91.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\金果榄\\Jinguolan91.jpg",
+          "exists": true,
+          "bytes": 39514,
+          "image_size": [
+            500,
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_009",
+      "sha256": "4f73e097106386674dcfb1a18ccbdd6718bf015f39956c0663e179d3633da24d",
+      "sha256_short": "4f73e09710638667",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "石榴皮",
+        "肉豆蔻"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "肉豆蔻",
+          "filename": "Roudoukou100.jpg",
+          "relative_path": "train\\肉豆蔻\\Roudoukou100.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\肉豆蔻\\Roudoukou100.jpg",
+          "exists": true,
+          "bytes": 43881,
+          "image_size": [
+            499,
+            361
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "石榴皮",
+          "filename": "Shiliupi53.jpg",
+          "relative_path": "val\\石榴皮\\Shiliupi53.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\石榴皮\\Shiliupi53.jpg",
+          "exists": true,
+          "bytes": 43881,
+          "image_size": [
+            499,
+            361
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_010",
+      "sha256": "56f83639e535564162f23005adda0a8891440962f9f71800acb7323e9e2f90e6",
+      "sha256_short": "56f83639e5355641",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya47.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya47.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\谷芽\\GuyaGuya47.jpg",
+          "exists": true,
+          "bytes": 78261,
+          "image_size": [
+            500,
+            375
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya17.jpg",
+          "relative_path": "val\\稻芽\\DaoyaDaoya17.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\稻芽\\DaoyaDaoya17.jpg",
+          "exists": true,
+          "bytes": 78261,
+          "image_size": [
+            500,
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_011",
+      "sha256": "7c569f8c12cbd590d7ba502e9e0ab9f65e4cea96793417b15645b818b711f316",
+      "sha256_short": "7c569f8c12cbd590",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "北沙参",
+        "麦冬"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "北沙参",
+          "filename": "BeishashenBeishashenBeishashen72.jpg",
+          "relative_path": "train\\北沙参\\BeishashenBeishashenBeishashen72.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\北沙参\\BeishashenBeishashenBeishashen72.jpg",
+          "exists": true,
+          "bytes": 49949,
+          "image_size": [
+            310,
+            310
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "麦冬",
+          "filename": "Maidong114.jpg",
+          "relative_path": "val\\麦冬\\Maidong114.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\麦冬\\Maidong114.jpg",
+          "exists": true,
+          "bytes": 49949,
+          "image_size": [
+            310,
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_012",
+      "sha256": "953b2ccdf7e305a4c1c11c01ec8c544516bd8ff6bce3a2746075a655bbfdcc25",
+      "sha256_short": "953b2ccdf7e305a4",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya46.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya46.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\谷芽\\GuyaGuya46.jpg",
+          "exists": true,
+          "bytes": 79537,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya18.jpg",
+          "relative_path": "val\\稻芽\\DaoyaDaoya18.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\稻芽\\DaoyaDaoya18.jpg",
+          "exists": true,
+          "bytes": 79537,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_013",
+      "sha256": "d2f746a1b0f43ba287cc3bb856a7e28e35d3229f1027408352ba932c599a1c96",
+      "sha256_short": "d2f746a1b0f43ba2",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "白茅根",
+        "芦根"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "白茅根",
+          "filename": "BaimaogenBaimaogenBaimaogen64.jpg",
+          "relative_path": "train\\白茅根\\BaimaogenBaimaogenBaimaogen64.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\白茅根\\BaimaogenBaimaogenBaimaogen64.jpg",
+          "exists": true,
+          "bytes": 63942,
+          "image_size": [
+            500,
+            449
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "芦根",
+          "filename": "Lugen5.jpg",
+          "relative_path": "val\\芦根\\Lugen5.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\芦根\\Lugen5.jpg",
+          "exists": true,
+          "bytes": 63942,
+          "image_size": [
+            500,
+            449
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_014",
+      "sha256": "da6c0882f1f93f720143d0e2f44820ba5fae18df4aa08f8bb805c0085bce70f6",
+      "sha256_short": "da6c0882f1f93f72",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya29.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya29.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\稻芽\\DaoyaDaoya29.jpg",
+          "exists": true,
+          "bytes": 57107,
+          "image_size": [
+            295,
+            300
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya20.jpg",
+          "relative_path": "val\\谷芽\\GuyaGuya20.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\谷芽\\GuyaGuya20.jpg",
+          "exists": true,
+          "bytes": 57107,
+          "image_size": [
+            295,
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_015",
+      "sha256": "e1082018a3bf412b6619898feb19434c5d78fced7560e2620c9eb697da3a4447",
+      "sha256_short": "e1082018a3bf412b",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya68.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya68.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\稻芽\\DaoyaDaoya68.jpg",
+          "exists": true,
+          "bytes": 82698,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya7.jpg",
+          "relative_path": "val\\谷芽\\GuyaGuya7.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\谷芽\\GuyaGuya7.jpg",
+          "exists": true,
+          "bytes": 82698,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_016",
+      "sha256": "ed0a2e918604c317ae51dd31148965fd093ef92291d60dd3478290c283585c14",
+      "sha256_short": "ed0a2e918604c317",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "浙贝母",
+        "湖北贝母"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "浙贝母",
+          "filename": "ZhebeimuZhebeimuZhebeimuZhebeimu_48.jpg",
+          "relative_path": "train\\浙贝母\\ZhebeimuZhebeimuZhebeimuZhebeimu_48.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\浙贝母\\ZhebeimuZhebeimuZhebeimuZhebeimu_48.jpg",
+          "exists": true,
+          "bytes": 33779,
+          "image_size": [
+            500,
+            373
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "湖北贝母",
+          "filename": "Hubeibeimu47.jpg",
+          "relative_path": "val\\湖北贝母\\Hubeibeimu47.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\湖北贝母\\Hubeibeimu47.jpg",
+          "exists": true,
+          "bytes": 33779,
+          "image_size": [
+            500,
+            373
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_017",
+      "sha256": "f4bc220bcef2256f0288190e757d6200b83a560a5499a8c828405be62b4f9f0b",
+      "sha256_short": "f4bc220bcef2256f",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya100.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya100.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\稻芽\\DaoyaDaoya100.jpg",
+          "exists": true,
+          "bytes": 57387,
+          "image_size": [
+            500,
+            333
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya9.jpg",
+          "relative_path": "val\\谷芽\\GuyaGuya9.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\谷芽\\GuyaGuya9.jpg",
+          "exists": true,
+          "bytes": 57387,
+          "image_size": [
+            500,
+            333
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_018",
+      "sha256": "f7350e26b0baa70e49420851216e79f869871acb4b6c7173a5d5d7a5b663f1f7",
+      "sha256_short": "f7350e26b0baa70e",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "秦皮",
+        "苏木"
+      ],
+      "cross_class": true,
+      "risk_level": "high_label_and_split_leak",
+      "suggested_action": "先核对类别目录标签；确认真实类别后只保留正确类别样本，并从验证集移除同字节训练副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "秦皮",
+          "filename": "Qinpi37.jpg",
+          "relative_path": "train\\秦皮\\Qinpi37.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\秦皮\\Qinpi37.jpg",
+          "exists": true,
+          "bytes": 42403,
+          "image_size": [
+            484,
+            300
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "苏木",
+          "filename": "Sumu39.jpg",
+          "relative_path": "val\\苏木\\Sumu39.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\苏木\\Sumu39.jpg",
+          "exists": true,
+          "bytes": 42403,
+          "image_size": [
+            484,
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_019",
+      "sha256": "1396eeb2cb69a8dd849f4d1771e127843197b3ebfb953045d92ce58833fe47cb",
+      "sha256_short": "1396eeb2cb69a8dd",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "荔枝核"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "荔枝核",
+          "filename": "Lizhihe54.jpg",
+          "relative_path": "train\\荔枝核\\Lizhihe54.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\荔枝核\\Lizhihe54.jpg",
+          "exists": true,
+          "bytes": 51359,
+          "image_size": [
+            300,
+            300
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "荔枝核",
+          "filename": "Lizhihe79.jpg",
+          "relative_path": "val\\荔枝核\\Lizhihe79.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荔枝核\\Lizhihe79.jpg",
+          "exists": true,
+          "bytes": 51359,
+          "image_size": [
+            300,
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_020",
+      "sha256": "15603309f94d6a3324de35ac73707b0b5607f998af760c0ee358247b3ba70453",
+      "sha256_short": "15603309f94d6a33",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "路路通"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "路路通",
+          "filename": "Lulutong98.jpg",
+          "relative_path": "train\\路路通\\Lulutong98.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\路路通\\Lulutong98.jpg",
+          "exists": true,
+          "bytes": 46621,
+          "image_size": [
+            500,
+            332
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "路路通",
+          "filename": "Lulutong60.jpg",
+          "relative_path": "val\\路路通\\Lulutong60.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\路路通\\Lulutong60.jpg",
+          "exists": true,
+          "bytes": 46621,
+          "image_size": [
+            500,
+            332
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_021",
+      "sha256": "1e0164df7cd5761e51ad37bc0050bbd14d5ad6a6ffb8824383652bc3ccdbda8f",
+      "sha256_short": "1e0164df7cd5761e",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "山奈"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "山奈",
+          "filename": "Shannai92.jpg",
+          "relative_path": "train\\山奈\\Shannai92.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\山奈\\Shannai92.jpg",
+          "exists": true,
+          "bytes": 48761,
+          "image_size": [
+            400,
+            315
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "山奈",
+          "filename": "Shannai80.jpg",
+          "relative_path": "val\\山奈\\Shannai80.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山奈\\Shannai80.jpg",
+          "exists": true,
+          "bytes": 48761,
+          "image_size": [
+            400,
+            315
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_022",
+      "sha256": "33c44f205ca4aafcf4666559c4f2e17765a510f7cb68058127131dc9245fb912",
+      "sha256_short": "33c44f205ca4aafc",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "路路通"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "路路通",
+          "filename": "Lulutong18.jpg",
+          "relative_path": "train\\路路通\\Lulutong18.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\路路通\\Lulutong18.jpg",
+          "exists": true,
+          "bytes": 69551,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "路路通",
+          "filename": "Lulutong46.jpg",
+          "relative_path": "val\\路路通\\Lulutong46.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\路路通\\Lulutong46.jpg",
+          "exists": true,
+          "bytes": 69551,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_023",
+      "sha256": "369578c5d404dac3039a9880cc23bce233723a66680913d967a92283a9ec8680",
+      "sha256_short": "369578c5d404dac3",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "荜澄茄"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "荜澄茄",
+          "filename": "BichengqieBichengqieBichengqie30.jpg",
+          "relative_path": "train\\荜澄茄\\BichengqieBichengqieBichengqie30.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\荜澄茄\\BichengqieBichengqieBichengqie30.jpg",
+          "exists": true,
+          "bytes": 51117,
+          "image_size": [
+            500,
+            375
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "荜澄茄",
+          "filename": "BichengqieBichengqieBichengqie11.jpg",
+          "relative_path": "val\\荜澄茄\\BichengqieBichengqieBichengqie11.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荜澄茄\\BichengqieBichengqieBichengqie11.jpg",
+          "exists": true,
+          "bytes": 51117,
+          "image_size": [
+            500,
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_024",
+      "sha256": "618b3a0d2ccd8824373c15eb047382b96b9524c8d5b12faa9247f9e778c9ea99",
+      "sha256_short": "618b3a0d2ccd8824",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "郁金"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "郁金",
+          "filename": "Yujin90.jpg",
+          "relative_path": "train\\郁金\\Yujin90.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\郁金\\Yujin90.jpg",
+          "exists": true,
+          "bytes": 59441,
+          "image_size": [
+            500,
+            333
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "郁金",
+          "filename": "Yujin87.jpg",
+          "relative_path": "val\\郁金\\Yujin87.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\郁金\\Yujin87.jpg",
+          "exists": true,
+          "bytes": 59441,
+          "image_size": [
+            500,
+            333
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_025",
+      "sha256": "6f76698390d98dc8794527a6677a5ebbb802610a9ab2bbbacc931a703778b1a5",
+      "sha256_short": "6f76698390d98dc8",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "荆芥穗"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "荆芥穗",
+          "filename": "Jingjiesui69.jpg",
+          "relative_path": "train\\荆芥穗\\Jingjiesui69.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\荆芥穗\\Jingjiesui69.jpg",
+          "exists": true,
+          "bytes": 27658,
+          "image_size": [
+            300,
+            300
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "荆芥穗",
+          "filename": "Jingjiesui46.jpg",
+          "relative_path": "val\\荆芥穗\\Jingjiesui46.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荆芥穗\\Jingjiesui46.jpg",
+          "exists": true,
+          "bytes": 27658,
+          "image_size": [
+            300,
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_026",
+      "sha256": "9cf1bf4c6199a7c4c98d983008e79c2227f9c105ea7f0652eb51d1729ac51cd0",
+      "sha256_short": "9cf1bf4c6199a7c4",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "路路通"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "路路通",
+          "filename": "Lulutong49.jpg",
+          "relative_path": "train\\路路通\\Lulutong49.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\路路通\\Lulutong49.jpg",
+          "exists": true,
+          "bytes": 57669,
+          "image_size": [
+            500,
+            333
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "路路通",
+          "filename": "Lulutong61.jpg",
+          "relative_path": "val\\路路通\\Lulutong61.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\路路通\\Lulutong61.jpg",
+          "exists": true,
+          "bytes": 57669,
+          "image_size": [
+            500,
+            333
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_027",
+      "sha256": "a13cd0d63fc8cba33dc55e16f276388ea9f765ab5a5a7fefb2fc1568ced9deeb",
+      "sha256_short": "a13cd0d63fc8cba3",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "荜澄茄"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "荜澄茄",
+          "filename": "BichengqieBichengqieBichengqie44.jpg",
+          "relative_path": "train\\荜澄茄\\BichengqieBichengqieBichengqie44.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\荜澄茄\\BichengqieBichengqieBichengqie44.jpg",
+          "exists": true,
+          "bytes": 90902,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "荜澄茄",
+          "filename": "BichengqieBichengqieBichengqie13.jpg",
+          "relative_path": "val\\荜澄茄\\BichengqieBichengqieBichengqie13.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荜澄茄\\BichengqieBichengqieBichengqie13.jpg",
+          "exists": true,
+          "bytes": 90902,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_028",
+      "sha256": "a99d290c965369a06bf76795c0b42dd110c43e6a7baacb89420eebb5a699e703",
+      "sha256_short": "a99d290c965369a0",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "荆芥穗"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "荆芥穗",
+          "filename": "Jingjiesui47.jpg",
+          "relative_path": "train\\荆芥穗\\Jingjiesui47.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\荆芥穗\\Jingjiesui47.jpg",
+          "exists": true,
+          "bytes": 56215,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "荆芥穗",
+          "filename": "Jingjiesui71.jpg",
+          "relative_path": "val\\荆芥穗\\Jingjiesui71.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荆芥穗\\Jingjiesui71.jpg",
+          "exists": true,
+          "bytes": 56215,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_029",
+      "sha256": "b6d425252946bc62340fb89550971fc63a21e30ae6a36842de060e33bccb4bef",
+      "sha256_short": "b6d425252946bc62",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "荔枝核"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "荔枝核",
+          "filename": "Lizhihe76.jpg",
+          "relative_path": "train\\荔枝核\\Lizhihe76.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\荔枝核\\Lizhihe76.jpg",
+          "exists": true,
+          "bytes": 12320,
+          "image_size": [
+            220,
+            220
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "荔枝核",
+          "filename": "Lizhihe94.jpg",
+          "relative_path": "val\\荔枝核\\Lizhihe94.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荔枝核\\Lizhihe94.jpg",
+          "exists": true,
+          "bytes": 12320,
+          "image_size": [
+            220,
+            220
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_030",
+      "sha256": "b8115791853944169a6d930b8c921ccf221552a034a6c2549a41b835176c0405",
+      "sha256_short": "b811579185394416",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "荆芥穗"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "荆芥穗",
+          "filename": "Jingjiesui56.jpg",
+          "relative_path": "train\\荆芥穗\\Jingjiesui56.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\荆芥穗\\Jingjiesui56.jpg",
+          "exists": true,
+          "bytes": 47594,
+          "image_size": [
+            320,
+            320
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "荆芥穗",
+          "filename": "Jingjiesui75.jpg",
+          "relative_path": "val\\荆芥穗\\Jingjiesui75.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荆芥穗\\Jingjiesui75.jpg",
+          "exists": true,
+          "bytes": 47594,
+          "image_size": [
+            320,
+            320
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_031",
+      "sha256": "bae41b29013c845bd5866b1d1bb062e3d768794d7bd608dc778e5147dab0fc30",
+      "sha256_short": "bae41b29013c845b",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "山奈"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "山奈",
+          "filename": "Shannai90.jpg",
+          "relative_path": "train\\山奈\\Shannai90.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\山奈\\Shannai90.jpg",
+          "exists": true,
+          "bytes": 40317,
+          "image_size": [
+            500,
+            375
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "山奈",
+          "filename": "Shannai83.jpg",
+          "relative_path": "val\\山奈\\Shannai83.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山奈\\Shannai83.jpg",
+          "exists": true,
+          "bytes": 40317,
+          "image_size": [
+            500,
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_032",
+      "sha256": "c1b236887a280387464971f456a31b03a2f0a51c4515f54db839011e8476e75d",
+      "sha256_short": "c1b236887a280387",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "竹茹"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "竹茹",
+          "filename": "Zhuru90.jpg",
+          "relative_path": "train\\竹茹\\Zhuru90.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\竹茹\\Zhuru90.jpg",
+          "exists": true,
+          "bytes": 28218,
+          "image_size": [
+            320,
+            320
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "竹茹",
+          "filename": "Zhuru89.jpg",
+          "relative_path": "val\\竹茹\\Zhuru89.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\竹茹\\Zhuru89.jpg",
+          "exists": true,
+          "bytes": 28218,
+          "image_size": [
+            320,
+            320
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_033",
+      "sha256": "cf7ff97dd8bd43db73e2d19c91959993ee591f84a9e94f23466c6bd3196c8657",
+      "sha256_short": "cf7ff97dd8bd43db",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "路路通"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "路路通",
+          "filename": "Lulutong8.jpg",
+          "relative_path": "train\\路路通\\Lulutong8.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\路路通\\Lulutong8.jpg",
+          "exists": true,
+          "bytes": 54046,
+          "image_size": [
+            500,
+            375
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "路路通",
+          "filename": "Lulutong33.jpg",
+          "relative_path": "val\\路路通\\Lulutong33.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\路路通\\Lulutong33.jpg",
+          "exists": true,
+          "bytes": 54046,
+          "image_size": [
+            500,
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "leak_034",
+      "sha256": "e87d8a96f1e66d74db9f432d528057fba5f380915a469489f6ae8f0e6840d3ff",
+      "sha256_short": "e87d8a96f1e66d74",
+      "record_count": 2,
+      "train_records": 1,
+      "val_records": 1,
+      "classes": [
+        "路路通"
+      ],
+      "cross_class": false,
+      "risk_level": "split_leak",
+      "suggested_action": "确认同一药材图片跨 train/val 后，保留一侧并重划另一侧，优先保证验证集独立。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "路路通",
+          "filename": "Lulutong31.jpg",
+          "relative_path": "train\\路路通\\Lulutong31.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\路路通\\Lulutong31.jpg",
+          "exists": true,
+          "bytes": 42052,
+          "image_size": [
+            500,
+            307
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "路路通",
+          "filename": "Lulutong17.jpg",
+          "relative_path": "val\\路路通\\Lulutong17.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\路路通\\Lulutong17.jpg",
+          "exists": true,
+          "bytes": 42052,
+          "image_size": [
+            500,
+            307
+          ]
+        }
+      ]
+    }
+  ],
+  "boundary_note": "该复核包只整理 train/val 字节级 exact duplicate 风险，不自动删除、移动或重划任何图片。",
+  "review_instructions": [
+    "优先处理 risk_level 为 high_label_and_split_leak 的组，因为它同时涉及验证泄漏和跨类别标签冲突。",
+    "人工确认图片内容和类别目录后，再决定删除副本、移动样本或重建无泄漏划分。",
+    "完成处理后必须重新运行 duplicate audit、训练和独立验证，旧指标不能作为无泄漏基准。"
+  ]
+}

@@ -1,0 +1,1452 @@
+{
+  "source": "D:\\AAA中药cv\\data",
+  "output": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class",
+  "quality": 95,
+  "val_ratio": 0.2,
+  "min_train": 1,
+  "min_val": 1,
+  "summary": {
+    "status": "complete",
+    "raw_classes": 93,
+    "output_classes": 93,
+    "train_images": 7841,
+    "val_images": 1745,
+    "total_images": 9586,
+    "skipped_images": 28,
+    "excluded_classes": [],
+    "rebalanced_classes": [
+      "大腹皮"
+    ],
+    "val_only_rebalanced_classes": [
+      "大腹皮"
+    ],
+    "train_only_rebalanced_classes": [],
+    "actions": {
+      "convert_to_jpeg": 122,
+      "copy_jpeg": 9464
+    },
+    "source_formats": {
+      "jpeg": 9464,
+      "png": 122
+    },
+    "strategy_counts": {
+      "preserve_raw_split": 92,
+      "rebalance_val_only": 1
+    }
+  },
+  "classes": [
+    "丝瓜络",
+    "九香虫",
+    "五加皮",
+    "人参",
+    "僵蚕",
+    "全蝎",
+    "冬虫夏草",
+    "北沙参",
+    "千年健",
+    "合欢皮",
+    "土荆皮",
+    "地龙",
+    "大腹皮",
+    "天花粉",
+    "天麻",
+    "太子参",
+    "安息香",
+    "山奈",
+    "山慈菇",
+    "山茱萸",
+    "川木香",
+    "川楝子",
+    "川牛膝",
+    "干姜",
+    "木丁香",
+    "枸杞子",
+    "柏子仁",
+    "桂枝",
+    "桑寄生",
+    "桑椹",
+    "桑螵蛸",
+    "槟榔",
+    "橘核",
+    "沉香",
+    "浙贝母",
+    "海螵蛸",
+    "淡豆豉",
+    "湖北贝母",
+    "灵芝",
+    "瓦楞子",
+    "甘松",
+    "甘草",
+    "番泻叶",
+    "白前",
+    "白扁豆",
+    "白矾",
+    "白芍",
+    "白芷",
+    "白茅根",
+    "白蔹",
+    "石榴皮",
+    "秦皮",
+    "稻芽",
+    "竹茹",
+    "细辛",
+    "羌活",
+    "肉豆蔻",
+    "自然铜",
+    "芥子",
+    "芦根",
+    "苍术",
+    "苏木",
+    "苦地丁",
+    "荆芥穗",
+    "草豆蔻",
+    "荔枝核",
+    "荜拨",
+    "荜澄茄",
+    "莱菔子",
+    "莲子",
+    "莲子心",
+    "莲房",
+    "薏苡仁",
+    "藁本",
+    "蜂房",
+    "谷精草",
+    "谷芽",
+    "路路通",
+    "郁金",
+    "酸枣仁",
+    "金果榄",
+    "金灯笼",
+    "金钱白花蛇",
+    "银柴胡",
+    "防风",
+    "鳖甲",
+    "鸡内金",
+    "鸡冠花",
+    "麦冬",
+    "黄柏",
+    "黄芩",
+    "黄芪",
+    "龙眼肉"
+  ],
+  "distribution": {
+    "train": {
+      "丝瓜络": 82,
+      "九香虫": 80,
+      "五加皮": 80,
+      "人参": 80,
+      "僵蚕": 92,
+      "全蝎": 86,
+      "冬虫夏草": 83,
+      "北沙参": 80,
+      "千年健": 73,
+      "合欢皮": 80,
+      "土荆皮": 80,
+      "地龙": 86,
+      "大腹皮": 15,
+      "天花粉": 81,
+      "天麻": 84,
+      "太子参": 85,
+      "安息香": 80,
+      "山奈": 80,
+      "山慈菇": 80,
+      "山茱萸": 85,
+      "川木香": 80,
+      "川楝子": 80,
+      "川牛膝": 160,
+      "干姜": 168,
+      "木丁香": 174,
+      "枸杞子": 150,
+      "柏子仁": 80,
+      "桂枝": 80,
+      "桑寄生": 80,
+      "桑椹": 78,
+      "桑螵蛸": 83,
+      "槟榔": 80,
+      "橘核": 75,
+      "沉香": 80,
+      "浙贝母": 79,
+      "海螵蛸": 82,
+      "淡豆豉": 80,
+      "湖北贝母": 88,
+      "灵芝": 79,
+      "瓦楞子": 80,
+      "甘松": 79,
+      "甘草": 79,
+      "番泻叶": 80,
+      "白前": 80,
+      "白扁豆": 80,
+      "白矾": 80,
+      "白芍": 78,
+      "白芷": 80,
+      "白茅根": 80,
+      "白蔹": 80,
+      "石榴皮": 80,
+      "秦皮": 85,
+      "稻芽": 80,
+      "竹茹": 81,
+      "细辛": 80,
+      "羌活": 80,
+      "肉豆蔻": 82,
+      "自然铜": 84,
+      "芥子": 83,
+      "芦根": 79,
+      "苍术": 80,
+      "苏木": 84,
+      "苦地丁": 80,
+      "荆芥穗": 79,
+      "草豆蔻": 80,
+      "荔枝核": 78,
+      "荜拨": 79,
+      "荜澄茄": 80,
+      "莱菔子": 80,
+      "莲子": 79,
+      "莲子心": 80,
+      "莲房": 80,
+      "薏苡仁": 80,
+      "藁本": 80,
+      "蜂房": 82,
+      "谷精草": 79,
+      "谷芽": 79,
+      "路路通": 83,
+      "郁金": 81,
+      "酸枣仁": 80,
+      "金果榄": 79,
+      "金灯笼": 77,
+      "金钱白花蛇": 80,
+      "银柴胡": 80,
+      "防风": 80,
+      "鳖甲": 80,
+      "鸡内金": 78,
+      "鸡冠花": 91,
+      "麦冬": 76,
+      "黄柏": 80,
+      "黄芩": 160,
+      "黄芪": 85,
+      "龙眼肉": 74
+    },
+    "val": {
+      "丝瓜络": 19,
+      "九香虫": 19,
+      "五加皮": 19,
+      "人参": 19,
+      "僵蚕": 19,
+      "全蝎": 19,
+      "冬虫夏草": 19,
+      "北沙参": 18,
+      "千年健": 19,
+      "合欢皮": 19,
+      "土荆皮": 19,
+      "地龙": 19,
+      "大腹皮": 4,
+      "天花粉": 19,
+      "天麻": 19,
+      "太子参": 19,
+      "安息香": 19,
+      "山奈": 19,
+      "山慈菇": 19,
+      "山茱萸": 19,
+      "川木香": 19,
+      "川楝子": 19,
+      "川牛膝": 19,
+      "干姜": 19,
+      "木丁香": 19,
+      "枸杞子": 19,
+      "柏子仁": 19,
+      "桂枝": 19,
+      "桑寄生": 18,
+      "桑椹": 19,
+      "桑螵蛸": 19,
+      "槟榔": 19,
+      "橘核": 19,
+      "沉香": 19,
+      "浙贝母": 19,
+      "海螵蛸": 19,
+      "淡豆豉": 18,
+      "湖北贝母": 19,
+      "灵芝": 19,
+      "瓦楞子": 19,
+      "甘松": 19,
+      "甘草": 19,
+      "番泻叶": 19,
+      "白前": 18,
+      "白扁豆": 19,
+      "白矾": 19,
+      "白芍": 19,
+      "白芷": 19,
+      "白茅根": 19,
+      "白蔹": 19,
+      "石榴皮": 19,
+      "秦皮": 19,
+      "稻芽": 19,
+      "竹茹": 19,
+      "细辛": 19,
+      "羌活": 18,
+      "肉豆蔻": 19,
+      "自然铜": 19,
+      "芥子": 19,
+      "芦根": 19,
+      "苍术": 19,
+      "苏木": 19,
+      "苦地丁": 19,
+      "荆芥穗": 19,
+      "草豆蔻": 19,
+      "荔枝核": 19,
+      "荜拨": 19,
+      "荜澄茄": 19,
+      "莱菔子": 19,
+      "莲子": 19,
+      "莲子心": 19,
+      "莲房": 19,
+      "薏苡仁": 19,
+      "藁本": 19,
+      "蜂房": 19,
+      "谷精草": 19,
+      "谷芽": 19,
+      "路路通": 19,
+      "郁金": 19,
+      "酸枣仁": 19,
+      "金果榄": 19,
+      "金灯笼": 19,
+      "金钱白花蛇": 18,
+      "银柴胡": 19,
+      "防风": 19,
+      "鳖甲": 19,
+      "鸡内金": 19,
+      "鸡冠花": 19,
+      "麦冬": 19,
+      "黄柏": 19,
+      "黄芩": 19,
+      "黄芪": 19,
+      "龙眼肉": 18
+    }
+  },
+  "class_strategies": [
+    {
+      "class_name": "丝瓜络",
+      "strategy": "preserve_raw_split",
+      "raw_train": 82,
+      "raw_val": 19,
+      "assigned_train": 82,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "九香虫",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "五加皮",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "人参",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "僵蚕",
+      "strategy": "preserve_raw_split",
+      "raw_train": 92,
+      "raw_val": 19,
+      "assigned_train": 92,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "全蝎",
+      "strategy": "preserve_raw_split",
+      "raw_train": 86,
+      "raw_val": 19,
+      "assigned_train": 86,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "冬虫夏草",
+      "strategy": "preserve_raw_split",
+      "raw_train": 84,
+      "raw_val": 19,
+      "assigned_train": 84,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "北沙参",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "千年健",
+      "strategy": "preserve_raw_split",
+      "raw_train": 73,
+      "raw_val": 19,
+      "assigned_train": 73,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "合欢皮",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "土荆皮",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "地龙",
+      "strategy": "preserve_raw_split",
+      "raw_train": 86,
+      "raw_val": 19,
+      "assigned_train": 86,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "大腹皮",
+      "strategy": "rebalance_val_only",
+      "raw_train": 0,
+      "raw_val": 19,
+      "assigned_train": 15,
+      "assigned_val": 4
+    },
+    {
+      "class_name": "天花粉",
+      "strategy": "preserve_raw_split",
+      "raw_train": 81,
+      "raw_val": 19,
+      "assigned_train": 81,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "天麻",
+      "strategy": "preserve_raw_split",
+      "raw_train": 84,
+      "raw_val": 19,
+      "assigned_train": 84,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "太子参",
+      "strategy": "preserve_raw_split",
+      "raw_train": 85,
+      "raw_val": 19,
+      "assigned_train": 85,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "安息香",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "山奈",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "山慈菇",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "山茱萸",
+      "strategy": "preserve_raw_split",
+      "raw_train": 85,
+      "raw_val": 19,
+      "assigned_train": 85,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "川木香",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "川楝子",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "川牛膝",
+      "strategy": "preserve_raw_split",
+      "raw_train": 160,
+      "raw_val": 19,
+      "assigned_train": 160,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "干姜",
+      "strategy": "preserve_raw_split",
+      "raw_train": 168,
+      "raw_val": 19,
+      "assigned_train": 168,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "木丁香",
+      "strategy": "preserve_raw_split",
+      "raw_train": 176,
+      "raw_val": 19,
+      "assigned_train": 176,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "枸杞子",
+      "strategy": "preserve_raw_split",
+      "raw_train": 154,
+      "raw_val": 19,
+      "assigned_train": 154,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "柏子仁",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "桂枝",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "桑寄生",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "桑椹",
+      "strategy": "preserve_raw_split",
+      "raw_train": 78,
+      "raw_val": 19,
+      "assigned_train": 78,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "桑螵蛸",
+      "strategy": "preserve_raw_split",
+      "raw_train": 83,
+      "raw_val": 19,
+      "assigned_train": 83,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "槟榔",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "橘核",
+      "strategy": "preserve_raw_split",
+      "raw_train": 75,
+      "raw_val": 19,
+      "assigned_train": 75,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "沉香",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "浙贝母",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "海螵蛸",
+      "strategy": "preserve_raw_split",
+      "raw_train": 82,
+      "raw_val": 19,
+      "assigned_train": 82,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "淡豆豉",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "湖北贝母",
+      "strategy": "preserve_raw_split",
+      "raw_train": 89,
+      "raw_val": 19,
+      "assigned_train": 89,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "灵芝",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "瓦楞子",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "甘松",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "甘草",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "番泻叶",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "白前",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "白扁豆",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "白矾",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "白芍",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "白芷",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "白茅根",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "白蔹",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "石榴皮",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "秦皮",
+      "strategy": "preserve_raw_split",
+      "raw_train": 85,
+      "raw_val": 19,
+      "assigned_train": 85,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "稻芽",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "竹茹",
+      "strategy": "preserve_raw_split",
+      "raw_train": 81,
+      "raw_val": 19,
+      "assigned_train": 81,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "细辛",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "羌活",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "肉豆蔻",
+      "strategy": "preserve_raw_split",
+      "raw_train": 83,
+      "raw_val": 19,
+      "assigned_train": 83,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "自然铜",
+      "strategy": "preserve_raw_split",
+      "raw_train": 84,
+      "raw_val": 19,
+      "assigned_train": 84,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "芥子",
+      "strategy": "preserve_raw_split",
+      "raw_train": 83,
+      "raw_val": 19,
+      "assigned_train": 83,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "芦根",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "苍术",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "苏木",
+      "strategy": "preserve_raw_split",
+      "raw_train": 84,
+      "raw_val": 19,
+      "assigned_train": 84,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "苦地丁",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "荆芥穗",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "草豆蔻",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "荔枝核",
+      "strategy": "preserve_raw_split",
+      "raw_train": 79,
+      "raw_val": 19,
+      "assigned_train": 79,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "荜拨",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "荜澄茄",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "莱菔子",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "莲子",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "莲子心",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "莲房",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "薏苡仁",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "藁本",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "蜂房",
+      "strategy": "preserve_raw_split",
+      "raw_train": 82,
+      "raw_val": 19,
+      "assigned_train": 82,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "谷精草",
+      "strategy": "preserve_raw_split",
+      "raw_train": 79,
+      "raw_val": 19,
+      "assigned_train": 79,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "谷芽",
+      "strategy": "preserve_raw_split",
+      "raw_train": 79,
+      "raw_val": 19,
+      "assigned_train": 79,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "路路通",
+      "strategy": "preserve_raw_split",
+      "raw_train": 83,
+      "raw_val": 19,
+      "assigned_train": 83,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "郁金",
+      "strategy": "preserve_raw_split",
+      "raw_train": 81,
+      "raw_val": 19,
+      "assigned_train": 81,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "酸枣仁",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "金果榄",
+      "strategy": "preserve_raw_split",
+      "raw_train": 79,
+      "raw_val": 19,
+      "assigned_train": 79,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "金灯笼",
+      "strategy": "preserve_raw_split",
+      "raw_train": 77,
+      "raw_val": 19,
+      "assigned_train": 77,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "金钱白花蛇",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "银柴胡",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "防风",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "鳖甲",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "鸡内金",
+      "strategy": "preserve_raw_split",
+      "raw_train": 78,
+      "raw_val": 19,
+      "assigned_train": 78,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "鸡冠花",
+      "strategy": "preserve_raw_split",
+      "raw_train": 91,
+      "raw_val": 19,
+      "assigned_train": 91,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "麦冬",
+      "strategy": "preserve_raw_split",
+      "raw_train": 76,
+      "raw_val": 19,
+      "assigned_train": 76,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "黄柏",
+      "strategy": "preserve_raw_split",
+      "raw_train": 80,
+      "raw_val": 19,
+      "assigned_train": 80,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "黄芩",
+      "strategy": "preserve_raw_split",
+      "raw_train": 160,
+      "raw_val": 19,
+      "assigned_train": 160,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "黄芪",
+      "strategy": "preserve_raw_split",
+      "raw_train": 86,
+      "raw_val": 19,
+      "assigned_train": 86,
+      "assigned_val": 19
+    },
+    {
+      "class_name": "龙眼肉",
+      "strategy": "preserve_raw_split",
+      "raw_train": 74,
+      "raw_val": 19,
+      "assigned_train": 74,
+      "assigned_val": 19
+    }
+  ],
+  "excluded_classes": [],
+  "skipped": [
+    {
+      "split": "train",
+      "class_name": "冬虫夏草",
+      "source": "D:\\AAA中药cv\\data\\train\\冬虫夏草\\DongchongxiacaoDongchongxiacao92.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "val",
+      "class_name": "北沙参",
+      "source": "D:\\AAA中药cv\\data\\val\\北沙参\\BeishashenBeishashenBeishashen19.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "木丁香",
+      "source": "D:\\AAA中药cv\\data\\train\\木丁香\\Mudingxiang36(1).jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "木丁香",
+      "source": "D:\\AAA中药cv\\data\\train\\木丁香\\Mudingxiang36.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "枸杞子",
+      "source": "D:\\AAA中药cv\\data\\train\\枸杞子\\GouqiziGouqizi103(1).jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "枸杞子",
+      "source": "D:\\AAA中药cv\\data\\train\\枸杞子\\GouqiziGouqizi103.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "枸杞子",
+      "source": "D:\\AAA中药cv\\data\\train\\枸杞子\\GouqiziGouqizi53(1).jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "枸杞子",
+      "source": "D:\\AAA中药cv\\data\\train\\枸杞子\\GouqiziGouqizi53.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "val",
+      "class_name": "桑寄生",
+      "source": "D:\\AAA中药cv\\data\\val\\桑寄生\\SangjishengSangjishengSangjishengIMG_20200724_180506.jpg",
+      "reason": "broken data stream when reading image file",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "浙贝母",
+      "source": "D:\\AAA中药cv\\data\\train\\浙贝母\\ZhebeimuZhebeimuZhebeimuZhebeimu_103.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "val",
+      "class_name": "淡豆豉",
+      "source": "D:\\AAA中药cv\\data\\val\\淡豆豉\\DandouchiDandouchi20.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "湖北贝母",
+      "source": "D:\\AAA中药cv\\data\\train\\湖北贝母\\Hubeibeimu18.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "灵芝",
+      "source": "D:\\AAA中药cv\\data\\train\\灵芝\\Lingzhi84.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "甘松",
+      "source": "D:\\AAA中药cv\\data\\train\\甘松\\GansongGansong95.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "甘草",
+      "source": "D:\\AAA中药cv\\data\\train\\甘草\\GancaoGancaoGancaoGancao_32.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "val",
+      "class_name": "白前",
+      "source": "D:\\AAA中药cv\\data\\val\\白前\\BaiqianBaiqianBaiqian10.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "白芍",
+      "source": "D:\\AAA中药cv\\data\\train\\白芍\\BaishaoBaishaoBaishaoIMG_20200724_180221.jpg",
+      "reason": "broken data stream when reading image file",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "白芍",
+      "source": "D:\\AAA中药cv\\data\\train\\白芍\\BaishaoBaishaoBaishaoIMG_20200724_180244.jpg",
+      "reason": "broken data stream when reading image file",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "val",
+      "class_name": "羌活",
+      "source": "D:\\AAA中药cv\\data\\val\\羌活\\QianghuoQianghuoQianghuoQianghuo_10.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "肉豆蔻",
+      "source": "D:\\AAA中药cv\\data\\train\\肉豆蔻\\Roudoukou86.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "芦根",
+      "source": "D:\\AAA中药cv\\data\\train\\芦根\\Lugen106.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "荆芥穗",
+      "source": "D:\\AAA中药cv\\data\\train\\荆芥穗\\Jingjiesui26.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "荔枝核",
+      "source": "D:\\AAA中药cv\\data\\train\\荔枝核\\Lizhihe104.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "荜拨",
+      "source": "D:\\AAA中药cv\\data\\train\\荜拨\\BiboBiboBibo25.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "莲子",
+      "source": "D:\\AAA中药cv\\data\\train\\莲子\\Lianzi15.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "val",
+      "class_name": "金钱白花蛇",
+      "source": "D:\\AAA中药cv\\data\\val\\金钱白花蛇\\Jinqianbaihuashe114.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "黄芪",
+      "source": "D:\\AAA中药cv\\data\\train\\黄芪\\HuangqiHuangqi66.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "val",
+      "class_name": "龙眼肉",
+      "source": "D:\\AAA中药cv\\data\\val\\龙眼肉\\Longyanrou80.jpg",
+      "reason": "unsupported content format: gif",
+      "strategy": "preserve_raw_split"
+    }
+  ],
+  "samples": [
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo0.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo0.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo1.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo1.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo10.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo10.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo100.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo100.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo101.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo101.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo102.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo102.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo103.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo103.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo105.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo105.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo107.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo107.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo111.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo111.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo112.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo112.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo113.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo113.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo114.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo114.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo119.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo119.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo12.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo12.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo14.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo14.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo17.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo17.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo19.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo19.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo2.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo2.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    },
+    {
+      "split": "train",
+      "class_name": "丝瓜络",
+      "source": "D:\\AAA中药cv\\data\\train\\丝瓜络\\Sigualuo20.jpg",
+      "target": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\丝瓜络\\Sigualuo20.jpg",
+      "action": "copy_jpeg",
+      "source_format": "jpeg",
+      "strategy": "preserve_raw_split"
+    }
+  ],
+  "boundary_note": "该数据集用于 93 类覆盖补齐实验。原始 train/val 均存在的类别保留原始划分；仅单侧存在的类别按确定性顺序重划 train/val，因此其结果不应与原始 92 类 strict 基准直接等价比较。"
+}

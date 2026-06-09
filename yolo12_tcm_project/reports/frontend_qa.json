@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-06-07T01:32:44",
+  "url": "http://127.0.0.1:5173",
+  "browser_path": "Playwright fallback; Browser plugin not available in this session.",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "url": "http://127.0.0.1:5173/",
+      "title": "YOLOv12 中药饮片识别系统",
+      "not_blank": true,
+      "framework_overlay_absent": true,
+      "body_excerpt": "Y12\n中药饮片识别\n\nYOLOv12 Recognition Console\n\n分类识别\n目标检测\n摄像头\n训练入口\n当前权重\n自动选择最新权重\nbest.pt · 2026-06-07T00:59:11\nlast.pt · 2026-06-07T00:59:11\nbest.pt · 2026-06-07T00:18:21\nlast.pt · 2026-06-07T00:18:21\nyolo11n-cls.pt · 2026-06-07T00:03:00\nbest.pt · 2026-06-06T23:17:25\nlast.pt · 2026-06-06T23:17:25\nbest.pt ·",
+      "screenshot": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\frontend_desktop.png"
+    },
+    {
+      "viewport": "desktop",
+      "interaction": "classify_upload",
+      "passed": true,
+      "detail": "上传 strict 验证图后返回分类 Top-k 结果。",
+      "screenshot": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\frontend_classify_result.png"
+    },
+    {
+      "viewport": "desktop",
+      "interaction": "nav_detect",
+      "passed": true,
+      "detail": "目标检测页签保留，可用于未来真实 bbox 权重。"
+    },
+    {
+      "viewport": "desktop",
+      "interaction": "nav_camera",
+      "passed": true,
+      "detail": "摄像头页签切换成功；未自动请求摄像头权限。"
+    },
+    {
+      "viewport": "desktop",
+      "interaction": "nav_train",
+      "passed": true,
+      "detail": "训练页签切换成功。"
+    },
+    {
+      "viewport": "mobile",
+      "url": "http://127.0.0.1:5173/",
+      "title": "YOLOv12 中药饮片识别系统",
+      "not_blank": true,
+      "framework_overlay_absent": true,
+      "body_excerpt": "Y12\n中药饮片识别\n\nYOLOv12 Recognition Console\n\n分类识别\n目标检测\n摄像头\n训练入口\n当前权重\n自动选择最新权重\nbest.pt · 2026-06-07T00:59:11\nlast.pt · 2026-06-07T00:59:11\nbest.pt · 2026-06-07T00:18:21\nlast.pt · 2026-06-07T00:18:21\nyolo11n-cls.pt · 2026-06-07T00:03:00\nbest.pt · 2026-06-06T23:17:25\nlast.pt · 2026-06-06T23:17:25\nbest.pt ·",
+      "screenshot": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\frontend_mobile.png"
+    }
+  ],
+  "console_logs": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    }
+  ],
+  "relevant_console_errors": [],
+  "summary": {
+    "checks_total": 6,
+    "checks_passed": 6,
+    "relevant_console_errors": 0
+  }
+}

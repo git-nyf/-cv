@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+
+# Local IDE and assistant state
+.idea/
+.vscode/
+.claude/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Project data and generated outputs
+data/
+outputs/
+yolo12_tcm_project/data/
+yolo12_tcm_project/runs/
+yolo12_tcm_project/outputs/
+
+# Model weights and exports
+*.pt
+*.pth
+*.onnx
+*.engine
+*.mlpackage/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+Thumbs.db
+.DS_Store

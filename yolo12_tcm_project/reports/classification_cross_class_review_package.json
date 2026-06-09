@@ -1,0 +1,1608 @@
+{
+  "source_audit": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_leakage_clean_candidate_duplicate_audit.json",
+  "reference_audit": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_leakage_clean_candidate_duplicate_audit.json",
+  "summary": {
+    "status": "complete_review_package",
+    "source_audit_status": "needs_leakage_review",
+    "source_total_images": 9533,
+    "cross_class_groups": 34,
+    "expected_cross_class_groups": 34,
+    "cross_class_records": 68,
+    "train_records": 62,
+    "val_records": 6,
+    "cross_split_groups": 0,
+    "train_val_leak_groups": 0,
+    "classes_involved": 22,
+    "shared_with_reference_cross_class_hashes": 34,
+    "figure": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_cross_class_contact_sheet.png"
+  },
+  "reference_summary": {
+    "status": "needs_leakage_review",
+    "total_images": 9552,
+    "unique_hashes": 9033,
+    "duplicate_hashes": 513,
+    "duplicate_images": 1032,
+    "duplicate_extra_images": 519,
+    "cross_split_duplicate_hashes": 0,
+    "train_val_leak_hashes": 0,
+    "cross_class_duplicate_hashes": 34,
+    "classes": 93,
+    "splits": {
+      "train": 7841,
+      "val": 1711
+    },
+    "reported_groups": 80
+  },
+  "groups": [
+    {
+      "group_id": "cross_class_001",
+      "sha256": "07ae9fdf7ba9735c9d18fe12cfcab709fa23c55788f35cd735552af4ed950659",
+      "sha256_short": "07ae9fdf7ba9735c",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya30.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya30.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya30.jpg",
+          "exists": true,
+          "bytes": 35768,
+          "image_size": [
+            290,
+            310
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya48.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya48.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya48.jpg",
+          "exists": true,
+          "bytes": 35768,
+          "image_size": [
+            290,
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_002",
+      "sha256": "12db6b5de76c47d5e1822dd57d4d10eb4525bed40d64c51c98569b1f3652ce1c",
+      "sha256_short": "12db6b5de76c47d5",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya60.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya60.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya60.jpg",
+          "exists": true,
+          "bytes": 61781,
+          "image_size": [
+            500,
+            456
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya77.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya77.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya77.jpg",
+          "exists": true,
+          "bytes": 61781,
+          "image_size": [
+            500,
+            456
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_003",
+      "sha256": "2141200648876bb48b5d72d25ab0df81937ebf1f1c1de3d45cdef6064a109e58",
+      "sha256_short": "2141200648876bb4",
+      "record_count": 2,
+      "split_counts": {
+        "val": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "val",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya16.jpg",
+          "relative_path": "val\\稻芽\\DaoyaDaoya16.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\val\\稻芽\\DaoyaDaoya16.jpg",
+          "exists": true,
+          "bytes": 89892,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya15.jpg",
+          "relative_path": "val\\谷芽\\GuyaGuya15.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\val\\谷芽\\GuyaGuya15.jpg",
+          "exists": true,
+          "bytes": 89892,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_004",
+      "sha256": "2587a11d3a2dda001099b4c6303bd4d22d0f847ecb43e198d89815f2ad4aac56",
+      "sha256_short": "2587a11d3a2dda00",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "橘核",
+        "龙眼肉"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 橘核、龙眼肉 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "橘核",
+          "filename": "Juhe99.jpg",
+          "relative_path": "train\\橘核\\Juhe99.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\橘核\\Juhe99.jpg",
+          "exists": true,
+          "bytes": 76635,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "龙眼肉",
+          "filename": "Longyanrou105.jpg",
+          "relative_path": "train\\龙眼肉\\Longyanrou105.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\龙眼肉\\Longyanrou105.jpg",
+          "exists": true,
+          "bytes": 76635,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_005",
+      "sha256": "25acee6cbf3714be4933eaba02472d4f75ca141e4c87f9090cc48b4e760d7d20",
+      "sha256_short": "25acee6cbf3714be",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "橘核",
+        "荔枝核"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 橘核、荔枝核 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "橘核",
+          "filename": "Juhe62.jpg",
+          "relative_path": "train\\橘核\\Juhe62.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\橘核\\Juhe62.jpg",
+          "exists": true,
+          "bytes": 36998,
+          "image_size": [
+            500,
+            460
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "荔枝核",
+          "filename": "Lizhihe99.jpg",
+          "relative_path": "train\\荔枝核\\Lizhihe99.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\荔枝核\\Lizhihe99.jpg",
+          "exists": true,
+          "bytes": 36998,
+          "image_size": [
+            500,
+            460
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_006",
+      "sha256": "299859d75e6318467c2a87f5d07f2a9307fadcb6884318cf9d1e9099cd5058ce",
+      "sha256_short": "299859d75e631846",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya42.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya42.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya42.jpg",
+          "exists": true,
+          "bytes": 40017,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya45.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya45.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya45.jpg",
+          "exists": true,
+          "bytes": 40017,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_007",
+      "sha256": "342186e6c5550841ad431c1daa81ff1b2ccd838838d6b464f2651e2958b22943",
+      "sha256_short": "342186e6c5550841",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya31.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya31.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya31.jpg",
+          "exists": true,
+          "bytes": 107947,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya50.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya50.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya50.jpg",
+          "exists": true,
+          "bytes": 107947,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_008",
+      "sha256": "3429570c51f28958d20d2a99e9a5aa16630819c117cc62381f55179b4452580b",
+      "sha256_short": "3429570c51f28958",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya96.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya96.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya96.jpg",
+          "exists": true,
+          "bytes": 50183,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya90.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya90.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya90.jpg",
+          "exists": true,
+          "bytes": 50183,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_009",
+      "sha256": "3f273e9266fdd9c4d19fc6db87ae5eaceda4670912e965eda713b7d107fcd608",
+      "sha256_short": "3f273e9266fdd9c4",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya51.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya51.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya51.jpg",
+          "exists": true,
+          "bytes": 23408,
+          "image_size": [
+            241,
+            196
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya70.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya70.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya70.jpg",
+          "exists": true,
+          "bytes": 23408,
+          "image_size": [
+            241,
+            196
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_010",
+      "sha256": "4e0ce7611811646897a450e43eeeab961d3e8c6bd6cac6ac5f3904e9b689125d",
+      "sha256_short": "4e0ce76118116468",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "肉豆蔻",
+        "草豆蔻"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 肉豆蔻、草豆蔻 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "肉豆蔻",
+          "filename": "Roudoukou34.jpg",
+          "relative_path": "train\\肉豆蔻\\Roudoukou34.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\肉豆蔻\\Roudoukou34.jpg",
+          "exists": true,
+          "bytes": 30977,
+          "image_size": [
+            310,
+            310
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "草豆蔻",
+          "filename": "CaodoukouCaodoukouCaodoukou43.jpg",
+          "relative_path": "train\\草豆蔻\\CaodoukouCaodoukouCaodoukou43.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\草豆蔻\\CaodoukouCaodoukouCaodoukou43.jpg",
+          "exists": true,
+          "bytes": 30977,
+          "image_size": [
+            310,
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_011",
+      "sha256": "53c1f2f48157b60158532319049981f4c1d3086f86cebf5c01080b14ca95b21e",
+      "sha256_short": "53c1f2f48157b601",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "白茅根",
+        "芦根"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 白茅根、芦根 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "白茅根",
+          "filename": "BaimaogenBaimaogenBaimaogen46.jpg",
+          "relative_path": "train\\白茅根\\BaimaogenBaimaogenBaimaogen46.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\白茅根\\BaimaogenBaimaogenBaimaogen46.jpg",
+          "exists": true,
+          "bytes": 56878,
+          "image_size": [
+            300,
+            300
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "芦根",
+          "filename": "Lugen52.jpg",
+          "relative_path": "train\\芦根\\Lugen52.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\芦根\\Lugen52.jpg",
+          "exists": true,
+          "bytes": 56878,
+          "image_size": [
+            300,
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_012",
+      "sha256": "574acedba57fc9b920cb40093aab5ebbcb077c6ed769eaaca23e0c1d709ffe55",
+      "sha256_short": "574acedba57fc9b9",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "白茅根",
+        "芦根"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 白茅根、芦根 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "白茅根",
+          "filename": "BaimaogenBaimaogenBaimaogen114.jpg",
+          "relative_path": "train\\白茅根\\BaimaogenBaimaogenBaimaogen114.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\白茅根\\BaimaogenBaimaogenBaimaogen114.jpg",
+          "exists": true,
+          "bytes": 73553,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "芦根",
+          "filename": "Lugen41.jpg",
+          "relative_path": "train\\芦根\\Lugen41.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\芦根\\Lugen41.jpg",
+          "exists": true,
+          "bytes": 73553,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_013",
+      "sha256": "5761ab58f7e9690dc8784f8aa146cd75b4583d32de95409fcdb0cd76b6f47686",
+      "sha256_short": "5761ab58f7e9690d",
+      "record_count": 2,
+      "split_counts": {
+        "val": 2
+      },
+      "classes": [
+        "甘草",
+        "黄芪"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 甘草、黄芪 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "val",
+          "class_name": "甘草",
+          "filename": "GancaoGancaoGancaoGancao_11.jpg",
+          "relative_path": "val\\甘草\\GancaoGancaoGancaoGancao_11.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\val\\甘草\\GancaoGancaoGancaoGancao_11.jpg",
+          "exists": true,
+          "bytes": 69572,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "黄芪",
+          "filename": "HuangqiHuangqi1.jpg",
+          "relative_path": "val\\黄芪\\HuangqiHuangqi1.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\val\\黄芪\\HuangqiHuangqi1.jpg",
+          "exists": true,
+          "bytes": 69572,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_014",
+      "sha256": "5ff229f40ca3aa6c0a197e9a81d3e7d154d068becbc5c940baf41f96f3420878",
+      "sha256_short": "5ff229f40ca3aa6c",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya23.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya23.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya23.jpg",
+          "exists": true,
+          "bytes": 121555,
+          "image_size": [
+            500,
+            611
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya106.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya106.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya106.jpg",
+          "exists": true,
+          "bytes": 121555,
+          "image_size": [
+            500,
+            611
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_015",
+      "sha256": "68e5cce2ae832fa6ed3c6a401831d7be211e025bf909b2cc180d50cd74915d57",
+      "sha256_short": "68e5cce2ae832fa6",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "芥子",
+        "莱菔子"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 芥子、莱菔子 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "芥子",
+          "filename": "Jiezi23.jpg",
+          "relative_path": "train\\芥子\\Jiezi23.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\芥子\\Jiezi23.jpg",
+          "exists": true,
+          "bytes": 35168,
+          "image_size": [
+            310,
+            310
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "莱菔子",
+          "filename": "Laifuzi18.jpg",
+          "relative_path": "train\\莱菔子\\Laifuzi18.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\莱菔子\\Laifuzi18.jpg",
+          "exists": true,
+          "bytes": 35168,
+          "image_size": [
+            310,
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_016",
+      "sha256": "6ad9e95745b9f0ea0928d1a5016036bc4d8078ec991e6533e74f289c0ae75dd4",
+      "sha256_short": "6ad9e95745b9f0ea",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya44.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya44.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya44.jpg",
+          "exists": true,
+          "bytes": 75001,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya43.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya43.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya43.jpg",
+          "exists": true,
+          "bytes": 75001,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_017",
+      "sha256": "8060ab98f2c791b8fa04d31b9a313170ff422903383190e8d05c069d0c0ae672",
+      "sha256_short": "8060ab98f2c791b8",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "五加皮",
+        "藁本"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 五加皮、藁本 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "五加皮",
+          "filename": "WujiapiWujiapiWujiapiWujiapi_106.jpg",
+          "relative_path": "train\\五加皮\\WujiapiWujiapiWujiapiWujiapi_106.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\五加皮\\WujiapiWujiapiWujiapiWujiapi_106.jpg",
+          "exists": true,
+          "bytes": 19875,
+          "image_size": [
+            340,
+            226
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "藁本",
+          "filename": "GaobenGaobenGaobenGaoben_90.jpg",
+          "relative_path": "train\\藁本\\GaobenGaobenGaobenGaoben_90.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\藁本\\GaobenGaobenGaobenGaoben_90.jpg",
+          "exists": true,
+          "bytes": 19875,
+          "image_size": [
+            340,
+            226
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_018",
+      "sha256": "821079cee422b6cb22f833be71f803d3cdd5d43eb1ff9ae1a54180850a30af74",
+      "sha256_short": "821079cee422b6cb",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "浙贝母",
+        "湖北贝母"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 浙贝母、湖北贝母 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "浙贝母",
+          "filename": "ZhebeimuZhebeimuZhebeimuZhebeimu_21.jpg",
+          "relative_path": "train\\浙贝母\\ZhebeimuZhebeimuZhebeimuZhebeimu_21.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\浙贝母\\ZhebeimuZhebeimuZhebeimuZhebeimu_21.jpg",
+          "exists": true,
+          "bytes": 38011,
+          "image_size": [
+            500,
+            375
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "湖北贝母",
+          "filename": "Hubeibeimu100.jpg",
+          "relative_path": "train\\湖北贝母\\Hubeibeimu100.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\湖北贝母\\Hubeibeimu100.jpg",
+          "exists": true,
+          "bytes": 38011,
+          "image_size": [
+            500,
+            375
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_019",
+      "sha256": "86d5dbcb033a4eb4e6188ff56ba83d232c54c5fb6219917511c9736770cb4317",
+      "sha256_short": "86d5dbcb033a4eb4",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "白茅根",
+        "芦根"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 白茅根、芦根 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "白茅根",
+          "filename": "BaimaogenBaimaogenBaimaogen95.jpg",
+          "relative_path": "train\\白茅根\\BaimaogenBaimaogenBaimaogen95.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\白茅根\\BaimaogenBaimaogenBaimaogen95.jpg",
+          "exists": true,
+          "bytes": 101942,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "芦根",
+          "filename": "Lugen63.jpg",
+          "relative_path": "train\\芦根\\Lugen63.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\芦根\\Lugen63.jpg",
+          "exists": true,
+          "bytes": 101942,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_020",
+      "sha256": "87a1c53dbae6f5cef7107d8b34ab285760951d299d30496aa7bbfa4c27b27d3f",
+      "sha256_short": "87a1c53dbae6f5ce",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya50.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya50.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya50.jpg",
+          "exists": true,
+          "bytes": 111523,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya104.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya104.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya104.jpg",
+          "exists": true,
+          "bytes": 111523,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_021",
+      "sha256": "8fbe1d8732f5226581e33c39cf9a6097a03a9087db3df243cdb26b8706299173",
+      "sha256_short": "8fbe1d8732f52265",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya57.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya57.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya57.jpg",
+          "exists": true,
+          "bytes": 79982,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya60.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya60.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya60.jpg",
+          "exists": true,
+          "bytes": 79982,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_022",
+      "sha256": "9d55250b1e50086ff474884eee334e4b84295f9455cf5523d8888a04161aec4d",
+      "sha256_short": "9d55250b1e50086f",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya52.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya52.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya52.jpg",
+          "exists": true,
+          "bytes": 59818,
+          "image_size": [
+            310,
+            310
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya53.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya53.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya53.jpg",
+          "exists": true,
+          "bytes": 59818,
+          "image_size": [
+            310,
+            310
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_023",
+      "sha256": "a2c8e9e199984ec19dce0d9b9cbb902e596e7225b929f0aef20eef687a16ebe4",
+      "sha256_short": "a2c8e9e199984ec1",
+      "record_count": 2,
+      "split_counts": {
+        "val": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "val",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya14.jpg",
+          "relative_path": "val\\稻芽\\DaoyaDaoya14.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\val\\稻芽\\DaoyaDaoya14.jpg",
+          "exists": true,
+          "bytes": 60426,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "val",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya19.jpg",
+          "relative_path": "val\\谷芽\\GuyaGuya19.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\val\\谷芽\\GuyaGuya19.jpg",
+          "exists": true,
+          "bytes": 60426,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_024",
+      "sha256": "b5e70e43a91efb70fc940335c4b1d926f9543face7814b76a5b2494951f19fc4",
+      "sha256_short": "b5e70e43a91efb70",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "瓦楞子",
+        "自然铜"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 瓦楞子、自然铜 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "瓦楞子",
+          "filename": "Walengzi14.jpg",
+          "relative_path": "train\\瓦楞子\\Walengzi14.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\瓦楞子\\Walengzi14.jpg",
+          "exists": true,
+          "bytes": 30772,
+          "image_size": [
+            280,
+            280
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "自然铜",
+          "filename": "Zirantong87.jpg",
+          "relative_path": "train\\自然铜\\Zirantong87.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\自然铜\\Zirantong87.jpg",
+          "exists": true,
+          "bytes": 30772,
+          "image_size": [
+            280,
+            280
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_025",
+      "sha256": "b639fb7ce6f299f30824e6bc8254d39169b73d6808b2ffbf67881501373a980c",
+      "sha256_short": "b639fb7ce6f299f3",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "橘核",
+        "苍术"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 橘核、苍术 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "橘核",
+          "filename": "Juhe74.jpg",
+          "relative_path": "train\\橘核\\Juhe74.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\橘核\\Juhe74.jpg",
+          "exists": true,
+          "bytes": 90348,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "苍术",
+          "filename": "CangzhuCangzhuCangzhuCangzhu_6.jpg",
+          "relative_path": "train\\苍术\\CangzhuCangzhuCangzhuCangzhu_6.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\苍术\\CangzhuCangzhuCangzhuCangzhu_6.jpg",
+          "exists": true,
+          "bytes": 90348,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_026",
+      "sha256": "bd6759cb266cd873839a7354bb299e7f0efe7bf7c74080c77f9bfb19b740342d",
+      "sha256_short": "bd6759cb266cd873",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "橘核",
+        "荔枝核"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 橘核、荔枝核 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "橘核",
+          "filename": "Juhe60.jpg",
+          "relative_path": "train\\橘核\\Juhe60.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\橘核\\Juhe60.jpg",
+          "exists": true,
+          "bytes": 14513,
+          "image_size": [
+            220,
+            220
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "荔枝核",
+          "filename": "Lizhihe113.jpg",
+          "relative_path": "train\\荔枝核\\Lizhihe113.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\荔枝核\\Lizhihe113.jpg",
+          "exists": true,
+          "bytes": 14513,
+          "image_size": [
+            220,
+            220
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_027",
+      "sha256": "d522a63b5a4d1648b41d5d2329c21e860df76afdfa339e2dbcd0d0b01d1e9b56",
+      "sha256_short": "d522a63b5a4d1648",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "白茅根",
+        "芦根"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 白茅根、芦根 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "白茅根",
+          "filename": "BaimaogenBaimaogenBaimaogen101.jpg",
+          "relative_path": "train\\白茅根\\BaimaogenBaimaogenBaimaogen101.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\白茅根\\BaimaogenBaimaogenBaimaogen101.jpg",
+          "exists": true,
+          "bytes": 51078,
+          "image_size": [
+            500,
+            460
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "芦根",
+          "filename": "Lugen47.jpg",
+          "relative_path": "train\\芦根\\Lugen47.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\芦根\\Lugen47.jpg",
+          "exists": true,
+          "bytes": 51078,
+          "image_size": [
+            500,
+            460
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_028",
+      "sha256": "d6c8bd74882ff5af7f26ec89ef379c59a1e5360411a94bdee3990c186fd4572f",
+      "sha256_short": "d6c8bd74882ff5af",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "橘核",
+        "荔枝核"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 橘核、荔枝核 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "橘核",
+          "filename": "Juhe97.jpg",
+          "relative_path": "train\\橘核\\Juhe97.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\橘核\\Juhe97.jpg",
+          "exists": true,
+          "bytes": 35179,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "荔枝核",
+          "filename": "Lizhihe119.jpg",
+          "relative_path": "train\\荔枝核\\Lizhihe119.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\荔枝核\\Lizhihe119.jpg",
+          "exists": true,
+          "bytes": 35179,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_029",
+      "sha256": "e40dad2fb61f4e48362f3786a0979b1074ff47c14362da586520d595be7c723b",
+      "sha256_short": "e40dad2fb61f4e48",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya38.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya38.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya38.jpg",
+          "exists": true,
+          "bytes": 84452,
+          "image_size": [
+            500,
+            502
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya58.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya58.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya58.jpg",
+          "exists": true,
+          "bytes": 84452,
+          "image_size": [
+            500,
+            502
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_030",
+      "sha256": "edabc03375fca68386a19cef25abd1641c2dfacc335007a6894e847983f134e0",
+      "sha256_short": "edabc03375fca683",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "白茅根",
+        "芦根"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 白茅根、芦根 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "白茅根",
+          "filename": "BaimaogenBaimaogenBaimaogen62.jpg",
+          "relative_path": "train\\白茅根\\BaimaogenBaimaogenBaimaogen62.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\白茅根\\BaimaogenBaimaogenBaimaogen62.jpg",
+          "exists": true,
+          "bytes": 34169,
+          "image_size": [
+            300,
+            300
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "芦根",
+          "filename": "Lugen95.jpg",
+          "relative_path": "train\\芦根\\Lugen95.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\芦根\\Lugen95.jpg",
+          "exists": true,
+          "bytes": 34169,
+          "image_size": [
+            300,
+            300
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_031",
+      "sha256": "f1c41162e031474c6631aba5f7cbcdf5f98d6196734a5a7d8ac204c0500ef4f7",
+      "sha256_short": "f1c41162e031474c",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya102.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya102.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya102.jpg",
+          "exists": true,
+          "bytes": 12271,
+          "image_size": [
+            180,
+            165
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya107.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya107.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya107.jpg",
+          "exists": true,
+          "bytes": 12271,
+          "image_size": [
+            180,
+            165
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_032",
+      "sha256": "f4cdc9c1d5fc653be91c121db5e2631d3a052c47bd8a44d7a296de9d5b245351",
+      "sha256_short": "f4cdc9c1d5fc653b",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "白茅根",
+        "芦根"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 白茅根、芦根 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "白茅根",
+          "filename": "BaimaogenBaimaogenBaimaogen89.jpg",
+          "relative_path": "train\\白茅根\\BaimaogenBaimaogenBaimaogen89.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\白茅根\\BaimaogenBaimaogenBaimaogen89.jpg",
+          "exists": true,
+          "bytes": 21399,
+          "image_size": [
+            310,
+            179
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "芦根",
+          "filename": "Lugen97.jpg",
+          "relative_path": "train\\芦根\\Lugen97.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\芦根\\Lugen97.jpg",
+          "exists": true,
+          "bytes": 21399,
+          "image_size": [
+            310,
+            179
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_033",
+      "sha256": "f599e26535367aae7a0ea5c5e30675e1af4edd58878be4efdd36f9a4e4122b15",
+      "sha256_short": "f599e26535367aae",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "稻芽",
+        "谷芽"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 稻芽、谷芽 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "稻芽",
+          "filename": "DaoyaDaoya85.jpg",
+          "relative_path": "train\\稻芽\\DaoyaDaoya85.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\稻芽\\DaoyaDaoya85.jpg",
+          "exists": true,
+          "bytes": 122744,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "谷芽",
+          "filename": "GuyaGuya38.jpg",
+          "relative_path": "train\\谷芽\\GuyaGuya38.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\谷芽\\GuyaGuya38.jpg",
+          "exists": true,
+          "bytes": 122744,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "cross_class_034",
+      "sha256": "fe1923297ff9424c6ed264009bb1e23eb1a38810cfe19f40034295cefdc863f0",
+      "sha256_short": "fe1923297ff9424c",
+      "record_count": 2,
+      "split_counts": {
+        "train": 2
+      },
+      "classes": [
+        "北沙参",
+        "麦冬"
+      ],
+      "cross_split": false,
+      "train_val_leak": false,
+      "risk_level": "label_conflict",
+      "suggested_action": "人工核对图片真实类别；若 北沙参、麦冬 中只有一个正确目录，保留正确类别样本并移除或重标其他副本。",
+      "manual_decision": "",
+      "records": [
+        {
+          "split": "train",
+          "class_name": "北沙参",
+          "filename": "BeishashenBeishashenBeishashen64.jpg",
+          "relative_path": "train\\北沙参\\BeishashenBeishashenBeishashen64.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\北沙参\\BeishashenBeishashenBeishashen64.jpg",
+          "exists": true,
+          "bytes": 85555,
+          "image_size": [
+            500,
+            500
+          ]
+        },
+        {
+          "split": "train",
+          "class_name": "麦冬",
+          "filename": "Maidong112.jpg",
+          "relative_path": "train\\麦冬\\Maidong112.jpg",
+          "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate\\train\\麦冬\\Maidong112.jpg",
+          "exists": true,
+          "bytes": 85555,
+          "image_size": [
+            500,
+            500
+          ]
+        }
+      ]
+    }
+  ],
+  "boundary_note": "该复核包只整理跨类别字节级 exact duplicate 标签冲突；不自动删除、移动、重命名或重标任何图片。",
+  "review_instructions": [
+    "逐组查看同 SHA256 图片在不同类别目录中的标注，确认真实药材类别。",
+    "若只有一个类别正确，后续应只保留正确类别样本或把错误副本移动到正确类别；若无法确认，应标记为需要专家复核。",
+    "完成处理后必须重新运行 duplicate audit、候选数据集检查、训练和独立验证，旧指标不能作为最终无标签冲突基准。"
+  ]
+}

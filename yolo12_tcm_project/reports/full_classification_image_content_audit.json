@@ -1,0 +1,1068 @@
+{
+  "summary": {
+    "dataset": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_clean",
+    "checked_images": 9595,
+    "issues": 150,
+    "by_issue": {
+      "extension_content_mismatch": 122,
+      "load_failed": 3,
+      "unsupported_content_format": 25
+    },
+    "by_split": {
+      "train": 126,
+      "val": 24
+    }
+  },
+  "issues": [
+    {
+      "file": "train/人参/Renshen17.jpg",
+      "split": "train",
+      "class_name": "人参",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/人参/Renshen38.jpg",
+      "split": "train",
+      "class_name": "人参",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/僵蚕/Jiangcan41.jpg",
+      "split": "train",
+      "class_name": "僵蚕",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/全蝎/Quanxie109.jpg",
+      "split": "train",
+      "class_name": "全蝎",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/冬虫夏草/DongchongxiacaoDongchongxiacao117.jpg",
+      "split": "train",
+      "class_name": "冬虫夏草",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/冬虫夏草/DongchongxiacaoDongchongxiacao44.jpg",
+      "split": "train",
+      "class_name": "冬虫夏草",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/冬虫夏草/DongchongxiacaoDongchongxiacao76.jpg",
+      "split": "train",
+      "class_name": "冬虫夏草",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/冬虫夏草/DongchongxiacaoDongchongxiacao80.jpg",
+      "split": "train",
+      "class_name": "冬虫夏草",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/冬虫夏草/DongchongxiacaoDongchongxiacao92.jpg",
+      "split": "train",
+      "class_name": "冬虫夏草",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/北沙参/BeishashenBeishashenBeishashen24.jpg",
+      "split": "train",
+      "class_name": "北沙参",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/北沙参/BeishashenBeishashenBeishashen81.jpg",
+      "split": "train",
+      "class_name": "北沙参",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/合欢皮/HehuanpiHehuanpi23.jpg",
+      "split": "train",
+      "class_name": "合欢皮",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/合欢皮/HehuanpiHehuanpi70.jpg",
+      "split": "train",
+      "class_name": "合欢皮",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/天麻/Tianma112.jpg",
+      "split": "train",
+      "class_name": "天麻",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/天麻/Tianma6.jpg",
+      "split": "train",
+      "class_name": "天麻",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/太子参/Taizishen106.jpg",
+      "split": "train",
+      "class_name": "太子参",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/山慈菇/Shancigu94.jpg",
+      "split": "train",
+      "class_name": "山慈菇",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/山茱萸/Shanzhuyu88.jpg",
+      "split": "train",
+      "class_name": "山茱萸",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/川木香/ChuanmuxiangChuanmuxiang90.jpg",
+      "split": "train",
+      "class_name": "川木香",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/川楝子/ChuanlianziChuanlianzi74.jpg",
+      "split": "train",
+      "class_name": "川楝子",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/干姜/GanjiangGanjiang119(1).jpg",
+      "split": "train",
+      "class_name": "干姜",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/干姜/GanjiangGanjiang119.jpg",
+      "split": "train",
+      "class_name": "干姜",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/干姜/GanjiangGanjiang98(1).jpg",
+      "split": "train",
+      "class_name": "干姜",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/干姜/GanjiangGanjiang98.jpg",
+      "split": "train",
+      "class_name": "干姜",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/木丁香/Mudingxiang101(1).jpg",
+      "split": "train",
+      "class_name": "木丁香",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/木丁香/Mudingxiang101.jpg",
+      "split": "train",
+      "class_name": "木丁香",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/木丁香/Mudingxiang24(1).jpg",
+      "split": "train",
+      "class_name": "木丁香",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/木丁香/Mudingxiang24.jpg",
+      "split": "train",
+      "class_name": "木丁香",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/木丁香/Mudingxiang36(1).jpg",
+      "split": "train",
+      "class_name": "木丁香",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/木丁香/Mudingxiang36.jpg",
+      "split": "train",
+      "class_name": "木丁香",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/枸杞子/GouqiziGouqizi103(1).jpg",
+      "split": "train",
+      "class_name": "枸杞子",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/枸杞子/GouqiziGouqizi103.jpg",
+      "split": "train",
+      "class_name": "枸杞子",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/枸杞子/GouqiziGouqizi53(1).jpg",
+      "split": "train",
+      "class_name": "枸杞子",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/枸杞子/GouqiziGouqizi53.jpg",
+      "split": "train",
+      "class_name": "枸杞子",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/桂枝/GuizhiGuizhiGuizhiGuizhi_39.jpg",
+      "split": "train",
+      "class_name": "桂枝",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/桑寄生/SangjishengSangjishengSangjishengSangjisheng_63.jpg",
+      "split": "train",
+      "class_name": "桑寄生",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/桑椹/Sangshen75.jpg",
+      "split": "train",
+      "class_name": "桑椹",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/桑椹/Sangshen79.jpg",
+      "split": "train",
+      "class_name": "桑椹",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/桑椹/Sangshen92.jpg",
+      "split": "train",
+      "class_name": "桑椹",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/桑螵蛸/Sangpiaoxiao75.jpg",
+      "split": "train",
+      "class_name": "桑螵蛸",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/槟榔/BinglangBinglangBinglangBinglang_27.jpg",
+      "split": "train",
+      "class_name": "槟榔",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/橘核/Juhe119.jpg",
+      "split": "train",
+      "class_name": "橘核",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/沉香/ChenxiangChenxiang37.jpg",
+      "split": "train",
+      "class_name": "沉香",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/沉香/ChenxiangChenxiang71.jpg",
+      "split": "train",
+      "class_name": "沉香",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/沉香/ChenxiangChenxiang82.jpg",
+      "split": "train",
+      "class_name": "沉香",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/沉香/ChenxiangChenxiang93.jpg",
+      "split": "train",
+      "class_name": "沉香",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/浙贝母/ZhebeimuZhebeimuZhebeimuZhebeimu_103.jpg",
+      "split": "train",
+      "class_name": "浙贝母",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/浙贝母/ZhebeimuZhebeimuZhebeimuZhebeimu_25.jpg",
+      "split": "train",
+      "class_name": "浙贝母",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/湖北贝母/Hubeibeimu18.jpg",
+      "split": "train",
+      "class_name": "湖北贝母",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/湖北贝母/Hubeibeimu31.jpg",
+      "split": "train",
+      "class_name": "湖北贝母",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/灵芝/Lingzhi11.jpg",
+      "split": "train",
+      "class_name": "灵芝",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/灵芝/Lingzhi112.jpg",
+      "split": "train",
+      "class_name": "灵芝",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/灵芝/Lingzhi113.jpg",
+      "split": "train",
+      "class_name": "灵芝",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/灵芝/Lingzhi84.jpg",
+      "split": "train",
+      "class_name": "灵芝",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/瓦楞子/Walengzi116.jpg",
+      "split": "train",
+      "class_name": "瓦楞子",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/瓦楞子/Walengzi47.jpg",
+      "split": "train",
+      "class_name": "瓦楞子",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/甘松/GansongGansong95.jpg",
+      "split": "train",
+      "class_name": "甘松",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/甘草/GancaoGancaoGancaoGancao_32.jpg",
+      "split": "train",
+      "class_name": "甘草",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/甘草/GancaoGancaoGancaoGancao_83.jpg",
+      "split": "train",
+      "class_name": "甘草",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/番泻叶/FanxieyeFanxieye101.jpg",
+      "split": "train",
+      "class_name": "番泻叶",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/番泻叶/FanxieyeFanxieye52.jpg",
+      "split": "train",
+      "class_name": "番泻叶",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/番泻叶/FanxieyeFanxieye56.jpg",
+      "split": "train",
+      "class_name": "番泻叶",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/番泻叶/FanxieyeFanxieye93.jpg",
+      "split": "train",
+      "class_name": "番泻叶",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/白前/BaiqianBaiqianBaiqian37.jpg",
+      "split": "train",
+      "class_name": "白前",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/白扁豆/BaibiandouBaibiandouBaibiandou85.jpg",
+      "split": "train",
+      "class_name": "白扁豆",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/白芍/BaishaoBaishaoBaishaoIMG_20200724_180221.jpg",
+      "split": "train",
+      "class_name": "白芍",
+      "issue": "load_failed",
+      "detail": "broken data stream when reading image file"
+    },
+    {
+      "file": "train/白芍/BaishaoBaishaoBaishaoIMG_20200724_180244.jpg",
+      "split": "train",
+      "class_name": "白芍",
+      "issue": "load_failed",
+      "detail": "broken data stream when reading image file"
+    },
+    {
+      "file": "train/白芷/BaizhiBaizhiBaizhiBaizhi_33.jpg",
+      "split": "train",
+      "class_name": "白芷",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/白茅根/BaimaogenBaimaogenBaimaogen103.jpg",
+      "split": "train",
+      "class_name": "白茅根",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/白茅根/BaimaogenBaimaogenBaimaogen54.jpg",
+      "split": "train",
+      "class_name": "白茅根",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/白茅根/BaimaogenBaimaogenBaimaogen59.jpg",
+      "split": "train",
+      "class_name": "白茅根",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/白茅根/BaimaogenBaimaogenBaimaogen60.jpg",
+      "split": "train",
+      "class_name": "白茅根",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/石榴皮/Shiliupi116.jpg",
+      "split": "train",
+      "class_name": "石榴皮",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/秦皮/Qinpi105.jpg",
+      "split": "train",
+      "class_name": "秦皮",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/秦皮/Qinpi79.jpg",
+      "split": "train",
+      "class_name": "秦皮",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/稻芽/DaoyaDaoya55.jpg",
+      "split": "train",
+      "class_name": "稻芽",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/竹茹/Zhuru98.jpg",
+      "split": "train",
+      "class_name": "竹茹",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/细辛/XixinXixinXixinXixin_12.jpg",
+      "split": "train",
+      "class_name": "细辛",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/羌活/QianghuoQianghuoQianghuoQianghuo_38.jpg",
+      "split": "train",
+      "class_name": "羌活",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/羌活/QianghuoQianghuoQianghuoQianghuo_54.jpg",
+      "split": "train",
+      "class_name": "羌活",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/肉豆蔻/Roudoukou8.jpg",
+      "split": "train",
+      "class_name": "肉豆蔻",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/肉豆蔻/Roudoukou86.jpg",
+      "split": "train",
+      "class_name": "肉豆蔻",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/自然铜/Zirantong4.jpg",
+      "split": "train",
+      "class_name": "自然铜",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/芥子/Jiezi107.jpg",
+      "split": "train",
+      "class_name": "芥子",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/芦根/Lugen106.jpg",
+      "split": "train",
+      "class_name": "芦根",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/芦根/Lugen54.jpg",
+      "split": "train",
+      "class_name": "芦根",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/荆芥穗/Jingjiesui26.jpg",
+      "split": "train",
+      "class_name": "荆芥穗",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/草豆蔻/CaodoukouCaodoukouCaodoukou44.jpg",
+      "split": "train",
+      "class_name": "草豆蔻",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/荔枝核/Lizhihe104.jpg",
+      "split": "train",
+      "class_name": "荔枝核",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/荔枝核/Lizhihe78.jpg",
+      "split": "train",
+      "class_name": "荔枝核",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/荜拨/BiboBiboBibo25.jpg",
+      "split": "train",
+      "class_name": "荜拨",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/荜拨/BiboBiboBibo35.jpg",
+      "split": "train",
+      "class_name": "荜拨",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/荜澄茄/BichengqieBichengqieBichengqie64.jpg",
+      "split": "train",
+      "class_name": "荜澄茄",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/莱菔子/Laifuzi88.jpg",
+      "split": "train",
+      "class_name": "莱菔子",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/莲子/Lianzi15.jpg",
+      "split": "train",
+      "class_name": "莲子",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/莲子/Lianzi20.jpg",
+      "split": "train",
+      "class_name": "莲子",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/莲子/Lianzi26.jpg",
+      "split": "train",
+      "class_name": "莲子",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/莲子/Lianzi32.jpg",
+      "split": "train",
+      "class_name": "莲子",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/莲子心/Lianzixin16.jpg",
+      "split": "train",
+      "class_name": "莲子心",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/莲子心/Lianzixin70.jpg",
+      "split": "train",
+      "class_name": "莲子心",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/莲子心/Lianzixin85.jpg",
+      "split": "train",
+      "class_name": "莲子心",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/谷精草/GujingcaoGujingcao60.jpg",
+      "split": "train",
+      "class_name": "谷精草",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/谷芽/GuyaGuya25.jpg",
+      "split": "train",
+      "class_name": "谷芽",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/谷芽/GuyaGuya59.jpg",
+      "split": "train",
+      "class_name": "谷芽",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/路路通/Lulutong88.jpg",
+      "split": "train",
+      "class_name": "路路通",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/路路通/Lulutong94.jpg",
+      "split": "train",
+      "class_name": "路路通",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/酸枣仁/SuanzaorenSuanzaorenSuanzaorenSuanzaoren_20.jpg",
+      "split": "train",
+      "class_name": "酸枣仁",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/酸枣仁/SuanzaorenSuanzaorenSuanzaorenSuanzaoren_51.jpg",
+      "split": "train",
+      "class_name": "酸枣仁",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/金灯笼/Jindenglong20.jpg",
+      "split": "train",
+      "class_name": "金灯笼",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/金灯笼/Jindenglong51.jpg",
+      "split": "train",
+      "class_name": "金灯笼",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/金灯笼/Jindenglong54.jpg",
+      "split": "train",
+      "class_name": "金灯笼",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/金灯笼/Jindenglong60.jpg",
+      "split": "train",
+      "class_name": "金灯笼",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/金钱白花蛇/Jinqianbaihuashe10.jpg",
+      "split": "train",
+      "class_name": "金钱白花蛇",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/鸡内金/Jineijin81.jpg",
+      "split": "train",
+      "class_name": "鸡内金",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/鸡冠花/Jiguanhua103.jpg",
+      "split": "train",
+      "class_name": "鸡冠花",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/鸡冠花/Jiguanhua108.jpg",
+      "split": "train",
+      "class_name": "鸡冠花",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/鸡冠花/Jiguanhua52.jpg",
+      "split": "train",
+      "class_name": "鸡冠花",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/麦冬/Maidong26.jpg",
+      "split": "train",
+      "class_name": "麦冬",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/麦冬/Maidong49.jpg",
+      "split": "train",
+      "class_name": "麦冬",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/黄芩/HuangqinHuangqinHuangqinHuangqin_11(1).jpg",
+      "split": "train",
+      "class_name": "黄芩",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/黄芩/HuangqinHuangqinHuangqinHuangqin_11.jpg",
+      "split": "train",
+      "class_name": "黄芩",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/黄芪/HuangqiHuangqi20.jpg",
+      "split": "train",
+      "class_name": "黄芪",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/黄芪/HuangqiHuangqi28.jpg",
+      "split": "train",
+      "class_name": "黄芪",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/黄芪/HuangqiHuangqi66.jpg",
+      "split": "train",
+      "class_name": "黄芪",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "train/龙眼肉/Longyanrou69.jpg",
+      "split": "train",
+      "class_name": "龙眼肉",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "train/龙眼肉/Longyanrou71.jpg",
+      "split": "train",
+      "class_name": "龙眼肉",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/丝瓜络/Sigualuo29.jpg",
+      "split": "val",
+      "class_name": "丝瓜络",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/五加皮/WujiapiWujiapiWujiapiWujiapi_4.jpg",
+      "split": "val",
+      "class_name": "五加皮",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/北沙参/BeishashenBeishashenBeishashen19.jpg",
+      "split": "val",
+      "class_name": "北沙参",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "val/地龙/DilongDilong1.jpg",
+      "split": "val",
+      "class_name": "地龙",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/川牛膝/ChuanniuxiChuanniuxi4.jpg",
+      "split": "val",
+      "class_name": "川牛膝",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/枸杞子/GouqiziGouqizi6.jpg",
+      "split": "val",
+      "class_name": "枸杞子",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/桑寄生/SangjishengSangjishengSangjishengIMG_20200724_180506.jpg",
+      "split": "val",
+      "class_name": "桑寄生",
+      "issue": "load_failed",
+      "detail": "broken data stream when reading image file"
+    },
+    {
+      "file": "val/淡豆豉/DandouchiDandouchi20.jpg",
+      "split": "val",
+      "class_name": "淡豆豉",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "val/甘草/GancaoGancaoGancaoGancao_2.jpg",
+      "split": "val",
+      "class_name": "甘草",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/白前/BaiqianBaiqianBaiqian10.jpg",
+      "split": "val",
+      "class_name": "白前",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "val/白扁豆/BaibiandouBaibiandouBaibiandou20.jpg",
+      "split": "val",
+      "class_name": "白扁豆",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/白茅根/BaimaogenBaimaogenBaimaogen17.jpg",
+      "split": "val",
+      "class_name": "白茅根",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/稻芽/DaoyaDaoya12.jpg",
+      "split": "val",
+      "class_name": "稻芽",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/稻芽/DaoyaDaoya8.jpg",
+      "split": "val",
+      "class_name": "稻芽",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/羌活/QianghuoQianghuoQianghuoQianghuo_10.jpg",
+      "split": "val",
+      "class_name": "羌活",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "val/苦地丁/Kudiding29.jpg",
+      "split": "val",
+      "class_name": "苦地丁",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/荆芥穗/Jingjiesui23.jpg",
+      "split": "val",
+      "class_name": "荆芥穗",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/荜拨/BiboBiboBibo13.jpg",
+      "split": "val",
+      "class_name": "荜拨",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/莲子/Lianzi60.jpg",
+      "split": "val",
+      "class_name": "莲子",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/金钱白花蛇/Jinqianbaihuashe114.jpg",
+      "split": "val",
+      "class_name": "金钱白花蛇",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    },
+    {
+      "file": "val/银柴胡/Yinchaihu82.jpg",
+      "split": "val",
+      "class_name": "银柴胡",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/鳖甲/BiejiaBiejiaBiejia1.jpg",
+      "split": "val",
+      "class_name": "鳖甲",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/黄芩/HuangqinHuangqinHuangqinHuangqin_7.jpg",
+      "split": "val",
+      "class_name": "黄芩",
+      "issue": "extension_content_mismatch",
+      "detail": "suffix .jpg but content format png"
+    },
+    {
+      "file": "val/龙眼肉/Longyanrou80.jpg",
+      "split": "val",
+      "class_name": "龙眼肉",
+      "issue": "unsupported_content_format",
+      "detail": "suffix .jpg but content format gif"
+    }
+  ]
+}

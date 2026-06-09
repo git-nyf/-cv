@@ -1,0 +1,5846 @@
+{
+  "model": "D:\\AAA中药cv\\yolo12_tcm_project\\runs\\train\\strict_classify_yolo12n_cls_cpu_5e\\weights\\best.pt",
+  "data": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val",
+  "imgsz": 224,
+  "device": "cpu",
+  "topk": 5,
+  "summary": {
+    "images": 1741,
+    "classes": 92,
+    "top1_correct": 308,
+    "top5_correct": 863,
+    "top1_accuracy": 0.17690982194141297,
+    "top5_accuracy": 0.4956921309592188
+  },
+  "worst_classes": [
+    {
+      "class_name": "地龙",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 0,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "most_predicted": [
+        {
+          "class_name": "木丁香",
+          "count": 5
+        },
+        {
+          "class_name": "路路通",
+          "count": 4
+        },
+        {
+          "class_name": "川牛膝",
+          "count": 3
+        },
+        {
+          "class_name": "甘松",
+          "count": 2
+        },
+        {
+          "class_name": "荆芥穗",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "class_name": "安息香",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 0,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "most_predicted": [
+        {
+          "class_name": "干姜",
+          "count": 3
+        },
+        {
+          "class_name": "肉豆蔻",
+          "count": 3
+        },
+        {
+          "class_name": "木丁香",
+          "count": 3
+        },
+        {
+          "class_name": "莱菔子",
+          "count": 2
+        },
+        {
+          "class_name": "川牛膝",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "class_name": "瓦楞子",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 0,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "most_predicted": [
+        {
+          "class_name": "干姜",
+          "count": 5
+        },
+        {
+          "class_name": "川牛膝",
+          "count": 3
+        },
+        {
+          "class_name": "甘松",
+          "count": 3
+        },
+        {
+          "class_name": "木丁香",
+          "count": 3
+        },
+        {
+          "class_name": "湖北贝母",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "北沙参",
+      "total": 18,
+      "top1_correct": 0,
+      "top5_correct": 0,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.0,
+      "most_predicted": [
+        {
+          "class_name": "薏苡仁",
+          "count": 6
+        },
+        {
+          "class_name": "川牛膝",
+          "count": 4
+        },
+        {
+          "class_name": "谷芽",
+          "count": 2
+        },
+        {
+          "class_name": "黄芩",
+          "count": 2
+        },
+        {
+          "class_name": "竹茹",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "全蝎",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 1,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.05263157894736842,
+      "most_predicted": [
+        {
+          "class_name": "川牛膝",
+          "count": 3
+        },
+        {
+          "class_name": "甘松",
+          "count": 3
+        },
+        {
+          "class_name": "芥子",
+          "count": 2
+        },
+        {
+          "class_name": "干姜",
+          "count": 2
+        },
+        {
+          "class_name": "荆芥穗",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "class_name": "白芍",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 1,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.05263157894736842,
+      "most_predicted": [
+        {
+          "class_name": "苍术",
+          "count": 5
+        },
+        {
+          "class_name": "干姜",
+          "count": 3
+        },
+        {
+          "class_name": "木丁香",
+          "count": 2
+        },
+        {
+          "class_name": "细辛",
+          "count": 2
+        },
+        {
+          "class_name": "肉豆蔻",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "草豆蔻",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 1,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.05263157894736842,
+      "most_predicted": [
+        {
+          "class_name": "干姜",
+          "count": 5
+        },
+        {
+          "class_name": "川牛膝",
+          "count": 4
+        },
+        {
+          "class_name": "肉豆蔻",
+          "count": 3
+        },
+        {
+          "class_name": "黄柏",
+          "count": 1
+        },
+        {
+          "class_name": "麦冬",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "白前",
+      "total": 18,
+      "top1_correct": 0,
+      "top5_correct": 1,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.05555555555555555,
+      "most_predicted": [
+        {
+          "class_name": "芥子",
+          "count": 6
+        },
+        {
+          "class_name": "谷芽",
+          "count": 3
+        },
+        {
+          "class_name": "莱菔子",
+          "count": 3
+        },
+        {
+          "class_name": "川牛膝",
+          "count": 2
+        },
+        {
+          "class_name": "黄柏",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "丝瓜络",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 2,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.10526315789473684,
+      "most_predicted": [
+        {
+          "class_name": "干姜",
+          "count": 8
+        },
+        {
+          "class_name": "川牛膝",
+          "count": 3
+        },
+        {
+          "class_name": "湖北贝母",
+          "count": 1
+        },
+        {
+          "class_name": "芥子",
+          "count": 1
+        },
+        {
+          "class_name": "谷芽",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "五加皮",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 2,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.10526315789473684,
+      "most_predicted": [
+        {
+          "class_name": "细辛",
+          "count": 4
+        },
+        {
+          "class_name": "川牛膝",
+          "count": 3
+        },
+        {
+          "class_name": "肉豆蔻",
+          "count": 3
+        },
+        {
+          "class_name": "白芷",
+          "count": 2
+        },
+        {
+          "class_name": "桂枝",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "class_name": "秦皮",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 2,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.10526315789473684,
+      "most_predicted": [
+        {
+          "class_name": "川牛膝",
+          "count": 6
+        },
+        {
+          "class_name": "木丁香",
+          "count": 4
+        },
+        {
+          "class_name": "甘松",
+          "count": 2
+        },
+        {
+          "class_name": "干姜",
+          "count": 2
+        },
+        {
+          "class_name": "路路通",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "class_name": "自然铜",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 2,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.10526315789473684,
+      "most_predicted": [
+        {
+          "class_name": "木丁香",
+          "count": 6
+        },
+        {
+          "class_name": "莱菔子",
+          "count": 2
+        },
+        {
+          "class_name": "芥子",
+          "count": 1
+        },
+        {
+          "class_name": "川牛膝",
+          "count": 1
+        },
+        {
+          "class_name": "甘松",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "芦根",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 2,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.10526315789473684,
+      "most_predicted": [
+        {
+          "class_name": "川牛膝",
+          "count": 5
+        },
+        {
+          "class_name": "干姜",
+          "count": 4
+        },
+        {
+          "class_name": "谷芽",
+          "count": 2
+        },
+        {
+          "class_name": "薏苡仁",
+          "count": 2
+        },
+        {
+          "class_name": "土荆皮",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "蜂房",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 2,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.10526315789473684,
+      "most_predicted": [
+        {
+          "class_name": "甘松",
+          "count": 4
+        },
+        {
+          "class_name": "芥子",
+          "count": 3
+        },
+        {
+          "class_name": "路路通",
+          "count": 3
+        },
+        {
+          "class_name": "木丁香",
+          "count": 2
+        },
+        {
+          "class_name": "莱菔子",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "防风",
+      "total": 19,
+      "top1_correct": 0,
+      "top5_correct": 2,
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 0.10526315789473684,
+      "most_predicted": [
+        {
+          "class_name": "白芷",
+          "count": 8
+        },
+        {
+          "class_name": "芥子",
+          "count": 2
+        },
+        {
+          "class_name": "甘松",
+          "count": 2
+        },
+        {
+          "class_name": "川牛膝",
+          "count": 2
+        },
+        {
+          "class_name": "苍术",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "best_classes": [
+    {
+      "class_name": "枸杞子",
+      "total": 19,
+      "top1_correct": 19,
+      "top5_correct": 19,
+      "top1_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "most_predicted": [
+        {
+          "class_name": "枸杞子",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "class_name": "莲子心",
+      "total": 19,
+      "top1_correct": 19,
+      "top5_correct": 19,
+      "top1_accuracy": 1.0,
+      "top5_accuracy": 1.0,
+      "most_predicted": [
+        {
+          "class_name": "莲子心",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "class_name": "鸡冠花",
+      "total": 19,
+      "top1_correct": 18,
+      "top5_correct": 19,
+      "top1_accuracy": 0.9473684210526315,
+      "top5_accuracy": 1.0,
+      "most_predicted": [
+        {
+          "class_name": "鸡冠花",
+          "count": 18
+        },
+        {
+          "class_name": "白矾",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "白矾",
+      "total": 19,
+      "top1_correct": 16,
+      "top5_correct": 19,
+      "top1_accuracy": 0.8421052631578947,
+      "top5_accuracy": 1.0,
+      "most_predicted": [
+        {
+          "class_name": "白矾",
+          "count": 16
+        },
+        {
+          "class_name": "白芷",
+          "count": 2
+        },
+        {
+          "class_name": "木丁香",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "芥子",
+      "total": 19,
+      "top1_correct": 15,
+      "top5_correct": 19,
+      "top1_accuracy": 0.7894736842105263,
+      "top5_accuracy": 1.0,
+      "most_predicted": [
+        {
+          "class_name": "芥子",
+          "count": 15
+        },
+        {
+          "class_name": "谷芽",
+          "count": 2
+        },
+        {
+          "class_name": "莱菔子",
+          "count": 1
+        },
+        {
+          "class_name": "太子参",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "酸枣仁",
+      "total": 19,
+      "top1_correct": 14,
+      "top5_correct": 19,
+      "top1_accuracy": 0.7368421052631579,
+      "top5_accuracy": 1.0,
+      "most_predicted": [
+        {
+          "class_name": "酸枣仁",
+          "count": 14
+        },
+        {
+          "class_name": "枸杞子",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "class_name": "番泻叶",
+      "total": 19,
+      "top1_correct": 14,
+      "top5_correct": 17,
+      "top1_accuracy": 0.7368421052631579,
+      "top5_accuracy": 0.8947368421052632,
+      "most_predicted": [
+        {
+          "class_name": "番泻叶",
+          "count": 14
+        },
+        {
+          "class_name": "莲子心",
+          "count": 2
+        },
+        {
+          "class_name": "荆芥穗",
+          "count": 1
+        },
+        {
+          "class_name": "苦地丁",
+          "count": 1
+        },
+        {
+          "class_name": "干姜",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "干姜",
+      "total": 19,
+      "top1_correct": 14,
+      "top5_correct": 16,
+      "top1_accuracy": 0.7368421052631579,
+      "top5_accuracy": 0.8421052631578947,
+      "most_predicted": [
+        {
+          "class_name": "干姜",
+          "count": 14
+        },
+        {
+          "class_name": "麦冬",
+          "count": 1
+        },
+        {
+          "class_name": "白芷",
+          "count": 1
+        },
+        {
+          "class_name": "湖北贝母",
+          "count": 1
+        },
+        {
+          "class_name": "川木香",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "木丁香",
+      "total": 19,
+      "top1_correct": 14,
+      "top5_correct": 16,
+      "top1_accuracy": 0.7368421052631579,
+      "top5_accuracy": 0.8421052631578947,
+      "most_predicted": [
+        {
+          "class_name": "木丁香",
+          "count": 14
+        },
+        {
+          "class_name": "路路通",
+          "count": 2
+        },
+        {
+          "class_name": "肉豆蔻",
+          "count": 1
+        },
+        {
+          "class_name": "细辛",
+          "count": 1
+        },
+        {
+          "class_name": "酸枣仁",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "苏木",
+      "total": 19,
+      "top1_correct": 14,
+      "top5_correct": 16,
+      "top1_accuracy": 0.7368421052631579,
+      "top5_accuracy": 0.8421052631578947,
+      "most_predicted": [
+        {
+          "class_name": "苏木",
+          "count": 14
+        },
+        {
+          "class_name": "鸡内金",
+          "count": 1
+        },
+        {
+          "class_name": "苍术",
+          "count": 1
+        },
+        {
+          "class_name": "莱菔子",
+          "count": 1
+        },
+        {
+          "class_name": "川楝子",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "薏苡仁",
+      "total": 19,
+      "top1_correct": 13,
+      "top5_correct": 15,
+      "top1_accuracy": 0.6842105263157895,
+      "top5_accuracy": 0.7894736842105263,
+      "most_predicted": [
+        {
+          "class_name": "薏苡仁",
+          "count": 13
+        },
+        {
+          "class_name": "干姜",
+          "count": 2
+        },
+        {
+          "class_name": "谷芽",
+          "count": 2
+        },
+        {
+          "class_name": "麦冬",
+          "count": 1
+        },
+        {
+          "class_name": "湖北贝母",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "黄柏",
+      "total": 19,
+      "top1_correct": 12,
+      "top5_correct": 12,
+      "top1_accuracy": 0.631578947368421,
+      "top5_accuracy": 0.631578947368421,
+      "most_predicted": [
+        {
+          "class_name": "黄柏",
+          "count": 12
+        },
+        {
+          "class_name": "芥子",
+          "count": 4
+        },
+        {
+          "class_name": "土荆皮",
+          "count": 1
+        },
+        {
+          "class_name": "苏木",
+          "count": 1
+        },
+        {
+          "class_name": "莱菔子",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "细辛",
+      "total": 19,
+      "top1_correct": 10,
+      "top5_correct": 18,
+      "top1_accuracy": 0.5263157894736842,
+      "top5_accuracy": 0.9473684210526315,
+      "most_predicted": [
+        {
+          "class_name": "细辛",
+          "count": 10
+        },
+        {
+          "class_name": "芥子",
+          "count": 3
+        },
+        {
+          "class_name": "莱菔子",
+          "count": 3
+        },
+        {
+          "class_name": "路路通",
+          "count": 1
+        },
+        {
+          "class_name": "川牛膝",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "路路通",
+      "total": 19,
+      "top1_correct": 9,
+      "top5_correct": 16,
+      "top1_accuracy": 0.47368421052631576,
+      "top5_accuracy": 0.8421052631578947,
+      "most_predicted": [
+        {
+          "class_name": "路路通",
+          "count": 9
+        },
+        {
+          "class_name": "木丁香",
+          "count": 3
+        },
+        {
+          "class_name": "莱菔子",
+          "count": 3
+        },
+        {
+          "class_name": "酸枣仁",
+          "count": 2
+        },
+        {
+          "class_name": "荆芥穗",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "class_name": "荔枝核",
+      "total": 19,
+      "top1_correct": 9,
+      "top5_correct": 14,
+      "top1_accuracy": 0.47368421052631576,
+      "top5_accuracy": 0.7368421052631579,
+      "most_predicted": [
+        {
+          "class_name": "荔枝核",
+          "count": 9
+        },
+        {
+          "class_name": "酸枣仁",
+          "count": 3
+        },
+        {
+          "class_name": "木丁香",
+          "count": 2
+        },
+        {
+          "class_name": "肉豆蔻",
+          "count": 2
+        },
+        {
+          "class_name": "莱菔子",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "confusion_pairs": [
+    {
+      "expected_class": "九香虫",
+      "predicted_class": "木丁香",
+      "count": 12
+    },
+    {
+      "expected_class": "合欢皮",
+      "predicted_class": "川牛膝",
+      "count": 12
+    },
+    {
+      "expected_class": "柏子仁",
+      "predicted_class": "芥子",
+      "count": 12
+    },
+    {
+      "expected_class": "荜澄茄",
+      "predicted_class": "木丁香",
+      "count": 12
+    },
+    {
+      "expected_class": "山茱萸",
+      "predicted_class": "枸杞子",
+      "count": 11
+    },
+    {
+      "expected_class": "浙贝母",
+      "predicted_class": "白芷",
+      "count": 11
+    },
+    {
+      "expected_class": "莲子",
+      "predicted_class": "薏苡仁",
+      "count": 11
+    },
+    {
+      "expected_class": "谷芽",
+      "predicted_class": "芥子",
+      "count": 11
+    },
+    {
+      "expected_class": "山慈菇",
+      "predicted_class": "川牛膝",
+      "count": 10
+    },
+    {
+      "expected_class": "桂枝",
+      "predicted_class": "细辛",
+      "count": 10
+    },
+    {
+      "expected_class": "槟榔",
+      "predicted_class": "细辛",
+      "count": 10
+    },
+    {
+      "expected_class": "荜拨",
+      "predicted_class": "木丁香",
+      "count": 10
+    },
+    {
+      "expected_class": "山奈",
+      "predicted_class": "干姜",
+      "count": 9
+    },
+    {
+      "expected_class": "稻芽",
+      "predicted_class": "芥子",
+      "count": 9
+    },
+    {
+      "expected_class": "肉豆蔻",
+      "predicted_class": "干姜",
+      "count": 9
+    },
+    {
+      "expected_class": "丝瓜络",
+      "predicted_class": "干姜",
+      "count": 8
+    },
+    {
+      "expected_class": "川木香",
+      "predicted_class": "川牛膝",
+      "count": 8
+    },
+    {
+      "expected_class": "桑螵蛸",
+      "predicted_class": "木丁香",
+      "count": 8
+    },
+    {
+      "expected_class": "橘核",
+      "predicted_class": "薏苡仁",
+      "count": 8
+    },
+    {
+      "expected_class": "羌活",
+      "predicted_class": "白芷",
+      "count": 8
+    }
+  ],
+  "misclassification_examples": [
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo117.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "干姜",
+      "top1_confidence": 0.09262776374816895,
+      "top5_predictions": [
+        {
+          "class_name": "干姜",
+          "confidence": 0.09262776374816895
+        },
+        {
+          "class_name": "浙贝母",
+          "confidence": 0.06788676977157593
+        },
+        {
+          "class_name": "白芷",
+          "confidence": 0.047663263976573944
+        },
+        {
+          "class_name": "甘草",
+          "confidence": 0.04449722170829773
+        },
+        {
+          "class_name": "天花粉",
+          "confidence": 0.042182885110378265
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo15.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "干姜",
+      "top1_confidence": 0.11489088088274002,
+      "top5_predictions": [
+        {
+          "class_name": "干姜",
+          "confidence": 0.11489088088274002
+        },
+        {
+          "class_name": "山奈",
+          "confidence": 0.03961453586816788
+        },
+        {
+          "class_name": "肉豆蔻",
+          "confidence": 0.034507039934396744
+        },
+        {
+          "class_name": "天花粉",
+          "confidence": 0.03229609876871109
+        },
+        {
+          "class_name": "黄芪",
+          "confidence": 0.031497109681367874
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo16.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "干姜",
+      "top1_confidence": 0.1362718939781189,
+      "top5_predictions": [
+        {
+          "class_name": "干姜",
+          "confidence": 0.1362718939781189
+        },
+        {
+          "class_name": "川牛膝",
+          "confidence": 0.06537455320358276
+        },
+        {
+          "class_name": "川木香",
+          "confidence": 0.06402101367712021
+        },
+        {
+          "class_name": "肉豆蔻",
+          "confidence": 0.04830960929393768
+        },
+        {
+          "class_name": "桑螵蛸",
+          "confidence": 0.042019300162792206
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo18.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "湖北贝母",
+      "top1_confidence": 0.10442505776882172,
+      "top5_predictions": [
+        {
+          "class_name": "湖北贝母",
+          "confidence": 0.10442505776882172
+        },
+        {
+          "class_name": "白扁豆",
+          "confidence": 0.09158023446798325
+        },
+        {
+          "class_name": "莲子",
+          "confidence": 0.08022823184728622
+        },
+        {
+          "class_name": "干姜",
+          "confidence": 0.06807644665241241
+        },
+        {
+          "class_name": "薏苡仁",
+          "confidence": 0.06095192953944206
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo21.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "干姜",
+      "top1_confidence": 0.18848799169063568,
+      "top5_predictions": [
+        {
+          "class_name": "干姜",
+          "confidence": 0.18848799169063568
+        },
+        {
+          "class_name": "白芷",
+          "confidence": 0.10041618347167969
+        },
+        {
+          "class_name": "肉豆蔻",
+          "confidence": 0.05641016736626625
+        },
+        {
+          "class_name": "浙贝母",
+          "confidence": 0.04966287314891815
+        },
+        {
+          "class_name": "丝瓜络",
+          "confidence": 0.0364595428109169
+        }
+      ],
+      "top5_contains_expected": true
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo25.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "干姜",
+      "top1_confidence": 0.1564299762248993,
+      "top5_predictions": [
+        {
+          "class_name": "干姜",
+          "confidence": 0.1564299762248993
+        },
+        {
+          "class_name": "黄芪",
+          "confidence": 0.045767173171043396
+        },
+        {
+          "class_name": "山奈",
+          "confidence": 0.03952368348836899
+        },
+        {
+          "class_name": "麦冬",
+          "confidence": 0.03457826003432274
+        },
+        {
+          "class_name": "天花粉",
+          "confidence": 0.030301017686724663
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo29.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "干姜",
+      "top1_confidence": 0.25513967871665955,
+      "top5_predictions": [
+        {
+          "class_name": "干姜",
+          "confidence": 0.25513967871665955
+        },
+        {
+          "class_name": "白芷",
+          "confidence": 0.0773792639374733
+        },
+        {
+          "class_name": "浙贝母",
+          "confidence": 0.04497843235731125
+        },
+        {
+          "class_name": "丝瓜络",
+          "confidence": 0.04242260381579399
+        },
+        {
+          "class_name": "肉豆蔻",
+          "confidence": 0.035371143370866776
+        }
+      ],
+      "top5_contains_expected": true
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo30.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "芥子",
+      "top1_confidence": 0.173379585146904,
+      "top5_predictions": [
+        {
+          "class_name": "芥子",
+          "confidence": 0.173379585146904
+        },
+        {
+          "class_name": "莱菔子",
+          "confidence": 0.09796782582998276
+        },
+        {
+          "class_name": "细辛",
+          "confidence": 0.09663461893796921
+        },
+        {
+          "class_name": "柏子仁",
+          "confidence": 0.076778843998909
+        },
+        {
+          "class_name": "谷芽",
+          "confidence": 0.05149075388908386
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo41.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "川牛膝",
+      "top1_confidence": 0.10253994911909103,
+      "top5_predictions": [
+        {
+          "class_name": "川牛膝",
+          "confidence": 0.10253994911909103
+        },
+        {
+          "class_name": "合欢皮",
+          "confidence": 0.035689644515514374
+        },
+        {
+          "class_name": "银柴胡",
+          "confidence": 0.03045581467449665
+        },
+        {
+          "class_name": "白前",
+          "confidence": 0.030012693256139755
+        },
+        {
+          "class_name": "黄芩",
+          "confidence": 0.029216505587100983
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo61.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "干姜",
+      "top1_confidence": 0.09267735481262207,
+      "top5_predictions": [
+        {
+          "class_name": "干姜",
+          "confidence": 0.09267735481262207
+        },
+        {
+          "class_name": "肉豆蔻",
+          "confidence": 0.08526956290006638
+        },
+        {
+          "class_name": "海螵蛸",
+          "confidence": 0.05574294552206993
+        },
+        {
+          "class_name": "白蔹",
+          "confidence": 0.05034492164850235
+        },
+        {
+          "class_name": "天花粉",
+          "confidence": 0.04537814110517502
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo67.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "川牛膝",
+      "top1_confidence": 0.03936256840825081,
+      "top5_predictions": [
+        {
+          "class_name": "川牛膝",
+          "confidence": 0.03936256840825081
+        },
+        {
+          "class_name": "僵蚕",
+          "confidence": 0.03669528290629387
+        },
+        {
+          "class_name": "橘核",
+          "confidence": 0.027878649532794952
+        },
+        {
+          "class_name": "自然铜",
+          "confidence": 0.02557332254946232
+        },
+        {
+          "class_name": "瓦楞子",
+          "confidence": 0.025476256385445595
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo70.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "谷芽",
+      "top1_confidence": 0.09377872943878174,
+      "top5_predictions": [
+        {
+          "class_name": "谷芽",
+          "confidence": 0.09377872943878174
+        },
+        {
+          "class_name": "太子参",
+          "confidence": 0.08410715311765671
+        },
+        {
+          "class_name": "白茅根",
+          "confidence": 0.05818825215101242
+        },
+        {
+          "class_name": "薏苡仁",
+          "confidence": 0.057477254420518875
+        },
+        {
+          "class_name": "柏子仁",
+          "confidence": 0.042874302715063095
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo74.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "干姜",
+      "top1_confidence": 0.21206742525100708,
+      "top5_predictions": [
+        {
+          "class_name": "干姜",
+          "confidence": 0.21206742525100708
+        },
+        {
+          "class_name": "肉豆蔻",
+          "confidence": 0.07066737115383148
+        },
+        {
+          "class_name": "天麻",
+          "confidence": 0.048555586487054825
+        },
+        {
+          "class_name": "川牛膝",
+          "confidence": 0.043422408401966095
+        },
+        {
+          "class_name": "川木香",
+          "confidence": 0.04081149771809578
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo8.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "川牛膝",
+      "top1_confidence": 0.09719736874103546,
+      "top5_predictions": [
+        {
+          "class_name": "川牛膝",
+          "confidence": 0.09719736874103546
+        },
+        {
+          "class_name": "黄芩",
+          "confidence": 0.03577252849936485
+        },
+        {
+          "class_name": "细辛",
+          "confidence": 0.0327313169836998
+        },
+        {
+          "class_name": "白前",
+          "confidence": 0.03208241984248161
+        },
+        {
+          "class_name": "稻芽",
+          "confidence": 0.03185802325606346
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo80.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "莱菔子",
+      "top1_confidence": 0.062154412269592285,
+      "top5_predictions": [
+        {
+          "class_name": "莱菔子",
+          "confidence": 0.062154412269592285
+        },
+        {
+          "class_name": "柏子仁",
+          "confidence": 0.03863786160945892
+        },
+        {
+          "class_name": "桂枝",
+          "confidence": 0.037309665232896805
+        },
+        {
+          "class_name": "路路通",
+          "confidence": 0.02966194413602352
+        },
+        {
+          "class_name": "川牛膝",
+          "confidence": 0.02854808233678341
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo82.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "川楝子",
+      "top1_confidence": 0.07522746920585632,
+      "top5_predictions": [
+        {
+          "class_name": "川楝子",
+          "confidence": 0.07522746920585632
+        },
+        {
+          "class_name": "天麻",
+          "confidence": 0.056959882378578186
+        },
+        {
+          "class_name": "龙眼肉",
+          "confidence": 0.05252556502819061
+        },
+        {
+          "class_name": "冬虫夏草",
+          "confidence": 0.04551004618406296
+        },
+        {
+          "class_name": "苏木",
+          "confidence": 0.042891811579465866
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo87.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "番泻叶",
+      "top1_confidence": 0.13180676102638245,
+      "top5_predictions": [
+        {
+          "class_name": "番泻叶",
+          "confidence": 0.13180676102638245
+        },
+        {
+          "class_name": "白矾",
+          "confidence": 0.07990410178899765
+        },
+        {
+          "class_name": "浙贝母",
+          "confidence": 0.07671640068292618
+        },
+        {
+          "class_name": "海螵蛸",
+          "confidence": 0.06418421119451523
+        },
+        {
+          "class_name": "白芷",
+          "confidence": 0.059012625366449356
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo90.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "太子参",
+      "top1_confidence": 0.12344802170991898,
+      "top5_predictions": [
+        {
+          "class_name": "太子参",
+          "confidence": 0.12344802170991898
+        },
+        {
+          "class_name": "麦冬",
+          "confidence": 0.11693401634693146
+        },
+        {
+          "class_name": "薏苡仁",
+          "confidence": 0.11371057480573654
+        },
+        {
+          "class_name": "白扁豆",
+          "confidence": 0.05509403720498085
+        },
+        {
+          "class_name": "白茅根",
+          "confidence": 0.05295208841562271
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo92.jpg",
+      "expected_class": "丝瓜络",
+      "predicted_class": "白矾",
+      "top1_confidence": 0.09409702569246292,
+      "top5_predictions": [
+        {
+          "class_name": "白矾",
+          "confidence": 0.09409702569246292
+        },
+        {
+          "class_name": "海螵蛸",
+          "confidence": 0.06142856553196907
+        },
+        {
+          "class_name": "白芍",
+          "confidence": 0.04211217164993286
+        },
+        {
+          "class_name": "灵芝",
+          "confidence": 0.04163925722241402
+        },
+        {
+          "class_name": "肉豆蔻",
+          "confidence": 0.03878505155444145
+        }
+      ],
+      "top5_contains_expected": false
+    },
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\九香虫\\Jiuxiangchong1.jpg",
+      "expected_class": "九香虫",
+      "predicted_class": "木丁香",
+      "top1_confidence": 0.328357070684433,
+      "top5_predictions": [
+        {
+          "class_name": "木丁香",
+          "confidence": 0.328357070684433
+        },
+        {
+          "class_name": "九香虫",
+          "confidence": 0.17570139467716217
+        },
+        {
+          "class_name": "荜澄茄",
+          "confidence": 0.07915499806404114
+        },
+        {
+          "class_name": "荜拨",
+          "confidence": 0.07059163600206375
+        },
+        {
+          "class_name": "淡豆豉",
+          "confidence": 0.05564821884036064
+        }
+      ],
+      "top5_contains_expected": true
+    }
+  ],
+  "review_samples": {
+    "confusion_pairs": [
+      {
+        "expected_class": "九香虫",
+        "predicted_class": "木丁香",
+        "count": 12,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\九香虫\\Jiuxiangchong1.jpg",
+            "expected_class": "九香虫",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.328357070684433,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.328357070684433
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.17570139467716217
+              },
+              {
+                "class_name": "荜澄茄",
+                "confidence": 0.07915499806404114
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.07059163600206375
+              },
+              {
+                "class_name": "淡豆豉",
+                "confidence": 0.05564821884036064
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\九香虫\\Jiuxiangchong105.jpg",
+            "expected_class": "九香虫",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.09893515706062317,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.09893515706062317
+              },
+              {
+                "class_name": "淡豆豉",
+                "confidence": 0.05479905754327774
+              },
+              {
+                "class_name": "僵蚕",
+                "confidence": 0.046116795390844345
+              },
+              {
+                "class_name": "瓦楞子",
+                "confidence": 0.03423120453953743
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.02946932427585125
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\九香虫\\Jiuxiangchong25.jpg",
+            "expected_class": "九香虫",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.28349176049232483,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.28349176049232483
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.19065500795841217
+              },
+              {
+                "class_name": "荜澄茄",
+                "confidence": 0.08963336795568466
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.08150549232959747
+              },
+              {
+                "class_name": "淡豆豉",
+                "confidence": 0.04824010655283928
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\九香虫\\Jiuxiangchong27.jpg",
+            "expected_class": "九香虫",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.1338091939687729,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.1338091939687729
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.11071141064167023
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.10282859206199646
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.08403077721595764
+              },
+              {
+                "class_name": "荜澄茄",
+                "confidence": 0.07106369733810425
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "合欢皮",
+        "predicted_class": "川牛膝",
+        "count": 12,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\合欢皮\\HehuanpiHehuanpi10.jpg",
+            "expected_class": "合欢皮",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.09814408421516418,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.09814408421516418
+              },
+              {
+                "class_name": "合欢皮",
+                "confidence": 0.03704271838068962
+              },
+              {
+                "class_name": "白前",
+                "confidence": 0.02767675742506981
+              },
+              {
+                "class_name": "藁本",
+                "confidence": 0.02752743847668171
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.027322368696331978
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\合欢皮\\HehuanpiHehuanpi11.jpg",
+            "expected_class": "合欢皮",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.06961651891469955,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.06961651891469955
+              },
+              {
+                "class_name": "合欢皮",
+                "confidence": 0.034497734159231186
+              },
+              {
+                "class_name": "山慈菇",
+                "confidence": 0.029979096725583076
+              },
+              {
+                "class_name": "干姜",
+                "confidence": 0.029573505744338036
+              },
+              {
+                "class_name": "僵蚕",
+                "confidence": 0.024836374446749687
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\合欢皮\\HehuanpiHehuanpi12.jpg",
+            "expected_class": "合欢皮",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.06270503252744675,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.06270503252744675
+              },
+              {
+                "class_name": "沉香",
+                "confidence": 0.054174989461898804
+              },
+              {
+                "class_name": "木丁香",
+                "confidence": 0.047625310719013214
+              },
+              {
+                "class_name": "藁本",
+                "confidence": 0.04538983106613159
+              },
+              {
+                "class_name": "甘松",
+                "confidence": 0.04395518824458122
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\合欢皮\\HehuanpiHehuanpi14.jpg",
+            "expected_class": "合欢皮",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.08939211815595627,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.08939211815595627
+              },
+              {
+                "class_name": "藁本",
+                "confidence": 0.03537732735276222
+              },
+              {
+                "class_name": "合欢皮",
+                "confidence": 0.0348508395254612
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.030108561739325523
+              },
+              {
+                "class_name": "沉香",
+                "confidence": 0.02890462800860405
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "柏子仁",
+        "predicted_class": "芥子",
+        "count": 12,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\柏子仁\\BaizirenBaizirenBaiziren1.jpg",
+            "expected_class": "柏子仁",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.10744190216064453,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.10744190216064453
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.08226703852415085
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.07133316993713379
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.05026059225201607
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.04894013702869415
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\柏子仁\\BaizirenBaizirenBaiziren10.jpg",
+            "expected_class": "柏子仁",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.42517977952957153,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.42517977952957153
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.22231018543243408
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.1128891110420227
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.05773049592971802
+              },
+              {
+                "class_name": "苏木",
+                "confidence": 0.05092968791723251
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\柏子仁\\BaizirenBaizirenBaiziren11.jpg",
+            "expected_class": "柏子仁",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.39691707491874695,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.39691707491874695
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.14947235584259033
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.1376938819885254
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.10058611631393433
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.034901347011327744
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\柏子仁\\BaizirenBaizirenBaiziren13.jpg",
+            "expected_class": "柏子仁",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.26072028279304504,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.26072028279304504
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.19340020418167114
+              },
+              {
+                "class_name": "苏木",
+                "confidence": 0.11790762096643448
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.10629000514745712
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.050232578068971634
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "荜澄茄",
+        "predicted_class": "木丁香",
+        "count": 12,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荜澄茄\\BichengqieBichengqieBichengqie1.jpg",
+            "expected_class": "荜澄茄",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.4029097259044647,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.4029097259044647
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.14935164153575897
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.08209725469350815
+              },
+              {
+                "class_name": "荜澄茄",
+                "confidence": 0.06684727966785431
+              },
+              {
+                "class_name": "淡豆豉",
+                "confidence": 0.031249146908521652
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荜澄茄\\BichengqieBichengqieBichengqie10.jpg",
+            "expected_class": "荜澄茄",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.09407520294189453,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.09407520294189453
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.08877464383840561
+              },
+              {
+                "class_name": "金钱白花蛇",
+                "confidence": 0.08134099096059799
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.08091386407613754
+              },
+              {
+                "class_name": "荜澄茄",
+                "confidence": 0.07879552990198135
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荜澄茄\\BichengqieBichengqieBichengqie11.jpg",
+            "expected_class": "荜澄茄",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.2157563716173172,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.2157563716173172
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.12670734524726868
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.08985507488250732
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.06561234593391418
+              },
+              {
+                "class_name": "荜澄茄",
+                "confidence": 0.06402940303087234
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荜澄茄\\BichengqieBichengqieBichengqie12.jpg",
+            "expected_class": "荜澄茄",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.32681766152381897,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.32681766152381897
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.2812827229499817
+              },
+              {
+                "class_name": "荜澄茄",
+                "confidence": 0.1046312227845192
+              },
+              {
+                "class_name": "桑椹",
+                "confidence": 0.06841238588094711
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.05786404758691788
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "山茱萸",
+        "predicted_class": "枸杞子",
+        "count": 11,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山茱萸\\Shanzhuyu114.jpg",
+            "expected_class": "山茱萸",
+            "predicted_class": "枸杞子",
+            "top1_confidence": 0.4461924433708191,
+            "top5_predictions": [
+              {
+                "class_name": "枸杞子",
+                "confidence": 0.4461924433708191
+              },
+              {
+                "class_name": "鸡冠花",
+                "confidence": 0.3367847502231598
+              },
+              {
+                "class_name": "山茱萸",
+                "confidence": 0.1632414609193802
+              },
+              {
+                "class_name": "人参",
+                "confidence": 0.015791160985827446
+              },
+              {
+                "class_name": "金灯笼",
+                "confidence": 0.011574824340641499
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山茱萸\\Shanzhuyu19.jpg",
+            "expected_class": "山茱萸",
+            "predicted_class": "枸杞子",
+            "top1_confidence": 0.8208940625190735,
+            "top5_predictions": [
+              {
+                "class_name": "枸杞子",
+                "confidence": 0.8208940625190735
+              },
+              {
+                "class_name": "山茱萸",
+                "confidence": 0.05918798968195915
+              },
+              {
+                "class_name": "荔枝核",
+                "confidence": 0.024986764416098595
+              },
+              {
+                "class_name": "金灯笼",
+                "confidence": 0.019241759553551674
+              },
+              {
+                "class_name": "酸枣仁",
+                "confidence": 0.016666822135448456
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山茱萸\\Shanzhuyu4.jpg",
+            "expected_class": "山茱萸",
+            "predicted_class": "枸杞子",
+            "top1_confidence": 0.7280771136283875,
+            "top5_predictions": [
+              {
+                "class_name": "枸杞子",
+                "confidence": 0.7280771136283875
+              },
+              {
+                "class_name": "山茱萸",
+                "confidence": 0.06676424294710159
+              },
+              {
+                "class_name": "荔枝核",
+                "confidence": 0.04546987637877464
+              },
+              {
+                "class_name": "酸枣仁",
+                "confidence": 0.04413095489144325
+              },
+              {
+                "class_name": "金灯笼",
+                "confidence": 0.027045199647545815
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山茱萸\\Shanzhuyu47.jpg",
+            "expected_class": "山茱萸",
+            "predicted_class": "枸杞子",
+            "top1_confidence": 0.5879416465759277,
+            "top5_predictions": [
+              {
+                "class_name": "枸杞子",
+                "confidence": 0.5879416465759277
+              },
+              {
+                "class_name": "鸡冠花",
+                "confidence": 0.2063451111316681
+              },
+              {
+                "class_name": "山茱萸",
+                "confidence": 0.1531962752342224
+              },
+              {
+                "class_name": "人参",
+                "confidence": 0.012195260263979435
+              },
+              {
+                "class_name": "金灯笼",
+                "confidence": 0.010071064345538616
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "浙贝母",
+        "predicted_class": "白芷",
+        "count": 11,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\浙贝母\\ZhebeimuZhebeimuZhebeimuIMG_20200722_171210.jpg",
+            "expected_class": "浙贝母",
+            "predicted_class": "白芷",
+            "top1_confidence": 0.3853456377983093,
+            "top5_predictions": [
+              {
+                "class_name": "白芷",
+                "confidence": 0.3853456377983093
+              },
+              {
+                "class_name": "浙贝母",
+                "confidence": 0.21665358543395996
+              },
+              {
+                "class_name": "白矾",
+                "confidence": 0.09079760313034058
+              },
+              {
+                "class_name": "海螵蛸",
+                "confidence": 0.05819959193468094
+              },
+              {
+                "class_name": "甘草",
+                "confidence": 0.03068242035806179
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\浙贝母\\ZhebeimuZhebeimuZhebeimuIMG_20200722_171210_1.jpg",
+            "expected_class": "浙贝母",
+            "predicted_class": "白芷",
+            "top1_confidence": 0.3737688958644867,
+            "top5_predictions": [
+              {
+                "class_name": "白芷",
+                "confidence": 0.3737688958644867
+              },
+              {
+                "class_name": "黄柏",
+                "confidence": 0.1666906476020813
+              },
+              {
+                "class_name": "浙贝母",
+                "confidence": 0.11591736227273941
+              },
+              {
+                "class_name": "甘草",
+                "confidence": 0.09250079095363617
+              },
+              {
+                "class_name": "桑寄生",
+                "confidence": 0.052282266318798065
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\浙贝母\\ZhebeimuZhebeimuZhebeimuIMG_20200722_171211.jpg",
+            "expected_class": "浙贝母",
+            "predicted_class": "白芷",
+            "top1_confidence": 0.2927260994911194,
+            "top5_predictions": [
+              {
+                "class_name": "白芷",
+                "confidence": 0.2927260994911194
+              },
+              {
+                "class_name": "浙贝母",
+                "confidence": 0.10978403687477112
+              },
+              {
+                "class_name": "番泻叶",
+                "confidence": 0.06702062487602234
+              },
+              {
+                "class_name": "白矾",
+                "confidence": 0.060524389147758484
+              },
+              {
+                "class_name": "甘草",
+                "confidence": 0.04930609464645386
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\浙贝母\\ZhebeimuZhebeimuZhebeimuIMG_20200722_171212.jpg",
+            "expected_class": "浙贝母",
+            "predicted_class": "白芷",
+            "top1_confidence": 0.5547717213630676,
+            "top5_predictions": [
+              {
+                "class_name": "白芷",
+                "confidence": 0.5547717213630676
+              },
+              {
+                "class_name": "浙贝母",
+                "confidence": 0.10523305833339691
+              },
+              {
+                "class_name": "甘草",
+                "confidence": 0.05229294300079346
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.03377263620495796
+              },
+              {
+                "class_name": "黄柏",
+                "confidence": 0.0284232497215271
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "莲子",
+        "predicted_class": "薏苡仁",
+        "count": 11,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\莲子\\Lianzi11.jpg",
+            "expected_class": "莲子",
+            "predicted_class": "薏苡仁",
+            "top1_confidence": 0.3274288475513458,
+            "top5_predictions": [
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.3274288475513458
+              },
+              {
+                "class_name": "白扁豆",
+                "confidence": 0.1099705696105957
+              },
+              {
+                "class_name": "湖北贝母",
+                "confidence": 0.10800184309482574
+              },
+              {
+                "class_name": "莲子",
+                "confidence": 0.07638653367757797
+              },
+              {
+                "class_name": "麦冬",
+                "confidence": 0.05275052785873413
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\莲子\\Lianzi113.jpg",
+            "expected_class": "莲子",
+            "predicted_class": "薏苡仁",
+            "top1_confidence": 0.0744280144572258,
+            "top5_predictions": [
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.0744280144572258
+              },
+              {
+                "class_name": "麦冬",
+                "confidence": 0.0634603276848793
+              },
+              {
+                "class_name": "太子参",
+                "confidence": 0.0582125149667263
+              },
+              {
+                "class_name": "白茅根",
+                "confidence": 0.04657110944390297
+              },
+              {
+                "class_name": "湖北贝母",
+                "confidence": 0.04232737421989441
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\莲子\\Lianzi29.jpg",
+            "expected_class": "莲子",
+            "predicted_class": "薏苡仁",
+            "top1_confidence": 0.1445329338312149,
+            "top5_predictions": [
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.1445329338312149
+              },
+              {
+                "class_name": "白扁豆",
+                "confidence": 0.06920278072357178
+              },
+              {
+                "class_name": "白茅根",
+                "confidence": 0.06116064637899399
+              },
+              {
+                "class_name": "麦冬",
+                "confidence": 0.06089841201901436
+              },
+              {
+                "class_name": "莲子",
+                "confidence": 0.05973599851131439
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\莲子\\Lianzi37.jpg",
+            "expected_class": "莲子",
+            "predicted_class": "薏苡仁",
+            "top1_confidence": 0.3378283679485321,
+            "top5_predictions": [
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.3378283679485321
+              },
+              {
+                "class_name": "湖北贝母",
+                "confidence": 0.18265798687934875
+              },
+              {
+                "class_name": "莲子",
+                "confidence": 0.1759922206401825
+              },
+              {
+                "class_name": "白扁豆",
+                "confidence": 0.13845448195934296
+              },
+              {
+                "class_name": "麦冬",
+                "confidence": 0.030131332576274872
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "谷芽",
+        "predicted_class": "芥子",
+        "count": 11,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\谷芽\\GuyaGuya1.jpg",
+            "expected_class": "谷芽",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.20205806195735931,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.20205806195735931
+              },
+              {
+                "class_name": "苦地丁",
+                "confidence": 0.11605454236268997
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.1011490598320961
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.09778439998626709
+              },
+              {
+                "class_name": "荆芥穗",
+                "confidence": 0.05360941216349602
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\谷芽\\GuyaGuya10.jpg",
+            "expected_class": "谷芽",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.1455184370279312,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.1455184370279312
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.13551102578639984
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.11847048997879028
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.1023164913058281
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.0458364300429821
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\谷芽\\GuyaGuya11.jpg",
+            "expected_class": "谷芽",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.5252079963684082,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.5252079963684082
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.12309622019529343
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.11475897580385208
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.06094413623213768
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.0388779416680336
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\谷芽\\GuyaGuya12.jpg",
+            "expected_class": "谷芽",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.12250379472970963,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.12250379472970963
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.07218574732542038
+              },
+              {
+                "class_name": "黄柏",
+                "confidence": 0.0683317556977272
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.06521094590425491
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.06292185932397842
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "山慈菇",
+        "predicted_class": "川牛膝",
+        "count": 10,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山慈菇\\Shancigu109.jpg",
+            "expected_class": "山慈菇",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.04811982810497284,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.04811982810497284
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.03720821440219879
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.035298723727464676
+              },
+              {
+                "class_name": "银柴胡",
+                "confidence": 0.033062901347875595
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.030415968969464302
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山慈菇\\Shancigu110.jpg",
+            "expected_class": "山慈菇",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.03813803568482399,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.03813803568482399
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.03596283867955208
+              },
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.028008196502923965
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.024122608825564384
+              },
+              {
+                "class_name": "苏木",
+                "confidence": 0.022769536823034286
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山慈菇\\Shancigu16.jpg",
+            "expected_class": "山慈菇",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.08478708565235138,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.08478708565235138
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.037658147513866425
+              },
+              {
+                "class_name": "山慈菇",
+                "confidence": 0.03361620381474495
+              },
+              {
+                "class_name": "沉香",
+                "confidence": 0.03277866169810295
+              },
+              {
+                "class_name": "合欢皮",
+                "confidence": 0.03037089668214321
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山慈菇\\Shancigu41.jpg",
+            "expected_class": "山慈菇",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.12004802376031876,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.12004802376031876
+              },
+              {
+                "class_name": "干姜",
+                "confidence": 0.06754366308450699
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.059640951454639435
+              },
+              {
+                "class_name": "山慈菇",
+                "confidence": 0.033419687300920486
+              },
+              {
+                "class_name": "银柴胡",
+                "confidence": 0.02992393635213375
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "桂枝",
+        "predicted_class": "细辛",
+        "count": 10,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\桂枝\\GuizhiGuizhiGuizhiIMG_20200719_174829.jpg",
+            "expected_class": "桂枝",
+            "predicted_class": "细辛",
+            "top1_confidence": 0.26840224862098694,
+            "top5_predictions": [
+              {
+                "class_name": "细辛",
+                "confidence": 0.26840224862098694
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.13106389343738556
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.10564321279525757
+              },
+              {
+                "class_name": "黄柏",
+                "confidence": 0.07694434374570847
+              },
+              {
+                "class_name": "槟榔",
+                "confidence": 0.056204501539468765
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\桂枝\\GuizhiGuizhiGuizhiIMG_20200719_174831.jpg",
+            "expected_class": "桂枝",
+            "predicted_class": "细辛",
+            "top1_confidence": 0.20672915875911713,
+            "top5_predictions": [
+              {
+                "class_name": "细辛",
+                "confidence": 0.20672915875911713
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.15242786705493927
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.11739151924848557
+              },
+              {
+                "class_name": "黄柏",
+                "confidence": 0.08658209443092346
+              },
+              {
+                "class_name": "槟榔",
+                "confidence": 0.05996251478791237
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\桂枝\\GuizhiGuizhiGuizhiIMG_20200719_174834.jpg",
+            "expected_class": "桂枝",
+            "predicted_class": "细辛",
+            "top1_confidence": 0.2122805267572403,
+            "top5_predictions": [
+              {
+                "class_name": "细辛",
+                "confidence": 0.2122805267572403
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.11807567626237869
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.10035094618797302
+              },
+              {
+                "class_name": "槟榔",
+                "confidence": 0.07774413377046585
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.06646924465894699
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\桂枝\\GuizhiGuizhiGuizhiIMG_20200719_174842.jpg",
+            "expected_class": "桂枝",
+            "predicted_class": "细辛",
+            "top1_confidence": 0.2677266597747803,
+            "top5_predictions": [
+              {
+                "class_name": "细辛",
+                "confidence": 0.2677266597747803
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.12512461841106415
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.10218045860528946
+              },
+              {
+                "class_name": "槟榔",
+                "confidence": 0.07386328279972076
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.07239025831222534
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "槟榔",
+        "predicted_class": "细辛",
+        "count": 10,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\槟榔\\BinglangBinglangBinglangBinglang_79.jpg",
+            "expected_class": "槟榔",
+            "predicted_class": "细辛",
+            "top1_confidence": 0.0854559987783432,
+            "top5_predictions": [
+              {
+                "class_name": "细辛",
+                "confidence": 0.0854559987783432
+              },
+              {
+                "class_name": "槟榔",
+                "confidence": 0.0761195719242096
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.06876585632562637
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.05058683827519417
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.04888710752129555
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\槟榔\\BinglangBinglangBinglangIMG_20200719_180447.jpg",
+            "expected_class": "槟榔",
+            "predicted_class": "细辛",
+            "top1_confidence": 0.16213537752628326,
+            "top5_predictions": [
+              {
+                "class_name": "细辛",
+                "confidence": 0.16213537752628326
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.1414136439561844
+              },
+              {
+                "class_name": "槟榔",
+                "confidence": 0.1234554797410965
+              },
+              {
+                "class_name": "羌活",
+                "confidence": 0.0906527042388916
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.07790785282850266
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\槟榔\\BinglangBinglangBinglangIMG_20200719_180448.jpg",
+            "expected_class": "槟榔",
+            "predicted_class": "细辛",
+            "top1_confidence": 0.11249472945928574,
+            "top5_predictions": [
+              {
+                "class_name": "细辛",
+                "confidence": 0.11249472945928574
+              },
+              {
+                "class_name": "槟榔",
+                "confidence": 0.10430547595024109
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.10417946428060532
+              },
+              {
+                "class_name": "羌活",
+                "confidence": 0.07843873649835587
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.0674348771572113
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\槟榔\\BinglangBinglangBinglangIMG_20200719_180449.jpg",
+            "expected_class": "槟榔",
+            "predicted_class": "细辛",
+            "top1_confidence": 0.1642775982618332,
+            "top5_predictions": [
+              {
+                "class_name": "细辛",
+                "confidence": 0.1642775982618332
+              },
+              {
+                "class_name": "槟榔",
+                "confidence": 0.11783851683139801
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.09411904215812683
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.08291194587945938
+              },
+              {
+                "class_name": "羌活",
+                "confidence": 0.07442207634449005
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "荜拨",
+        "predicted_class": "木丁香",
+        "count": 10,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荜拨\\BiboBiboBibo11.jpg",
+            "expected_class": "荜拨",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.2556791603565216,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.2556791603565216
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.1032310426235199
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.05003255605697632
+              },
+              {
+                "class_name": "荔枝核",
+                "confidence": 0.04973265528678894
+              },
+              {
+                "class_name": "灵芝",
+                "confidence": 0.0478694885969162
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荜拨\\BiboBiboBibo14.jpg",
+            "expected_class": "荜拨",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.2053949385881424,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.2053949385881424
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.13488450646400452
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.08593156933784485
+              },
+              {
+                "class_name": "沉香",
+                "confidence": 0.04078206792473793
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.035979438573122025
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荜拨\\BiboBiboBibo16.jpg",
+            "expected_class": "荜拨",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.2200610339641571,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.2200610339641571
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.0580688901245594
+              },
+              {
+                "class_name": "灵芝",
+                "confidence": 0.04443371295928955
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.03398234769701958
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.032626938074827194
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\荜拨\\BiboBiboBibo18.jpg",
+            "expected_class": "荜拨",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.04285052418708801,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.04285052418708801
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.02967856638133526
+              },
+              {
+                "class_name": "地龙",
+                "confidence": 0.027499880641698837
+              },
+              {
+                "class_name": "鳖甲",
+                "confidence": 0.027011504396796227
+              },
+              {
+                "class_name": "瓦楞子",
+                "confidence": 0.025348132476210594
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "expected_class": "山奈",
+        "predicted_class": "干姜",
+        "count": 9,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山奈\\Shannai18.jpg",
+            "expected_class": "山奈",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.0688120499253273,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.0688120499253273
+              },
+              {
+                "class_name": "山奈",
+                "confidence": 0.04194900393486023
+              },
+              {
+                "class_name": "天花粉",
+                "confidence": 0.032029103487730026
+              },
+              {
+                "class_name": "白蔹",
+                "confidence": 0.03182438015937805
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.027209782972931862
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山奈\\Shannai21.jpg",
+            "expected_class": "山奈",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.18990908563137054,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.18990908563137054
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.04013394936919212
+              },
+              {
+                "class_name": "丝瓜络",
+                "confidence": 0.03684224560856819
+              },
+              {
+                "class_name": "浙贝母",
+                "confidence": 0.0349140465259552
+              },
+              {
+                "class_name": "黄芪",
+                "confidence": 0.03221412003040314
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山奈\\Shannai25.jpg",
+            "expected_class": "山奈",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.17349088191986084,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.17349088191986084
+              },
+              {
+                "class_name": "浙贝母",
+                "confidence": 0.08235509693622589
+              },
+              {
+                "class_name": "白芷",
+                "confidence": 0.0663750097155571
+              },
+              {
+                "class_name": "天花粉",
+                "confidence": 0.05595351755619049
+              },
+              {
+                "class_name": "竹茹",
+                "confidence": 0.047514040023088455
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\山奈\\Shannai27.jpg",
+            "expected_class": "山奈",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.06170308217406273,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.06170308217406273
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.05102898180484772
+              },
+              {
+                "class_name": "鳖甲",
+                "confidence": 0.04198666289448738
+              },
+              {
+                "class_name": "竹茹",
+                "confidence": 0.030279947444796562
+              },
+              {
+                "class_name": "僵蚕",
+                "confidence": 0.028026442974805832
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "expected_class": "稻芽",
+        "predicted_class": "芥子",
+        "count": 9,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\稻芽\\DaoyaDaoya10.jpg",
+            "expected_class": "稻芽",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.42623692750930786,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.42623692750930786
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.15934495627880096
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.11771377176046371
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.043853405863046646
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.040594637393951416
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\稻芽\\DaoyaDaoya13.jpg",
+            "expected_class": "稻芽",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.27942460775375366,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.27942460775375366
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.1392570585012436
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.118320532143116
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.06348224729299545
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.05072055011987686
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\稻芽\\DaoyaDaoya16.jpg",
+            "expected_class": "稻芽",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.23438216745853424,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.23438216745853424
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.19041673839092255
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.11321503669023514
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.058362774550914764
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.04648410156369209
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\稻芽\\DaoyaDaoya17.jpg",
+            "expected_class": "稻芽",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.3764428496360779,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.3764428496360779
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.17726914584636688
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.11390329152345657
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.09814432263374329
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.029669757932424545
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "肉豆蔻",
+        "predicted_class": "干姜",
+        "count": 9,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\肉豆蔻\\Roudoukou11.jpg",
+            "expected_class": "肉豆蔻",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.048941005021333694,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.048941005021333694
+              },
+              {
+                "class_name": "五加皮",
+                "confidence": 0.043306611478328705
+              },
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.042166952043771744
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.04154156148433685
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.0404697060585022
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\肉豆蔻\\Roudoukou13.jpg",
+            "expected_class": "肉豆蔻",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.25105616450309753,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.25105616450309753
+              },
+              {
+                "class_name": "天花粉",
+                "confidence": 0.07149561494588852
+              },
+              {
+                "class_name": "浙贝母",
+                "confidence": 0.056916289031505585
+              },
+              {
+                "class_name": "黄芪",
+                "confidence": 0.04655807092785835
+              },
+              {
+                "class_name": "丝瓜络",
+                "confidence": 0.03667775169014931
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\肉豆蔻\\Roudoukou4.jpg",
+            "expected_class": "肉豆蔻",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.16161218285560608,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.16161218285560608
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.07829055935144424
+              },
+              {
+                "class_name": "天麻",
+                "confidence": 0.04369249567389488
+              },
+              {
+                "class_name": "白蔹",
+                "confidence": 0.0415312685072422
+              },
+              {
+                "class_name": "天花粉",
+                "confidence": 0.0322902649641037
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\肉豆蔻\\Roudoukou46.jpg",
+            "expected_class": "肉豆蔻",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.08340112864971161,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.08340112864971161
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.06356065720319748
+              },
+              {
+                "class_name": "白芷",
+                "confidence": 0.037343647330999374
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.030997907742857933
+              },
+              {
+                "class_name": "丝瓜络",
+                "confidence": 0.029126394540071487
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "expected_class": "丝瓜络",
+        "predicted_class": "干姜",
+        "count": 8,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo117.jpg",
+            "expected_class": "丝瓜络",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.09262776374816895,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.09262776374816895
+              },
+              {
+                "class_name": "浙贝母",
+                "confidence": 0.06788676977157593
+              },
+              {
+                "class_name": "白芷",
+                "confidence": 0.047663263976573944
+              },
+              {
+                "class_name": "甘草",
+                "confidence": 0.04449722170829773
+              },
+              {
+                "class_name": "天花粉",
+                "confidence": 0.042182885110378265
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo15.jpg",
+            "expected_class": "丝瓜络",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.11489088088274002,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.11489088088274002
+              },
+              {
+                "class_name": "山奈",
+                "confidence": 0.03961453586816788
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.034507039934396744
+              },
+              {
+                "class_name": "天花粉",
+                "confidence": 0.03229609876871109
+              },
+              {
+                "class_name": "黄芪",
+                "confidence": 0.031497109681367874
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo16.jpg",
+            "expected_class": "丝瓜络",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.1362718939781189,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.1362718939781189
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.06537455320358276
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.06402101367712021
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.04830960929393768
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.042019300162792206
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo21.jpg",
+            "expected_class": "丝瓜络",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.18848799169063568,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.18848799169063568
+              },
+              {
+                "class_name": "白芷",
+                "confidence": 0.10041618347167969
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.05641016736626625
+              },
+              {
+                "class_name": "浙贝母",
+                "confidence": 0.04966287314891815
+              },
+              {
+                "class_name": "丝瓜络",
+                "confidence": 0.0364595428109169
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "川木香",
+        "predicted_class": "川牛膝",
+        "count": 8,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\川木香\\ChuanmuxiangChuanmuxiang10.jpg",
+            "expected_class": "川木香",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.11446652561426163,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.11446652561426163
+              },
+              {
+                "class_name": "干姜",
+                "confidence": 0.07284724712371826
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.053784824907779694
+              },
+              {
+                "class_name": "合欢皮",
+                "confidence": 0.03291008993983269
+              },
+              {
+                "class_name": "沉香",
+                "confidence": 0.030645225197076797
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\川木香\\ChuanmuxiangChuanmuxiang12.jpg",
+            "expected_class": "川木香",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.05742683634161949,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.05742683634161949
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.03789438307285309
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.03744443133473396
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.029943302273750305
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.027324030175805092
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\川木香\\ChuanmuxiangChuanmuxiang14.jpg",
+            "expected_class": "川木香",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.07741896063089371,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.07741896063089371
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.0547993928194046
+              },
+              {
+                "class_name": "沉香",
+                "confidence": 0.04638056457042694
+              },
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.04385911673307419
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.03247026354074478
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\川木香\\ChuanmuxiangChuanmuxiang18.jpg",
+            "expected_class": "川木香",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.04475976899266243,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.04475976899266243
+              },
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.04187850281596184
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.033343393355607986
+              },
+              {
+                "class_name": "沉香",
+                "confidence": 0.03006676398217678
+              },
+              {
+                "class_name": "千年健",
+                "confidence": 0.027673441916704178
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "expected_class": "桑螵蛸",
+        "predicted_class": "木丁香",
+        "count": 8,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\桑螵蛸\\Sangpiaoxiao27.jpg",
+            "expected_class": "桑螵蛸",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.0987997055053711,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.0987997055053711
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.03894627094268799
+              },
+              {
+                "class_name": "地龙",
+                "confidence": 0.03842170163989067
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.03066273033618927
+              },
+              {
+                "class_name": "秦皮",
+                "confidence": 0.027732249349355698
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\桑螵蛸\\Sangpiaoxiao41.jpg",
+            "expected_class": "桑螵蛸",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.07799046486616135,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.07799046486616135
+              },
+              {
+                "class_name": "沉香",
+                "confidence": 0.07622511684894562
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.06420495361089706
+              },
+              {
+                "class_name": "千年健",
+                "confidence": 0.049880560487508774
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.049052417278289795
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\桑螵蛸\\Sangpiaoxiao50.jpg",
+            "expected_class": "桑螵蛸",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.06984226405620575,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.06984226405620575
+              },
+              {
+                "class_name": "地龙",
+                "confidence": 0.032041747123003006
+              },
+              {
+                "class_name": "山慈菇",
+                "confidence": 0.03201628848910332
+              },
+              {
+                "class_name": "山奈",
+                "confidence": 0.03191191330552101
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.03168134018778801
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\桑螵蛸\\Sangpiaoxiao56.jpg",
+            "expected_class": "桑螵蛸",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.12332955747842789,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.12332955747842789
+              },
+              {
+                "class_name": "鳖甲",
+                "confidence": 0.03929581493139267
+              },
+              {
+                "class_name": "海螵蛸",
+                "confidence": 0.035920560359954834
+              },
+              {
+                "class_name": "白蔹",
+                "confidence": 0.03391130268573761
+              },
+              {
+                "class_name": "自然铜",
+                "confidence": 0.03383573517203331
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "expected_class": "橘核",
+        "predicted_class": "薏苡仁",
+        "count": 8,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\橘核\\Juhe19.jpg",
+            "expected_class": "橘核",
+            "predicted_class": "薏苡仁",
+            "top1_confidence": 0.05979370325803757,
+            "top5_predictions": [
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.05979370325803757
+              },
+              {
+                "class_name": "湖北贝母",
+                "confidence": 0.05902949348092079
+              },
+              {
+                "class_name": "僵蚕",
+                "confidence": 0.04814016446471214
+              },
+              {
+                "class_name": "莲子",
+                "confidence": 0.04077128693461418
+              },
+              {
+                "class_name": "橘核",
+                "confidence": 0.03825698420405388
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\橘核\\Juhe20.jpg",
+            "expected_class": "橘核",
+            "predicted_class": "薏苡仁",
+            "top1_confidence": 0.19149279594421387,
+            "top5_predictions": [
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.19149279594421387
+              },
+              {
+                "class_name": "湖北贝母",
+                "confidence": 0.14580930769443512
+              },
+              {
+                "class_name": "白扁豆",
+                "confidence": 0.11137209832668304
+              },
+              {
+                "class_name": "莲子",
+                "confidence": 0.08143350481987
+              },
+              {
+                "class_name": "麦冬",
+                "confidence": 0.04372648149728775
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\橘核\\Juhe27.jpg",
+            "expected_class": "橘核",
+            "predicted_class": "薏苡仁",
+            "top1_confidence": 0.3560066819190979,
+            "top5_predictions": [
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.3560066819190979
+              },
+              {
+                "class_name": "橘核",
+                "confidence": 0.16561588644981384
+              },
+              {
+                "class_name": "湖北贝母",
+                "confidence": 0.14524871110916138
+              },
+              {
+                "class_name": "白扁豆",
+                "confidence": 0.05727419629693031
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.04651949182152748
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\橘核\\Juhe33.jpg",
+            "expected_class": "橘核",
+            "predicted_class": "薏苡仁",
+            "top1_confidence": 0.32700014114379883,
+            "top5_predictions": [
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.32700014114379883
+              },
+              {
+                "class_name": "橘核",
+                "confidence": 0.094477079808712
+              },
+              {
+                "class_name": "湖北贝母",
+                "confidence": 0.09421025961637497
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.08058073371648788
+              },
+              {
+                "class_name": "白扁豆",
+                "confidence": 0.06065882742404938
+              }
+            ],
+            "top5_contains_expected": true
+          }
+        ]
+      },
+      {
+        "expected_class": "羌活",
+        "predicted_class": "白芷",
+        "count": 8,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\羌活\\QianghuoQianghuoQianghuoIMG_20200719_173105.jpg",
+            "expected_class": "羌活",
+            "predicted_class": "白芷",
+            "top1_confidence": 0.21141675114631653,
+            "top5_predictions": [
+              {
+                "class_name": "白芷",
+                "confidence": 0.21141675114631653
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.13925515115261078
+              },
+              {
+                "class_name": "羌活",
+                "confidence": 0.08969588577747345
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.07431164383888245
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.07101250439882278
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\羌活\\QianghuoQianghuoQianghuoIMG_20200719_173113.jpg",
+            "expected_class": "羌活",
+            "predicted_class": "白芷",
+            "top1_confidence": 0.167108416557312,
+            "top5_predictions": [
+              {
+                "class_name": "白芷",
+                "confidence": 0.167108416557312
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.12550412118434906
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.08750639110803604
+              },
+              {
+                "class_name": "羌活",
+                "confidence": 0.08551626652479172
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.08427227288484573
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\羌活\\QianghuoQianghuoQianghuoIMG_20200719_173115.jpg",
+            "expected_class": "羌活",
+            "predicted_class": "白芷",
+            "top1_confidence": 0.1383076012134552,
+            "top5_predictions": [
+              {
+                "class_name": "白芷",
+                "confidence": 0.1383076012134552
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.1238846480846405
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.10357765853404999
+              },
+              {
+                "class_name": "羌活",
+                "confidence": 0.09059859067201614
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.07084782421588898
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\羌活\\QianghuoQianghuoQianghuoIMG_20200719_173119.jpg",
+            "expected_class": "羌活",
+            "predicted_class": "白芷",
+            "top1_confidence": 0.28332462906837463,
+            "top5_predictions": [
+              {
+                "class_name": "白芷",
+                "confidence": 0.28332462906837463
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.10130679607391357
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.0966288298368454
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.07180182635784149
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.05791541561484337
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      }
+    ],
+    "worst_classes": [
+      {
+        "class_name": "地龙",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.0,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\地龙\\DilongDilong1.jpg",
+            "expected_class": "地龙",
+            "predicted_class": "白芷",
+            "top1_confidence": 0.32538357377052307,
+            "top5_predictions": [
+              {
+                "class_name": "白芷",
+                "confidence": 0.32538357377052307
+              },
+              {
+                "class_name": "白矾",
+                "confidence": 0.1530301570892334
+              },
+              {
+                "class_name": "浙贝母",
+                "confidence": 0.09945670515298843
+              },
+              {
+                "class_name": "海螵蛸",
+                "confidence": 0.08573679625988007
+              },
+              {
+                "class_name": "五加皮",
+                "confidence": 0.04317985475063324
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\地龙\\DilongDilong10.jpg",
+            "expected_class": "地龙",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.21775808930397034,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.21775808930397034
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.08258960396051407
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.07918258011341095
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.07627294212579727
+              },
+              {
+                "class_name": "酸枣仁",
+                "confidence": 0.05868705362081528
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\地龙\\DilongDilong11.jpg",
+            "expected_class": "地龙",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.04758954420685768,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.04758954420685768
+              },
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.04309634491801262
+              },
+              {
+                "class_name": "千年健",
+                "confidence": 0.041057832539081573
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.03655017912387848
+              },
+              {
+                "class_name": "山慈菇",
+                "confidence": 0.0340086966753006
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\地龙\\DilongDilong12.jpg",
+            "expected_class": "地龙",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.05532011762261391,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.05532011762261391
+              },
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.04412155970931053
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.04290113225579262
+              },
+              {
+                "class_name": "千年健",
+                "confidence": 0.041225090622901917
+              },
+              {
+                "class_name": "沉香",
+                "confidence": 0.04081079363822937
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "安息香",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.0,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\安息香\\AnxixiangAnxixiangAnxixiang1.jpg",
+            "expected_class": "安息香",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.11824977397918701,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.11824977397918701
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.055509522557258606
+              },
+              {
+                "class_name": "丝瓜络",
+                "confidence": 0.03212853893637657
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.029870809987187386
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.02974271960556507
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\安息香\\AnxixiangAnxixiangAnxixiang10.jpg",
+            "expected_class": "安息香",
+            "predicted_class": "肉豆蔻",
+            "top1_confidence": 0.0760384127497673,
+            "top5_predictions": [
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.0760384127497673
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.06375375390052795
+              },
+              {
+                "class_name": "千年健",
+                "confidence": 0.04491918161511421
+              },
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.04473667964339256
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.04213038831949234
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\安息香\\AnxixiangAnxixiangAnxixiang11.jpg",
+            "expected_class": "安息香",
+            "predicted_class": "土荆皮",
+            "top1_confidence": 0.05301399901509285,
+            "top5_predictions": [
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.05301399901509285
+              },
+              {
+                "class_name": "千年健",
+                "confidence": 0.04462605342268944
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.044038236141204834
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.03552195057272911
+              },
+              {
+                "class_name": "秦皮",
+                "confidence": 0.03340256214141846
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\安息香\\AnxixiangAnxixiangAnxixiang12.jpg",
+            "expected_class": "安息香",
+            "predicted_class": "莲房",
+            "top1_confidence": 0.039160456508398056,
+            "top5_predictions": [
+              {
+                "class_name": "莲房",
+                "confidence": 0.039160456508398056
+              },
+              {
+                "class_name": "全蝎",
+                "confidence": 0.03325044736266136
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.031112240627408028
+              },
+              {
+                "class_name": "蜂房",
+                "confidence": 0.03108508512377739
+              },
+              {
+                "class_name": "苦地丁",
+                "confidence": 0.027430064976215363
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "瓦楞子",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.0,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\瓦楞子\\Walengzi114.jpg",
+            "expected_class": "瓦楞子",
+            "predicted_class": "湖北贝母",
+            "top1_confidence": 0.1423906534910202,
+            "top5_predictions": [
+              {
+                "class_name": "湖北贝母",
+                "confidence": 0.1423906534910202
+              },
+              {
+                "class_name": "白扁豆",
+                "confidence": 0.09451305866241455
+              },
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.09150466322898865
+              },
+              {
+                "class_name": "莲子",
+                "confidence": 0.09020432084798813
+              },
+              {
+                "class_name": "白芍",
+                "confidence": 0.05188526213169098
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\瓦楞子\\Walengzi119.jpg",
+            "expected_class": "瓦楞子",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.11133445799350739,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.11133445799350739
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.06364450603723526
+              },
+              {
+                "class_name": "天麻",
+                "confidence": 0.04041149467229843
+              },
+              {
+                "class_name": "川楝子",
+                "confidence": 0.030919145792722702
+              },
+              {
+                "class_name": "丝瓜络",
+                "confidence": 0.02630610391497612
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\瓦楞子\\Walengzi21.jpg",
+            "expected_class": "瓦楞子",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.07747144997119904,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.07747144997119904
+              },
+              {
+                "class_name": "木丁香",
+                "confidence": 0.03879482299089432
+              },
+              {
+                "class_name": "僵蚕",
+                "confidence": 0.03683067858219147
+              },
+              {
+                "class_name": "鳖甲",
+                "confidence": 0.036546461284160614
+              },
+              {
+                "class_name": "合欢皮",
+                "confidence": 0.035628873854875565
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\瓦楞子\\Walengzi24.jpg",
+            "expected_class": "瓦楞子",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.04197185859084129,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.04197185859084129
+              },
+              {
+                "class_name": "橘核",
+                "confidence": 0.04181560501456261
+              },
+              {
+                "class_name": "白茅根",
+                "confidence": 0.03544298931956291
+              },
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.03371773287653923
+              },
+              {
+                "class_name": "竹茹",
+                "confidence": 0.033579159528017044
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "北沙参",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.0,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\北沙参\\BeishashenBeishashenBeishashen1.jpg",
+            "expected_class": "北沙参",
+            "predicted_class": "谷芽",
+            "top1_confidence": 0.16194961965084076,
+            "top5_predictions": [
+              {
+                "class_name": "谷芽",
+                "confidence": 0.16194961965084076
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.15101706981658936
+              },
+              {
+                "class_name": "竹茹",
+                "confidence": 0.07995002716779709
+              },
+              {
+                "class_name": "莲子心",
+                "confidence": 0.06881120800971985
+              },
+              {
+                "class_name": "橘核",
+                "confidence": 0.057500652968883514
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\北沙参\\BeishashenBeishashenBeishashen10.jpg",
+            "expected_class": "北沙参",
+            "predicted_class": "黄芩",
+            "top1_confidence": 0.044400908052921295,
+            "top5_predictions": [
+              {
+                "class_name": "黄芩",
+                "confidence": 0.044400908052921295
+              },
+              {
+                "class_name": "干姜",
+                "confidence": 0.033836591988801956
+              },
+              {
+                "class_name": "甘草",
+                "confidence": 0.03341555595397949
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.03192518278956413
+              },
+              {
+                "class_name": "白茅根",
+                "confidence": 0.02994447387754917
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\北沙参\\BeishashenBeishashenBeishashen11.jpg",
+            "expected_class": "北沙参",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.09008348733186722,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.09008348733186722
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.056452441960573196
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.044184692203998566
+              },
+              {
+                "class_name": "银柴胡",
+                "confidence": 0.039977673441171646
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.03629942983388901
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\北沙参\\BeishashenBeishashenBeishashen12.jpg",
+            "expected_class": "北沙参",
+            "predicted_class": "薏苡仁",
+            "top1_confidence": 0.20596186816692352,
+            "top5_predictions": [
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.20596186816692352
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.20055122673511505
+              },
+              {
+                "class_name": "太子参",
+                "confidence": 0.08531252294778824
+              },
+              {
+                "class_name": "白茅根",
+                "confidence": 0.0713411420583725
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.05225030705332756
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "全蝎",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.05263157894736842,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\全蝎\\Quanxie13.jpg",
+            "expected_class": "全蝎",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.1320084184408188,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.1320084184408188
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.1150699183344841
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.08345191925764084
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.05958087742328644
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.047782931476831436
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\全蝎\\Quanxie17.jpg",
+            "expected_class": "全蝎",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.060217540711164474,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.060217540711164474
+              },
+              {
+                "class_name": "山慈菇",
+                "confidence": 0.03534044697880745
+              },
+              {
+                "class_name": "合欢皮",
+                "confidence": 0.03408757597208023
+              },
+              {
+                "class_name": "干姜",
+                "confidence": 0.032891638576984406
+              },
+              {
+                "class_name": "木丁香",
+                "confidence": 0.031975675374269485
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\全蝎\\Quanxie26.jpg",
+            "expected_class": "全蝎",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.053292207419872284,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.053292207419872284
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.04358445480465889
+              },
+              {
+                "class_name": "白芷",
+                "confidence": 0.03336646407842636
+              },
+              {
+                "class_name": "甘草",
+                "confidence": 0.03230442479252815
+              },
+              {
+                "class_name": "藁本",
+                "confidence": 0.030980683863162994
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\全蝎\\Quanxie28.jpg",
+            "expected_class": "全蝎",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.07325737923383713,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.07325737923383713
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.03938409313559532
+              },
+              {
+                "class_name": "白前",
+                "confidence": 0.033948708325624466
+              },
+              {
+                "class_name": "甘松",
+                "confidence": 0.03380312770605087
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.029294252395629883
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "白芍",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.05263157894736842,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\白芍\\BaishaoBaishaoBaishaoBaishao_106.jpg",
+            "expected_class": "白芍",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.06433837115764618,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.06433837115764618
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.053648971021175385
+              },
+              {
+                "class_name": "白蔹",
+                "confidence": 0.04025723785161972
+              },
+              {
+                "class_name": "海螵蛸",
+                "confidence": 0.038598157465457916
+              },
+              {
+                "class_name": "灵芝",
+                "confidence": 0.028555430471897125
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\白芍\\BaishaoBaishaoBaishaoBaishao_109.jpg",
+            "expected_class": "白芍",
+            "predicted_class": "肉豆蔻",
+            "top1_confidence": 0.14137881994247437,
+            "top5_predictions": [
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.14137881994247437
+              },
+              {
+                "class_name": "海螵蛸",
+                "confidence": 0.07632315903902054
+              },
+              {
+                "class_name": "白蔹",
+                "confidence": 0.055423539131879807
+              },
+              {
+                "class_name": "干姜",
+                "confidence": 0.05194295942783356
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.0392049103975296
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\白芍\\BaishaoBaishaoBaishaoBaishao_110.jpg",
+            "expected_class": "白芍",
+            "predicted_class": "薏苡仁",
+            "top1_confidence": 0.377611368894577,
+            "top5_predictions": [
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.377611368894577
+              },
+              {
+                "class_name": "湖北贝母",
+                "confidence": 0.253915399312973
+              },
+              {
+                "class_name": "白扁豆",
+                "confidence": 0.14654503762722015
+              },
+              {
+                "class_name": "莲子",
+                "confidence": 0.10715540498495102
+              },
+              {
+                "class_name": "橘核",
+                "confidence": 0.019482046365737915
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\白芍\\BaishaoBaishaoBaishaoBaishao_114.jpg",
+            "expected_class": "白芍",
+            "predicted_class": "湖北贝母",
+            "top1_confidence": 0.16741985082626343,
+            "top5_predictions": [
+              {
+                "class_name": "湖北贝母",
+                "confidence": 0.16741985082626343
+              },
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.12530401349067688
+              },
+              {
+                "class_name": "白扁豆",
+                "confidence": 0.09523025155067444
+              },
+              {
+                "class_name": "莲子",
+                "confidence": 0.08553314208984375
+              },
+              {
+                "class_name": "橘核",
+                "confidence": 0.06724879890680313
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "草豆蔻",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.05263157894736842,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\草豆蔻\\CaodoukouCaodoukouCaodoukou10.jpg",
+            "expected_class": "草豆蔻",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.08099330216646194,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.08099330216646194
+              },
+              {
+                "class_name": "沉香",
+                "confidence": 0.061543140560388565
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.04424070566892624
+              },
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.03247566893696785
+              },
+              {
+                "class_name": "秦皮",
+                "confidence": 0.029788795858621597
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\草豆蔻\\CaodoukouCaodoukouCaodoukou11.jpg",
+            "expected_class": "草豆蔻",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.25009259581565857,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.25009259581565857
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.15029114484786987
+              },
+              {
+                "class_name": "天麻",
+                "confidence": 0.06000596657395363
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.03597274795174599
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.034184232354164124
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\草豆蔻\\CaodoukouCaodoukouCaodoukou12.jpg",
+            "expected_class": "草豆蔻",
+            "predicted_class": "黄柏",
+            "top1_confidence": 0.05009956657886505,
+            "top5_predictions": [
+              {
+                "class_name": "黄柏",
+                "confidence": 0.05009956657886505
+              },
+              {
+                "class_name": "桑寄生",
+                "confidence": 0.04602879285812378
+              },
+              {
+                "class_name": "藁本",
+                "confidence": 0.04204286262392998
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.04175092652440071
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.04061177745461464
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\草豆蔻\\CaodoukouCaodoukouCaodoukou13.jpg",
+            "expected_class": "草豆蔻",
+            "predicted_class": "肉豆蔻",
+            "top1_confidence": 0.09559167921543121,
+            "top5_predictions": [
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.09559167921543121
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.06603934615850449
+              },
+              {
+                "class_name": "天麻",
+                "confidence": 0.05613056197762489
+              },
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.05605174973607063
+              },
+              {
+                "class_name": "千年健",
+                "confidence": 0.04605133458971977
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "白前",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.05555555555555555,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\白前\\BaiqianBaiqianBaiqian1.jpg",
+            "expected_class": "白前",
+            "predicted_class": "谷芽",
+            "top1_confidence": 0.08544804155826569,
+            "top5_predictions": [
+              {
+                "class_name": "谷芽",
+                "confidence": 0.08544804155826569
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.0758974626660347
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.055807773023843765
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.05364690721035004
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.05137543007731438
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\白前\\BaiqianBaiqianBaiqian11.jpg",
+            "expected_class": "白前",
+            "predicted_class": "莱菔子",
+            "top1_confidence": 0.14298683404922485,
+            "top5_predictions": [
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.14298683404922485
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.09228415787220001
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.08364317566156387
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.059878431260585785
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.043828535825014114
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\白前\\BaiqianBaiqianBaiqian12.jpg",
+            "expected_class": "白前",
+            "predicted_class": "谷芽",
+            "top1_confidence": 0.07960893213748932,
+            "top5_predictions": [
+              {
+                "class_name": "谷芽",
+                "confidence": 0.07960893213748932
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.06651920825242996
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.06499135494232178
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.060519102960824966
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.05339036136865616
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\白前\\BaiqianBaiqianBaiqian13.jpg",
+            "expected_class": "白前",
+            "predicted_class": "黄柏",
+            "top1_confidence": 0.07022687792778015,
+            "top5_predictions": [
+              {
+                "class_name": "黄柏",
+                "confidence": 0.07022687792778015
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.06103102117776871
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.06056393310427666
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.054592326283454895
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.045022185891866684
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "丝瓜络",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.10526315789473684,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo117.jpg",
+            "expected_class": "丝瓜络",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.09262776374816895,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.09262776374816895
+              },
+              {
+                "class_name": "浙贝母",
+                "confidence": 0.06788676977157593
+              },
+              {
+                "class_name": "白芷",
+                "confidence": 0.047663263976573944
+              },
+              {
+                "class_name": "甘草",
+                "confidence": 0.04449722170829773
+              },
+              {
+                "class_name": "天花粉",
+                "confidence": 0.042182885110378265
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo15.jpg",
+            "expected_class": "丝瓜络",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.11489088088274002,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.11489088088274002
+              },
+              {
+                "class_name": "山奈",
+                "confidence": 0.03961453586816788
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.034507039934396744
+              },
+              {
+                "class_name": "天花粉",
+                "confidence": 0.03229609876871109
+              },
+              {
+                "class_name": "黄芪",
+                "confidence": 0.031497109681367874
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo16.jpg",
+            "expected_class": "丝瓜络",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.1362718939781189,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.1362718939781189
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.06537455320358276
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.06402101367712021
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.04830960929393768
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.042019300162792206
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo18.jpg",
+            "expected_class": "丝瓜络",
+            "predicted_class": "湖北贝母",
+            "top1_confidence": 0.10442505776882172,
+            "top5_predictions": [
+              {
+                "class_name": "湖北贝母",
+                "confidence": 0.10442505776882172
+              },
+              {
+                "class_name": "白扁豆",
+                "confidence": 0.09158023446798325
+              },
+              {
+                "class_name": "莲子",
+                "confidence": 0.08022823184728622
+              },
+              {
+                "class_name": "干姜",
+                "confidence": 0.06807644665241241
+              },
+              {
+                "class_name": "薏苡仁",
+                "confidence": 0.06095192953944206
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "五加皮",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.10526315789473684,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\五加皮\\WujiapiWujiapiWujiapiIMG_20200722_170020.jpg",
+            "expected_class": "五加皮",
+            "predicted_class": "细辛",
+            "top1_confidence": 0.17959044873714447,
+            "top5_predictions": [
+              {
+                "class_name": "细辛",
+                "confidence": 0.17959044873714447
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.11233393847942352
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.11050569266080856
+              },
+              {
+                "class_name": "槟榔",
+                "confidence": 0.09487947076559067
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.08685985952615738
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\五加皮\\WujiapiWujiapiWujiapiIMG_20200722_170021.jpg",
+            "expected_class": "五加皮",
+            "predicted_class": "细辛",
+            "top1_confidence": 0.12332143634557724,
+            "top5_predictions": [
+              {
+                "class_name": "细辛",
+                "confidence": 0.12332143634557724
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.10374616831541061
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.09812922775745392
+              },
+              {
+                "class_name": "槟榔",
+                "confidence": 0.09184235334396362
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.08205217123031616
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\五加皮\\WujiapiWujiapiWujiapiIMG_20200722_170022.jpg",
+            "expected_class": "五加皮",
+            "predicted_class": "白芷",
+            "top1_confidence": 0.14247150719165802,
+            "top5_predictions": [
+              {
+                "class_name": "白芷",
+                "confidence": 0.14247150719165802
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.10904645174741745
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.09225185215473175
+              },
+              {
+                "class_name": "桂枝",
+                "confidence": 0.07752280682325363
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.07133274525403976
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\五加皮\\WujiapiWujiapiWujiapiIMG_20200722_170022_1.jpg",
+            "expected_class": "五加皮",
+            "predicted_class": "白芷",
+            "top1_confidence": 0.17035451531410217,
+            "top5_predictions": [
+              {
+                "class_name": "白芷",
+                "confidence": 0.17035451531410217
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.15133333206176758
+              },
+              {
+                "class_name": "苍术",
+                "confidence": 0.09126802533864975
+              },
+              {
+                "class_name": "羌活",
+                "confidence": 0.08331886678934097
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.07890642434358597
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "秦皮",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.10526315789473684,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\秦皮\\Qinpi102.jpg",
+            "expected_class": "秦皮",
+            "predicted_class": "沉香",
+            "top1_confidence": 0.09992219507694244,
+            "top5_predictions": [
+              {
+                "class_name": "沉香",
+                "confidence": 0.09992219507694244
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.08029046654701233
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.07964752614498138
+              },
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.05229202285408974
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.04900816082954407
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\秦皮\\Qinpi108.jpg",
+            "expected_class": "秦皮",
+            "predicted_class": "甘松",
+            "top1_confidence": 0.10000535100698471,
+            "top5_predictions": [
+              {
+                "class_name": "甘松",
+                "confidence": 0.10000535100698471
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.07902330905199051
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.07267028093338013
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.060189444571733475
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.05293457210063934
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\秦皮\\Qinpi11.jpg",
+            "expected_class": "秦皮",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.10165882110595703,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.10165882110595703
+              },
+              {
+                "class_name": "干姜",
+                "confidence": 0.0792146548628807
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.06236365810036659
+              },
+              {
+                "class_name": "山慈菇",
+                "confidence": 0.03487956151366234
+              },
+              {
+                "class_name": "桑螵蛸",
+                "confidence": 0.032863158732652664
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\秦皮\\Qinpi115.jpg",
+            "expected_class": "秦皮",
+            "predicted_class": "甘松",
+            "top1_confidence": 0.06966706365346909,
+            "top5_predictions": [
+              {
+                "class_name": "甘松",
+                "confidence": 0.06966706365346909
+              },
+              {
+                "class_name": "藁本",
+                "confidence": 0.0573427677154541
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.056911807507276535
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.05427996441721916
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.03962727263569832
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "自然铜",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.10526315789473684,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\自然铜\\Zirantong119.jpg",
+            "expected_class": "自然铜",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.10069087892770767,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.10069087892770767
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.06912535429000854
+              },
+              {
+                "class_name": "柏子仁",
+                "confidence": 0.06606239080429077
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.06571576744318008
+              },
+              {
+                "class_name": "黄芩",
+                "confidence": 0.05369158834218979
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\自然铜\\Zirantong13.jpg",
+            "expected_class": "自然铜",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.07872071862220764,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.07872071862220764
+              },
+              {
+                "class_name": "木丁香",
+                "confidence": 0.04352873936295509
+              },
+              {
+                "class_name": "甘松",
+                "confidence": 0.039630256593227386
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.038989804685115814
+              },
+              {
+                "class_name": "荆芥穗",
+                "confidence": 0.032982803881168365
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\自然铜\\Zirantong14.jpg",
+            "expected_class": "自然铜",
+            "predicted_class": "甘松",
+            "top1_confidence": 0.17329628765583038,
+            "top5_predictions": [
+              {
+                "class_name": "甘松",
+                "confidence": 0.17329628765583038
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.14121566712856293
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.126231387257576
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.07659878581762314
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.0639837458729744
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\自然铜\\Zirantong17.jpg",
+            "expected_class": "自然铜",
+            "predicted_class": "木丁香",
+            "top1_confidence": 0.2784157395362854,
+            "top5_predictions": [
+              {
+                "class_name": "木丁香",
+                "confidence": 0.2784157395362854
+              },
+              {
+                "class_name": "灵芝",
+                "confidence": 0.07806017994880676
+              },
+              {
+                "class_name": "荔枝核",
+                "confidence": 0.06449704617261887
+              },
+              {
+                "class_name": "荜拨",
+                "confidence": 0.05167720094323158
+              },
+              {
+                "class_name": "九香虫",
+                "confidence": 0.04558289051055908
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "芦根",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.10526315789473684,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\芦根\\Lugen16.jpg",
+            "expected_class": "芦根",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.10059257596731186,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.10059257596731186
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.04711334407329559
+              },
+              {
+                "class_name": "黄芪",
+                "confidence": 0.044905561953783035
+              },
+              {
+                "class_name": "麦冬",
+                "confidence": 0.043451908975839615
+              },
+              {
+                "class_name": "芦根",
+                "confidence": 0.031160512939095497
+              }
+            ],
+            "top5_contains_expected": true
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\芦根\\Lugen31.jpg",
+            "expected_class": "芦根",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.10651370882987976,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.10651370882987976
+              },
+              {
+                "class_name": "山奈",
+                "confidence": 0.04429301992058754
+              },
+              {
+                "class_name": "黄芪",
+                "confidence": 0.03761626407504082
+              },
+              {
+                "class_name": "肉豆蔻",
+                "confidence": 0.037269476801157
+              },
+              {
+                "class_name": "天麻",
+                "confidence": 0.03672327473759651
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\芦根\\Lugen37.jpg",
+            "expected_class": "芦根",
+            "predicted_class": "干姜",
+            "top1_confidence": 0.09764561802148819,
+            "top5_predictions": [
+              {
+                "class_name": "干姜",
+                "confidence": 0.09764561802148819
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.07560041546821594
+              },
+              {
+                "class_name": "鳖甲",
+                "confidence": 0.03180152177810669
+              },
+              {
+                "class_name": "丝瓜络",
+                "confidence": 0.028867678716778755
+              },
+              {
+                "class_name": "合欢皮",
+                "confidence": 0.028851956129074097
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\芦根\\Lugen38.jpg",
+            "expected_class": "芦根",
+            "predicted_class": "川牛膝",
+            "top1_confidence": 0.055101457983255386,
+            "top5_predictions": [
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.055101457983255386
+              },
+              {
+                "class_name": "干姜",
+                "confidence": 0.050311826169490814
+              },
+              {
+                "class_name": "川木香",
+                "confidence": 0.04873201623558998
+              },
+              {
+                "class_name": "天麻",
+                "confidence": 0.04348665103316307
+              },
+              {
+                "class_name": "土荆皮",
+                "confidence": 0.04313621670007706
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "蜂房",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.10526315789473684,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\蜂房\\FengfangFengfang1.jpg",
+            "expected_class": "蜂房",
+            "predicted_class": "甘松",
+            "top1_confidence": 0.155177041888237,
+            "top5_predictions": [
+              {
+                "class_name": "甘松",
+                "confidence": 0.155177041888237
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.14796410501003265
+              },
+              {
+                "class_name": "苦地丁",
+                "confidence": 0.08346475660800934
+              },
+              {
+                "class_name": "荆芥穗",
+                "confidence": 0.0828624740242958
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.07332344353199005
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\蜂房\\FengfangFengfang10.jpg",
+            "expected_class": "蜂房",
+            "predicted_class": "莱菔子",
+            "top1_confidence": 0.15684719383716583,
+            "top5_predictions": [
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.15684719383716583
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.13825440406799316
+              },
+              {
+                "class_name": "甘松",
+                "confidence": 0.12643134593963623
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.11762634664773941
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.0626462772488594
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\蜂房\\FengfangFengfang11.jpg",
+            "expected_class": "蜂房",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.1369231790304184,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.1369231790304184
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.09996674954891205
+              },
+              {
+                "class_name": "甘松",
+                "confidence": 0.0886087492108345
+              },
+              {
+                "class_name": "荆芥穗",
+                "confidence": 0.07105967402458191
+              },
+              {
+                "class_name": "苦地丁",
+                "confidence": 0.06290021538734436
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\蜂房\\FengfangFengfang12.jpg",
+            "expected_class": "蜂房",
+            "predicted_class": "谷精草",
+            "top1_confidence": 0.09536494314670563,
+            "top5_predictions": [
+              {
+                "class_name": "谷精草",
+                "confidence": 0.09536494314670563
+              },
+              {
+                "class_name": "荆芥穗",
+                "confidence": 0.0941237285733223
+              },
+              {
+                "class_name": "甘松",
+                "confidence": 0.06655202060937881
+              },
+              {
+                "class_name": "苦地丁",
+                "confidence": 0.059571098536252975
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.043047644197940826
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      },
+      {
+        "class_name": "防风",
+        "top1_accuracy": 0.0,
+        "top5_accuracy": 0.10526315789473684,
+        "examples": [
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\防风\\FangfengFangfengFangfengFangfeng_75.jpg",
+            "expected_class": "防风",
+            "predicted_class": "芥子",
+            "top1_confidence": 0.07643863558769226,
+            "top5_predictions": [
+              {
+                "class_name": "芥子",
+                "confidence": 0.07643863558769226
+              },
+              {
+                "class_name": "谷芽",
+                "confidence": 0.07501357793807983
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.06928955018520355
+              },
+              {
+                "class_name": "稻芽",
+                "confidence": 0.055290911346673965
+              },
+              {
+                "class_name": "川牛膝",
+                "confidence": 0.04833049327135086
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\防风\\FangfengFangfengFangfengFangfeng_76.jpg",
+            "expected_class": "防风",
+            "predicted_class": "甘松",
+            "top1_confidence": 0.0927618145942688,
+            "top5_predictions": [
+              {
+                "class_name": "甘松",
+                "confidence": 0.0927618145942688
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.07340415567159653
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.06579069793224335
+              },
+              {
+                "class_name": "莱菔子",
+                "confidence": 0.05139828473329544
+              },
+              {
+                "class_name": "芥子",
+                "confidence": 0.046180881559848785
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\防风\\FangfengFangfengFangfengFangfeng_77.jpg",
+            "expected_class": "防风",
+            "predicted_class": "甘松",
+            "top1_confidence": 0.15978644788265228,
+            "top5_predictions": [
+              {
+                "class_name": "甘松",
+                "confidence": 0.15978644788265228
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.14013288915157318
+              },
+              {
+                "class_name": "荆芥穗",
+                "confidence": 0.08748538792133331
+              },
+              {
+                "class_name": "苦地丁",
+                "confidence": 0.07215455919504166
+              },
+              {
+                "class_name": "路路通",
+                "confidence": 0.05706942826509476
+              }
+            ],
+            "top5_contains_expected": false
+          },
+          {
+            "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\防风\\FangfengFangfengFangfengFangfeng_78.jpg",
+            "expected_class": "防风",
+            "predicted_class": "荆芥穗",
+            "top1_confidence": 0.17437872290611267,
+            "top5_predictions": [
+              {
+                "class_name": "荆芥穗",
+                "confidence": 0.17437872290611267
+              },
+              {
+                "class_name": "苦地丁",
+                "confidence": 0.15300750732421875
+              },
+              {
+                "class_name": "谷精草",
+                "confidence": 0.13135482370853424
+              },
+              {
+                "class_name": "甘松",
+                "confidence": 0.06807681918144226
+              },
+              {
+                "class_name": "细辛",
+                "confidence": 0.039768315851688385
+              }
+            ],
+            "top5_contains_expected": false
+          }
+        ]
+      }
+    ]
+  }
+}

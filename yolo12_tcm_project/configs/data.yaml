@@ -1,0 +1,10 @@
+# YOLO dataset config template.
+# Update paths after running scripts/split_yolo_dataset.py.
+path: ../data/splits
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: class_0
+

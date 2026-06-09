@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "images": 38,
+    "classes_declared": 2,
+    "labels_empty": 0,
+    "orphan_labels": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "classes": {
+    "0": "丝瓜络",
+    "1": "九香虫"
+  },
+  "box_distribution": {
+    "0": 19,
+    "1": 19
+  },
+  "image_distribution": {
+    "0": 19,
+    "1": 19
+  },
+  "issues": []
+}

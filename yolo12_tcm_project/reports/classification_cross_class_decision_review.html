@@ -1,0 +1,3555 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>跨类别标签冲突人工决策复核页</title>
+  <style>
+    :root {
+      --bg: #f6f4ee;
+      --ink: #1d2520;
+      --muted: #68736c;
+      --line: #d7d0c2;
+      --panel: #fffdf8;
+      --accent: #2f6f73;
+      --accent-2: #8a4d2f;
+      --warn: #a23e31;
+      --ok: #4d7a45;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Microsoft YaHei", "Segoe UI", sans-serif; }
+    header.page { position: sticky; top: 0; z-index: 5; background: rgba(246,244,238,.96); border-bottom: 1px solid var(--line); padding: 18px 24px; }
+    h1 { margin: 0 0 8px; font-size: 24px; letter-spacing: 0; }
+    .summary { display: flex; flex-wrap: wrap; gap: 10px; color: var(--muted); font-size: 13px; }
+    .toolbar { margin-top: 14px; display: grid; grid-template-columns: minmax(180px, 1fr) 180px 180px; gap: 10px; max-width: 940px; }
+    input, select, textarea, button { font: inherit; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--ink); }
+    .toolbar input, .toolbar select { padding: 9px 10px; }
+    main { padding: 22px 24px 56px; display: grid; gap: 18px; }
+    .group-card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 24px rgba(33, 28, 20, .06); }
+    .group-head { display: flex; justify-content: space-between; gap: 16px; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+    .group-head h2 { margin: 0; font-size: 18px; }
+    .group-head p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    .index { color: var(--accent-2); font-weight: 700; font-size: 13px; }
+    .status-pill { align-self: start; padding: 6px 9px; border-radius: 999px; background: #e6efe8; color: var(--ok); font-size: 12px; white-space: nowrap; }
+    .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; padding: 16px 18px; }
+    .record { margin: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #fbfaf4; }
+    .image-frame { aspect-ratio: 1 / .82; display: grid; place-items: center; background: #ece6d8; }
+    .image-frame img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    figcaption { display: grid; gap: 5px; padding: 10px; font-size: 12px; color: var(--muted); }
+    figcaption strong { color: var(--ink); font-size: 14px; }
+    code { font-family: "Cascadia Mono", Consolas, monospace; font-size: 12px; white-space: normal; word-break: break-all; }
+    .decision-grid { padding: 0 18px 16px; display: grid; grid-template-columns: repeat(3, minmax(180px, 1fr)); gap: 12px; }
+    label { display: grid; gap: 6px; font-size: 12px; color: var(--muted); }
+    label > input, label > select, label > textarea { width: 100%; padding: 8px 9px; }
+    .wide { grid-column: 1 / -1; }
+    .path-list { display: grid; gap: 6px; border: 1px solid var(--line); border-radius: 6px; background: #fff; padding: 8px; }
+    .path-check { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; }
+    .group-actions { display: flex; gap: 10px; align-items: center; padding: 12px 18px 16px; border-top: 1px solid var(--line); }
+    button { padding: 8px 11px; cursor: pointer; background: var(--accent); color: #fff; border-color: var(--accent); }
+    button:hover { filter: brightness(.96); }
+    .copy-state { color: var(--muted); }
+    .hidden { display: none; }
+    @media (max-width: 760px) {
+      header.page { position: static; padding: 14px; }
+      main { padding: 14px; }
+      .toolbar, .decision-grid { grid-template-columns: 1fr; }
+      .group-head { display: grid; }
+    }
+  </style>
+</head>
+<body data-meta="{&quot;groups&quot;: 34, &quot;records&quot;: 68, &quot;review_package&quot;: &quot;reports\\classification_cross_class_review_package.json&quot;, &quot;decision_table&quot;: &quot;reports\\classification_cross_class_decision_table.json&quot;, &quot;decision_csv&quot;: &quot;reports\\classification_cross_class_decision_table.csv&quot;, &quot;source_status&quot;: &quot;complete_review_package&quot;}">
+  <header class="page">
+    <h1>跨类别标签冲突人工决策复核页</h1>
+    <div class="summary">
+      <span>34 组冲突</span>
+      <span>68 条记录</span>
+      <span>来源: reports\classification_cross_class_review_package.json</span>
+      <span>只辅助人工填写，不自动修改 CSV 或数据集</span>
+    </div>
+    <div class="toolbar">
+      <input id="search" placeholder="搜索 group、类别、路径">
+      <select id="statusFilter">
+        <option value="">全部状态</option>
+        <option value="pending">pending</option>
+        <option value="decided">decided</option>
+        <option value="needs_expert_review">needs_expert_review</option>
+        <option value="defer">defer</option>
+      </select>
+      <select id="classFilter">
+        <option value="">全部类别组合</option>
+      </select>
+    </div>
+  </header>
+  <main id="groups">
+    
+    <article class="group-card" data-group-id="cross_class_001" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#01</span>
+          <h2>cross_class_001</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 07ae9fdf7ba9735c</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya30.jpg" alt="train/稻芽/DaoyaDaoya30.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya30.jpg</code>
+                <span>train · DaoyaDaoya30.jpg · 35768 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya48.jpg" alt="train/谷芽/GuyaGuya48.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya48.jpg</code>
+                <span>train · GuyaGuya48.jpg · 35768 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_001&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya30.jpg">
+              <span>train/稻芽/DaoyaDaoya30.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya48.jpg">
+              <span>train/谷芽/GuyaGuya48.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_002" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#02</span>
+          <h2>cross_class_002</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 12db6b5de76c47d5</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya60.jpg" alt="train/稻芽/DaoyaDaoya60.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya60.jpg</code>
+                <span>train · DaoyaDaoya60.jpg · 61781 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya77.jpg" alt="train/谷芽/GuyaGuya77.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya77.jpg</code>
+                <span>train · GuyaGuya77.jpg · 61781 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_002&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya60.jpg">
+              <span>train/稻芽/DaoyaDaoya60.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya77.jpg">
+              <span>train/谷芽/GuyaGuya77.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_003" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#03</span>
+          <h2>cross_class_003</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 2141200648876bb4</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/val/%E7%A8%BB%E8%8A%BD/DaoyaDaoya16.jpg" alt="val/稻芽/DaoyaDaoya16.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>val/稻芽/DaoyaDaoya16.jpg</code>
+                <span>val · DaoyaDaoya16.jpg · 89892 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/val/%E8%B0%B7%E8%8A%BD/GuyaGuya15.jpg" alt="val/谷芽/GuyaGuya15.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>val/谷芽/GuyaGuya15.jpg</code>
+                <span>val · GuyaGuya15.jpg · 89892 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_003&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="val/稻芽/DaoyaDaoya16.jpg">
+              <span>val/稻芽/DaoyaDaoya16.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="val/谷芽/GuyaGuya15.jpg">
+              <span>val/谷芽/GuyaGuya15.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_004" data-classes="橘核 / 龙眼肉" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#04</span>
+          <h2>cross_class_004</h2>
+          <p>橘核 / 龙眼肉 · 2 records · SHA 2587a11d3a2dda00</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E6%A9%98%E6%A0%B8/Juhe99.jpg" alt="train/橘核/Juhe99.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>橘核</strong>
+                <code>train/橘核/Juhe99.jpg</code>
+                <span>train · Juhe99.jpg · 76635 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E9%BE%99%E7%9C%BC%E8%82%89/Longyanrou105.jpg" alt="train/龙眼肉/Longyanrou105.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>龙眼肉</strong>
+                <code>train/龙眼肉/Longyanrou105.jpg</code>
+                <span>train · Longyanrou105.jpg · 76635 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_004&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="橘核">橘核</option>
+<option value="龙眼肉">龙眼肉</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="橘核">橘核</option>
+<option value="龙眼肉">龙眼肉</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/橘核/Juhe99.jpg">
+              <span>train/橘核/Juhe99.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/龙眼肉/Longyanrou105.jpg">
+              <span>train/龙眼肉/Longyanrou105.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_005" data-classes="橘核 / 荔枝核" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#05</span>
+          <h2>cross_class_005</h2>
+          <p>橘核 / 荔枝核 · 2 records · SHA 25acee6cbf3714be</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E6%A9%98%E6%A0%B8/Juhe62.jpg" alt="train/橘核/Juhe62.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>橘核</strong>
+                <code>train/橘核/Juhe62.jpg</code>
+                <span>train · Juhe62.jpg · 36998 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8D%94%E6%9E%9D%E6%A0%B8/Lizhihe99.jpg" alt="train/荔枝核/Lizhihe99.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>荔枝核</strong>
+                <code>train/荔枝核/Lizhihe99.jpg</code>
+                <span>train · Lizhihe99.jpg · 36998 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_005&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="橘核">橘核</option>
+<option value="荔枝核">荔枝核</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="橘核">橘核</option>
+<option value="荔枝核">荔枝核</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/橘核/Juhe62.jpg">
+              <span>train/橘核/Juhe62.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/荔枝核/Lizhihe99.jpg">
+              <span>train/荔枝核/Lizhihe99.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_006" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#06</span>
+          <h2>cross_class_006</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 299859d75e631846</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya42.jpg" alt="train/稻芽/DaoyaDaoya42.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya42.jpg</code>
+                <span>train · DaoyaDaoya42.jpg · 40017 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya45.jpg" alt="train/谷芽/GuyaGuya45.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya45.jpg</code>
+                <span>train · GuyaGuya45.jpg · 40017 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_006&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya42.jpg">
+              <span>train/稻芽/DaoyaDaoya42.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya45.jpg">
+              <span>train/谷芽/GuyaGuya45.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_007" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#07</span>
+          <h2>cross_class_007</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 342186e6c5550841</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya31.jpg" alt="train/稻芽/DaoyaDaoya31.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya31.jpg</code>
+                <span>train · DaoyaDaoya31.jpg · 107947 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya50.jpg" alt="train/谷芽/GuyaGuya50.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya50.jpg</code>
+                <span>train · GuyaGuya50.jpg · 107947 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_007&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya31.jpg">
+              <span>train/稻芽/DaoyaDaoya31.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya50.jpg">
+              <span>train/谷芽/GuyaGuya50.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_008" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#08</span>
+          <h2>cross_class_008</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 3429570c51f28958</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya96.jpg" alt="train/稻芽/DaoyaDaoya96.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya96.jpg</code>
+                <span>train · DaoyaDaoya96.jpg · 50183 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya90.jpg" alt="train/谷芽/GuyaGuya90.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya90.jpg</code>
+                <span>train · GuyaGuya90.jpg · 50183 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_008&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya96.jpg">
+              <span>train/稻芽/DaoyaDaoya96.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya90.jpg">
+              <span>train/谷芽/GuyaGuya90.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_009" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#09</span>
+          <h2>cross_class_009</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 3f273e9266fdd9c4</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya51.jpg" alt="train/稻芽/DaoyaDaoya51.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya51.jpg</code>
+                <span>train · DaoyaDaoya51.jpg · 23408 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya70.jpg" alt="train/谷芽/GuyaGuya70.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya70.jpg</code>
+                <span>train · GuyaGuya70.jpg · 23408 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_009&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya51.jpg">
+              <span>train/稻芽/DaoyaDaoya51.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya70.jpg">
+              <span>train/谷芽/GuyaGuya70.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_010" data-classes="肉豆蔻 / 草豆蔻" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#10</span>
+          <h2>cross_class_010</h2>
+          <p>肉豆蔻 / 草豆蔻 · 2 records · SHA 4e0ce76118116468</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%82%89%E8%B1%86%E8%94%BB/Roudoukou34.jpg" alt="train/肉豆蔻/Roudoukou34.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>肉豆蔻</strong>
+                <code>train/肉豆蔻/Roudoukou34.jpg</code>
+                <span>train · Roudoukou34.jpg · 30977 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8D%89%E8%B1%86%E8%94%BB/CaodoukouCaodoukouCaodoukou43.jpg" alt="train/草豆蔻/CaodoukouCaodoukouCaodoukou43.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>草豆蔻</strong>
+                <code>train/草豆蔻/CaodoukouCaodoukouCaodoukou43.jpg</code>
+                <span>train · CaodoukouCaodoukouCaodoukou43.jpg · 30977 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_010&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="肉豆蔻">肉豆蔻</option>
+<option value="草豆蔻">草豆蔻</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="肉豆蔻">肉豆蔻</option>
+<option value="草豆蔻">草豆蔻</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/肉豆蔻/Roudoukou34.jpg">
+              <span>train/肉豆蔻/Roudoukou34.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/草豆蔻/CaodoukouCaodoukouCaodoukou43.jpg">
+              <span>train/草豆蔻/CaodoukouCaodoukouCaodoukou43.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_011" data-classes="白茅根 / 芦根" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#11</span>
+          <h2>cross_class_011</h2>
+          <p>白茅根 / 芦根 · 2 records · SHA 53c1f2f48157b601</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%99%BD%E8%8C%85%E6%A0%B9/BaimaogenBaimaogenBaimaogen46.jpg" alt="train/白茅根/BaimaogenBaimaogenBaimaogen46.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>白茅根</strong>
+                <code>train/白茅根/BaimaogenBaimaogenBaimaogen46.jpg</code>
+                <span>train · BaimaogenBaimaogenBaimaogen46.jpg · 56878 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8A%A6%E6%A0%B9/Lugen52.jpg" alt="train/芦根/Lugen52.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>芦根</strong>
+                <code>train/芦根/Lugen52.jpg</code>
+                <span>train · Lugen52.jpg · 56878 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_011&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/白茅根/BaimaogenBaimaogenBaimaogen46.jpg">
+              <span>train/白茅根/BaimaogenBaimaogenBaimaogen46.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/芦根/Lugen52.jpg">
+              <span>train/芦根/Lugen52.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_012" data-classes="白茅根 / 芦根" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#12</span>
+          <h2>cross_class_012</h2>
+          <p>白茅根 / 芦根 · 2 records · SHA 574acedba57fc9b9</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%99%BD%E8%8C%85%E6%A0%B9/BaimaogenBaimaogenBaimaogen114.jpg" alt="train/白茅根/BaimaogenBaimaogenBaimaogen114.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>白茅根</strong>
+                <code>train/白茅根/BaimaogenBaimaogenBaimaogen114.jpg</code>
+                <span>train · BaimaogenBaimaogenBaimaogen114.jpg · 73553 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8A%A6%E6%A0%B9/Lugen41.jpg" alt="train/芦根/Lugen41.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>芦根</strong>
+                <code>train/芦根/Lugen41.jpg</code>
+                <span>train · Lugen41.jpg · 73553 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_012&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/白茅根/BaimaogenBaimaogenBaimaogen114.jpg">
+              <span>train/白茅根/BaimaogenBaimaogenBaimaogen114.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/芦根/Lugen41.jpg">
+              <span>train/芦根/Lugen41.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_013" data-classes="甘草 / 黄芪" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#13</span>
+          <h2>cross_class_013</h2>
+          <p>甘草 / 黄芪 · 2 records · SHA 5761ab58f7e9690d</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/val/%E7%94%98%E8%8D%89/GancaoGancaoGancaoGancao_11.jpg" alt="val/甘草/GancaoGancaoGancaoGancao_11.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>甘草</strong>
+                <code>val/甘草/GancaoGancaoGancaoGancao_11.jpg</code>
+                <span>val · GancaoGancaoGancaoGancao_11.jpg · 69572 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/val/%E9%BB%84%E8%8A%AA/HuangqiHuangqi1.jpg" alt="val/黄芪/HuangqiHuangqi1.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>黄芪</strong>
+                <code>val/黄芪/HuangqiHuangqi1.jpg</code>
+                <span>val · HuangqiHuangqi1.jpg · 69572 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_013&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="甘草">甘草</option>
+<option value="黄芪">黄芪</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="甘草">甘草</option>
+<option value="黄芪">黄芪</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="val/甘草/GancaoGancaoGancaoGancao_11.jpg">
+              <span>val/甘草/GancaoGancaoGancaoGancao_11.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="val/黄芪/HuangqiHuangqi1.jpg">
+              <span>val/黄芪/HuangqiHuangqi1.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_014" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#14</span>
+          <h2>cross_class_014</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 5ff229f40ca3aa6c</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya23.jpg" alt="train/稻芽/DaoyaDaoya23.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya23.jpg</code>
+                <span>train · DaoyaDaoya23.jpg · 121555 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya106.jpg" alt="train/谷芽/GuyaGuya106.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya106.jpg</code>
+                <span>train · GuyaGuya106.jpg · 121555 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_014&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya23.jpg">
+              <span>train/稻芽/DaoyaDaoya23.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya106.jpg">
+              <span>train/谷芽/GuyaGuya106.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_015" data-classes="芥子 / 莱菔子" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#15</span>
+          <h2>cross_class_015</h2>
+          <p>芥子 / 莱菔子 · 2 records · SHA 68e5cce2ae832fa6</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8A%A5%E5%AD%90/Jiezi23.jpg" alt="train/芥子/Jiezi23.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>芥子</strong>
+                <code>train/芥子/Jiezi23.jpg</code>
+                <span>train · Jiezi23.jpg · 35168 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8E%B1%E8%8F%94%E5%AD%90/Laifuzi18.jpg" alt="train/莱菔子/Laifuzi18.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>莱菔子</strong>
+                <code>train/莱菔子/Laifuzi18.jpg</code>
+                <span>train · Laifuzi18.jpg · 35168 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_015&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="芥子">芥子</option>
+<option value="莱菔子">莱菔子</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="芥子">芥子</option>
+<option value="莱菔子">莱菔子</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/芥子/Jiezi23.jpg">
+              <span>train/芥子/Jiezi23.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/莱菔子/Laifuzi18.jpg">
+              <span>train/莱菔子/Laifuzi18.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_016" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#16</span>
+          <h2>cross_class_016</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 6ad9e95745b9f0ea</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya44.jpg" alt="train/稻芽/DaoyaDaoya44.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya44.jpg</code>
+                <span>train · DaoyaDaoya44.jpg · 75001 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya43.jpg" alt="train/谷芽/GuyaGuya43.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya43.jpg</code>
+                <span>train · GuyaGuya43.jpg · 75001 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_016&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya44.jpg">
+              <span>train/稻芽/DaoyaDaoya44.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya43.jpg">
+              <span>train/谷芽/GuyaGuya43.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_017" data-classes="五加皮 / 藁本" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#17</span>
+          <h2>cross_class_017</h2>
+          <p>五加皮 / 藁本 · 2 records · SHA 8060ab98f2c791b8</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E4%BA%94%E5%8A%A0%E7%9A%AE/WujiapiWujiapiWujiapiWujiapi_106.jpg" alt="train/五加皮/WujiapiWujiapiWujiapiWujiapi_106.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>五加皮</strong>
+                <code>train/五加皮/WujiapiWujiapiWujiapiWujiapi_106.jpg</code>
+                <span>train · WujiapiWujiapiWujiapiWujiapi_106.jpg · 19875 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%97%81%E6%9C%AC/GaobenGaobenGaobenGaoben_90.jpg" alt="train/藁本/GaobenGaobenGaobenGaoben_90.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>藁本</strong>
+                <code>train/藁本/GaobenGaobenGaobenGaoben_90.jpg</code>
+                <span>train · GaobenGaobenGaobenGaoben_90.jpg · 19875 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_017&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="五加皮">五加皮</option>
+<option value="藁本">藁本</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="五加皮">五加皮</option>
+<option value="藁本">藁本</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/五加皮/WujiapiWujiapiWujiapiWujiapi_106.jpg">
+              <span>train/五加皮/WujiapiWujiapiWujiapiWujiapi_106.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/藁本/GaobenGaobenGaobenGaoben_90.jpg">
+              <span>train/藁本/GaobenGaobenGaobenGaoben_90.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_018" data-classes="浙贝母 / 湖北贝母" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#18</span>
+          <h2>cross_class_018</h2>
+          <p>浙贝母 / 湖北贝母 · 2 records · SHA 821079cee422b6cb</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E6%B5%99%E8%B4%9D%E6%AF%8D/ZhebeimuZhebeimuZhebeimuZhebeimu_21.jpg" alt="train/浙贝母/ZhebeimuZhebeimuZhebeimuZhebeimu_21.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>浙贝母</strong>
+                <code>train/浙贝母/ZhebeimuZhebeimuZhebeimuZhebeimu_21.jpg</code>
+                <span>train · ZhebeimuZhebeimuZhebeimuZhebeimu_21.jpg · 38011 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E6%B9%96%E5%8C%97%E8%B4%9D%E6%AF%8D/Hubeibeimu100.jpg" alt="train/湖北贝母/Hubeibeimu100.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>湖北贝母</strong>
+                <code>train/湖北贝母/Hubeibeimu100.jpg</code>
+                <span>train · Hubeibeimu100.jpg · 38011 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_018&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="浙贝母">浙贝母</option>
+<option value="湖北贝母">湖北贝母</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="浙贝母">浙贝母</option>
+<option value="湖北贝母">湖北贝母</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/浙贝母/ZhebeimuZhebeimuZhebeimuZhebeimu_21.jpg">
+              <span>train/浙贝母/ZhebeimuZhebeimuZhebeimuZhebeimu_21.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/湖北贝母/Hubeibeimu100.jpg">
+              <span>train/湖北贝母/Hubeibeimu100.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_019" data-classes="白茅根 / 芦根" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#19</span>
+          <h2>cross_class_019</h2>
+          <p>白茅根 / 芦根 · 2 records · SHA 86d5dbcb033a4eb4</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%99%BD%E8%8C%85%E6%A0%B9/BaimaogenBaimaogenBaimaogen95.jpg" alt="train/白茅根/BaimaogenBaimaogenBaimaogen95.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>白茅根</strong>
+                <code>train/白茅根/BaimaogenBaimaogenBaimaogen95.jpg</code>
+                <span>train · BaimaogenBaimaogenBaimaogen95.jpg · 101942 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8A%A6%E6%A0%B9/Lugen63.jpg" alt="train/芦根/Lugen63.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>芦根</strong>
+                <code>train/芦根/Lugen63.jpg</code>
+                <span>train · Lugen63.jpg · 101942 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_019&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/白茅根/BaimaogenBaimaogenBaimaogen95.jpg">
+              <span>train/白茅根/BaimaogenBaimaogenBaimaogen95.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/芦根/Lugen63.jpg">
+              <span>train/芦根/Lugen63.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_020" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#20</span>
+          <h2>cross_class_020</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 87a1c53dbae6f5ce</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya50.jpg" alt="train/稻芽/DaoyaDaoya50.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya50.jpg</code>
+                <span>train · DaoyaDaoya50.jpg · 111523 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya104.jpg" alt="train/谷芽/GuyaGuya104.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya104.jpg</code>
+                <span>train · GuyaGuya104.jpg · 111523 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_020&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya50.jpg">
+              <span>train/稻芽/DaoyaDaoya50.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya104.jpg">
+              <span>train/谷芽/GuyaGuya104.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_021" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#21</span>
+          <h2>cross_class_021</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 8fbe1d8732f52265</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya57.jpg" alt="train/稻芽/DaoyaDaoya57.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya57.jpg</code>
+                <span>train · DaoyaDaoya57.jpg · 79982 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya60.jpg" alt="train/谷芽/GuyaGuya60.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya60.jpg</code>
+                <span>train · GuyaGuya60.jpg · 79982 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_021&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya57.jpg">
+              <span>train/稻芽/DaoyaDaoya57.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya60.jpg">
+              <span>train/谷芽/GuyaGuya60.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_022" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#22</span>
+          <h2>cross_class_022</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA 9d55250b1e50086f</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya52.jpg" alt="train/稻芽/DaoyaDaoya52.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya52.jpg</code>
+                <span>train · DaoyaDaoya52.jpg · 59818 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya53.jpg" alt="train/谷芽/GuyaGuya53.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya53.jpg</code>
+                <span>train · GuyaGuya53.jpg · 59818 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_022&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya52.jpg">
+              <span>train/稻芽/DaoyaDaoya52.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya53.jpg">
+              <span>train/谷芽/GuyaGuya53.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_023" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#23</span>
+          <h2>cross_class_023</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA a2c8e9e199984ec1</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/val/%E7%A8%BB%E8%8A%BD/DaoyaDaoya14.jpg" alt="val/稻芽/DaoyaDaoya14.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>val/稻芽/DaoyaDaoya14.jpg</code>
+                <span>val · DaoyaDaoya14.jpg · 60426 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/val/%E8%B0%B7%E8%8A%BD/GuyaGuya19.jpg" alt="val/谷芽/GuyaGuya19.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>val/谷芽/GuyaGuya19.jpg</code>
+                <span>val · GuyaGuya19.jpg · 60426 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_023&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="val/稻芽/DaoyaDaoya14.jpg">
+              <span>val/稻芽/DaoyaDaoya14.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="val/谷芽/GuyaGuya19.jpg">
+              <span>val/谷芽/GuyaGuya19.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_024" data-classes="瓦楞子 / 自然铜" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#24</span>
+          <h2>cross_class_024</h2>
+          <p>瓦楞子 / 自然铜 · 2 records · SHA b5e70e43a91efb70</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%93%A6%E6%A5%9E%E5%AD%90/Walengzi14.jpg" alt="train/瓦楞子/Walengzi14.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>瓦楞子</strong>
+                <code>train/瓦楞子/Walengzi14.jpg</code>
+                <span>train · Walengzi14.jpg · 30772 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%87%AA%E7%84%B6%E9%93%9C/Zirantong87.jpg" alt="train/自然铜/Zirantong87.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>自然铜</strong>
+                <code>train/自然铜/Zirantong87.jpg</code>
+                <span>train · Zirantong87.jpg · 30772 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_024&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="瓦楞子">瓦楞子</option>
+<option value="自然铜">自然铜</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="瓦楞子">瓦楞子</option>
+<option value="自然铜">自然铜</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/瓦楞子/Walengzi14.jpg">
+              <span>train/瓦楞子/Walengzi14.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/自然铜/Zirantong87.jpg">
+              <span>train/自然铜/Zirantong87.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_025" data-classes="橘核 / 苍术" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#25</span>
+          <h2>cross_class_025</h2>
+          <p>橘核 / 苍术 · 2 records · SHA b639fb7ce6f299f3</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E6%A9%98%E6%A0%B8/Juhe74.jpg" alt="train/橘核/Juhe74.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>橘核</strong>
+                <code>train/橘核/Juhe74.jpg</code>
+                <span>train · Juhe74.jpg · 90348 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8B%8D%E6%9C%AF/CangzhuCangzhuCangzhuCangzhu_6.jpg" alt="train/苍术/CangzhuCangzhuCangzhuCangzhu_6.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>苍术</strong>
+                <code>train/苍术/CangzhuCangzhuCangzhuCangzhu_6.jpg</code>
+                <span>train · CangzhuCangzhuCangzhuCangzhu_6.jpg · 90348 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_025&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="橘核">橘核</option>
+<option value="苍术">苍术</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="橘核">橘核</option>
+<option value="苍术">苍术</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/橘核/Juhe74.jpg">
+              <span>train/橘核/Juhe74.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/苍术/CangzhuCangzhuCangzhuCangzhu_6.jpg">
+              <span>train/苍术/CangzhuCangzhuCangzhuCangzhu_6.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_026" data-classes="橘核 / 荔枝核" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#26</span>
+          <h2>cross_class_026</h2>
+          <p>橘核 / 荔枝核 · 2 records · SHA bd6759cb266cd873</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E6%A9%98%E6%A0%B8/Juhe60.jpg" alt="train/橘核/Juhe60.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>橘核</strong>
+                <code>train/橘核/Juhe60.jpg</code>
+                <span>train · Juhe60.jpg · 14513 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8D%94%E6%9E%9D%E6%A0%B8/Lizhihe113.jpg" alt="train/荔枝核/Lizhihe113.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>荔枝核</strong>
+                <code>train/荔枝核/Lizhihe113.jpg</code>
+                <span>train · Lizhihe113.jpg · 14513 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_026&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="橘核">橘核</option>
+<option value="荔枝核">荔枝核</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="橘核">橘核</option>
+<option value="荔枝核">荔枝核</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/橘核/Juhe60.jpg">
+              <span>train/橘核/Juhe60.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/荔枝核/Lizhihe113.jpg">
+              <span>train/荔枝核/Lizhihe113.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_027" data-classes="白茅根 / 芦根" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#27</span>
+          <h2>cross_class_027</h2>
+          <p>白茅根 / 芦根 · 2 records · SHA d522a63b5a4d1648</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%99%BD%E8%8C%85%E6%A0%B9/BaimaogenBaimaogenBaimaogen101.jpg" alt="train/白茅根/BaimaogenBaimaogenBaimaogen101.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>白茅根</strong>
+                <code>train/白茅根/BaimaogenBaimaogenBaimaogen101.jpg</code>
+                <span>train · BaimaogenBaimaogenBaimaogen101.jpg · 51078 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8A%A6%E6%A0%B9/Lugen47.jpg" alt="train/芦根/Lugen47.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>芦根</strong>
+                <code>train/芦根/Lugen47.jpg</code>
+                <span>train · Lugen47.jpg · 51078 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_027&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/白茅根/BaimaogenBaimaogenBaimaogen101.jpg">
+              <span>train/白茅根/BaimaogenBaimaogenBaimaogen101.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/芦根/Lugen47.jpg">
+              <span>train/芦根/Lugen47.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_028" data-classes="橘核 / 荔枝核" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#28</span>
+          <h2>cross_class_028</h2>
+          <p>橘核 / 荔枝核 · 2 records · SHA d6c8bd74882ff5af</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E6%A9%98%E6%A0%B8/Juhe97.jpg" alt="train/橘核/Juhe97.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>橘核</strong>
+                <code>train/橘核/Juhe97.jpg</code>
+                <span>train · Juhe97.jpg · 35179 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8D%94%E6%9E%9D%E6%A0%B8/Lizhihe119.jpg" alt="train/荔枝核/Lizhihe119.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>荔枝核</strong>
+                <code>train/荔枝核/Lizhihe119.jpg</code>
+                <span>train · Lizhihe119.jpg · 35179 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_028&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="橘核">橘核</option>
+<option value="荔枝核">荔枝核</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="橘核">橘核</option>
+<option value="荔枝核">荔枝核</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/橘核/Juhe97.jpg">
+              <span>train/橘核/Juhe97.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/荔枝核/Lizhihe119.jpg">
+              <span>train/荔枝核/Lizhihe119.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_029" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#29</span>
+          <h2>cross_class_029</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA e40dad2fb61f4e48</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya38.jpg" alt="train/稻芽/DaoyaDaoya38.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya38.jpg</code>
+                <span>train · DaoyaDaoya38.jpg · 84452 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya58.jpg" alt="train/谷芽/GuyaGuya58.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya58.jpg</code>
+                <span>train · GuyaGuya58.jpg · 84452 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_029&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya38.jpg">
+              <span>train/稻芽/DaoyaDaoya38.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya58.jpg">
+              <span>train/谷芽/GuyaGuya58.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_030" data-classes="白茅根 / 芦根" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#30</span>
+          <h2>cross_class_030</h2>
+          <p>白茅根 / 芦根 · 2 records · SHA edabc03375fca683</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%99%BD%E8%8C%85%E6%A0%B9/BaimaogenBaimaogenBaimaogen62.jpg" alt="train/白茅根/BaimaogenBaimaogenBaimaogen62.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>白茅根</strong>
+                <code>train/白茅根/BaimaogenBaimaogenBaimaogen62.jpg</code>
+                <span>train · BaimaogenBaimaogenBaimaogen62.jpg · 34169 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8A%A6%E6%A0%B9/Lugen95.jpg" alt="train/芦根/Lugen95.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>芦根</strong>
+                <code>train/芦根/Lugen95.jpg</code>
+                <span>train · Lugen95.jpg · 34169 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_030&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/白茅根/BaimaogenBaimaogenBaimaogen62.jpg">
+              <span>train/白茅根/BaimaogenBaimaogenBaimaogen62.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/芦根/Lugen95.jpg">
+              <span>train/芦根/Lugen95.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_031" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#31</span>
+          <h2>cross_class_031</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA f1c41162e031474c</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya102.jpg" alt="train/稻芽/DaoyaDaoya102.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya102.jpg</code>
+                <span>train · DaoyaDaoya102.jpg · 12271 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya107.jpg" alt="train/谷芽/GuyaGuya107.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya107.jpg</code>
+                <span>train · GuyaGuya107.jpg · 12271 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_031&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya102.jpg">
+              <span>train/稻芽/DaoyaDaoya102.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya107.jpg">
+              <span>train/谷芽/GuyaGuya107.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_032" data-classes="白茅根 / 芦根" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#32</span>
+          <h2>cross_class_032</h2>
+          <p>白茅根 / 芦根 · 2 records · SHA f4cdc9c1d5fc653b</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%99%BD%E8%8C%85%E6%A0%B9/BaimaogenBaimaogenBaimaogen89.jpg" alt="train/白茅根/BaimaogenBaimaogenBaimaogen89.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>白茅根</strong>
+                <code>train/白茅根/BaimaogenBaimaogenBaimaogen89.jpg</code>
+                <span>train · BaimaogenBaimaogenBaimaogen89.jpg · 21399 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%8A%A6%E6%A0%B9/Lugen97.jpg" alt="train/芦根/Lugen97.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>芦根</strong>
+                <code>train/芦根/Lugen97.jpg</code>
+                <span>train · Lugen97.jpg · 21399 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_032&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="白茅根">白茅根</option>
+<option value="芦根">芦根</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/白茅根/BaimaogenBaimaogenBaimaogen89.jpg">
+              <span>train/白茅根/BaimaogenBaimaogenBaimaogen89.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/芦根/Lugen97.jpg">
+              <span>train/芦根/Lugen97.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_033" data-classes="稻芽 / 谷芽" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#33</span>
+          <h2>cross_class_033</h2>
+          <p>稻芽 / 谷芽 · 2 records · SHA f599e26535367aae</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E7%A8%BB%E8%8A%BD/DaoyaDaoya85.jpg" alt="train/稻芽/DaoyaDaoya85.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>稻芽</strong>
+                <code>train/稻芽/DaoyaDaoya85.jpg</code>
+                <span>train · DaoyaDaoya85.jpg · 122744 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E8%B0%B7%E8%8A%BD/GuyaGuya38.jpg" alt="train/谷芽/GuyaGuya38.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>谷芽</strong>
+                <code>train/谷芽/GuyaGuya38.jpg</code>
+                <span>train · GuyaGuya38.jpg · 122744 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_033&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="稻芽">稻芽</option>
+<option value="谷芽">谷芽</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/稻芽/DaoyaDaoya85.jpg">
+              <span>train/稻芽/DaoyaDaoya85.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/谷芽/GuyaGuya38.jpg">
+              <span>train/谷芽/GuyaGuya38.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+
+    <article class="group-card" data-group-id="cross_class_034" data-classes="北沙参 / 麦冬" data-status="pending">
+      <header class="group-head">
+        <div>
+          <span class="index">#34</span>
+          <h2>cross_class_034</h2>
+          <p>北沙参 / 麦冬 · 2 records · SHA fe1923297ff9424c</p>
+        </div>
+        <div class="status-pill">pending</div>
+      </header>
+      <section class="image-grid">
+        
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E5%8C%97%E6%B2%99%E5%8F%82/BeishashenBeishashenBeishashen64.jpg" alt="train/北沙参/BeishashenBeishashenBeishashen64.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>北沙参</strong>
+                <code>train/北沙参/BeishashenBeishashenBeishashen64.jpg</code>
+                <span>train · BeishashenBeishashenBeishashen64.jpg · 85555 bytes</span>
+              </figcaption>
+            </figure>
+            
+
+            <figure class="record ok">
+              <div class="image-frame">
+                <img src="data/classification_strict_jpeg_leakage_clean_candidate/train/%E9%BA%A6%E5%86%AC/Maidong112.jpg" alt="train/麦冬/Maidong112.jpg" loading="lazy">
+              </div>
+              <figcaption>
+                <strong>麦冬</strong>
+                <code>train/麦冬/Maidong112.jpg</code>
+                <span>train · Maidong112.jpg · 85555 bytes</span>
+              </figcaption>
+            </figure>
+            
+      </section>
+      <section class="decision-grid" data-fields="{&quot;group_id&quot;: &quot;cross_class_034&quot;, &quot;decision_status&quot;: &quot;pending&quot;, &quot;chosen_class&quot;: &quot;&quot;, &quot;action&quot;: &quot;&quot;, &quot;remove_relative_paths&quot;: &quot;&quot;, &quot;move_to_class&quot;: &quot;&quot;, &quot;reviewer&quot;: &quot;&quot;, &quot;reviewed_at&quot;: &quot;&quot;, &quot;decision_note&quot;: &quot;&quot;}">
+        <label>decision_status
+          <select data-field="decision_status">
+            <option value="pending" selected>pending</option>
+<option value="decided">decided</option>
+<option value="needs_expert_review">needs_expert_review</option>
+<option value="defer">defer</option>
+          </select>
+        </label>
+        <label>chosen_class
+          <select data-field="chosen_class">
+            <option value="" selected>-</option>
+<option value="北沙参">北沙参</option>
+<option value="麦冬">麦冬</option>
+          </select>
+        </label>
+        <label>action
+          <select data-field="action">
+            <option value="" selected>-</option>
+<option value="keep_chosen_class_remove_others">keep_chosen_class_remove_others</option>
+<option value="move_all_to_chosen_class">move_all_to_chosen_class</option>
+<option value="keep_all_as_is">keep_all_as_is</option>
+<option value="remove_all_uncertain">remove_all_uncertain</option>
+<option value="needs_expert_review">needs_expert_review</option>
+          </select>
+        </label>
+        <label>move_to_class
+          <select data-field="move_to_class">
+            <option value="" selected>-</option>
+<option value="北沙参">北沙参</option>
+<option value="麦冬">麦冬</option>
+          </select>
+        </label>
+        <label>reviewer
+          <input data-field="reviewer" value="">
+        </label>
+        <label>reviewed_at
+          <input data-field="reviewed_at" placeholder="YYYY-MM-DD" value="">
+        </label>
+        <label class="wide">remove_relative_paths
+          <div class="path-list">
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/北沙参/BeishashenBeishashenBeishashen64.jpg">
+              <span>train/北沙参/BeishashenBeishashenBeishashen64.jpg</span>
+            </label>
+            
+
+            <label class="path-check">
+              <input type="checkbox" data-remove-path value="train/麦冬/Maidong112.jpg">
+              <span>train/麦冬/Maidong112.jpg</span>
+            </label>
+            </div>
+        </label>
+        <label class="wide">decision_note
+          <textarea data-field="decision_note" rows="3"></textarea>
+        </label>
+      </section>
+      <footer class="group-actions">
+        <button type="button" data-copy-row>Copy TSV row</button>
+        <button type="button" data-copy-remove>Copy remove paths</button>
+        <code class="copy-state">ready</code>
+      </footer>
+    </article>
+    
+  </main>
+  <script>
+    const cards = Array.from(document.querySelectorAll('.group-card'));
+    const search = document.querySelector('#search');
+    const statusFilter = document.querySelector('#statusFilter');
+    const classFilter = document.querySelector('#classFilter');
+    const classes = [...new Set(cards.map(card => card.dataset.classes).filter(Boolean))].sort();
+    for (const item of classes) {
+      const option = document.createElement('option');
+      option.value = item;
+      option.textContent = item;
+      classFilter.appendChild(option);
+    }
+    function removePaths(card) {
+      return Array.from(card.querySelectorAll('[data-remove-path]:checked')).map(item => item.value).join(';');
+    }
+    function fieldValue(card, field) {
+      const input = card.querySelector(`[data-field="${field}"]`);
+      return input ? input.value.trim() : '';
+    }
+    function tsvRow(card) {
+      return [
+        card.dataset.groupId,
+        fieldValue(card, 'decision_status'),
+        fieldValue(card, 'chosen_class'),
+        fieldValue(card, 'action'),
+        removePaths(card),
+        fieldValue(card, 'move_to_class'),
+        fieldValue(card, 'reviewer'),
+        fieldValue(card, 'reviewed_at'),
+        fieldValue(card, 'decision_note')
+      ].join('\t');
+    }
+    async function copyText(text, state) {
+      try {
+        await navigator.clipboard.writeText(text);
+        state.textContent = 'copied';
+      } catch (err) {
+        state.textContent = text;
+      }
+    }
+    function applyFilters() {
+      const needle = search.value.trim().toLowerCase();
+      const status = statusFilter.value;
+      const klass = classFilter.value;
+      for (const card of cards) {
+        const text = card.textContent.toLowerCase();
+        const visible = (!needle || text.includes(needle)) && (!status || card.dataset.status === status) && (!klass || card.dataset.classes === klass);
+        card.classList.toggle('hidden', !visible);
+      }
+    }
+    document.addEventListener('click', event => {
+      const card = event.target.closest('.group-card');
+      if (!card) return;
+      const state = card.querySelector('.copy-state');
+      if (event.target.matches('[data-copy-row]')) copyText(tsvRow(card), state);
+      if (event.target.matches('[data-copy-remove]')) copyText(removePaths(card), state);
+    });
+    document.addEventListener('input', event => {
+      if (event.target.matches('select[data-field="decision_status"]')) {
+        const card = event.target.closest('.group-card');
+        card.dataset.status = event.target.value;
+        card.querySelector('.status-pill').textContent = event.target.value;
+      }
+      applyFilters();
+    });
+    search.addEventListener('input', applyFilters);
+    statusFilter.addEventListener('change', applyFilters);
+    classFilter.addEventListener('change', applyFilters);
+  </script>
+</body>
+</html>

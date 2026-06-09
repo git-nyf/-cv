@@ -1,0 +1,43 @@
+{
+  "model": "D:\\AAA中药cv\\yolo12_tcm_project\\runs\\train\\strict_classify_yolo12n_cls_cpu_5e\\weights\\best.pt",
+  "source": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo117.jpg",
+  "imgsz": 224,
+  "device": "cpu",
+  "topk": 5,
+  "results": [
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo117.jpg",
+      "expected_class": "丝瓜络",
+      "top1_class_id": 22,
+      "top1_class_name": "干姜",
+      "top1_confidence": 0.09262768924236298,
+      "predictions": [
+        {
+          "class_id": 22,
+          "class_name": "干姜",
+          "confidence": 0.09262768924236298
+        },
+        {
+          "class_id": 33,
+          "class_name": "浙贝母",
+          "confidence": 0.06788679212331772
+        },
+        {
+          "class_id": 46,
+          "class_name": "白芷",
+          "confidence": 0.04766327142715454
+        },
+        {
+          "class_id": 40,
+          "class_name": "甘草",
+          "confidence": 0.04449721798300743
+        },
+        {
+          "class_id": 12,
+          "class_name": "天花粉",
+          "confidence": 0.04218287020921707
+        }
+      ]
+    }
+  ]
+}

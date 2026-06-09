@@ -1,0 +1,43 @@
+{
+  "model": "D:\\AAA中药cv\\yolo12_tcm_project\\runs\\train\\strict_classify_yolo12n_cls_gpu_100e\\weights\\best.pt",
+  "source": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo117.jpg",
+  "imgsz": 224,
+  "device": "0",
+  "topk": 5,
+  "results": [
+    {
+      "image": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\丝瓜络\\Sigualuo117.jpg",
+      "expected_class": "丝瓜络",
+      "top1_class_id": 34,
+      "top1_class_name": "海螵蛸",
+      "top1_confidence": 0.28037166595458984,
+      "predictions": [
+        {
+          "class_id": 34,
+          "class_name": "海螵蛸",
+          "confidence": 0.28037166595458984
+        },
+        {
+          "class_id": 3,
+          "class_name": "人参",
+          "confidence": 0.15214967727661133
+        },
+        {
+          "class_id": 90,
+          "class_name": "黄芪",
+          "confidence": 0.0911010354757309
+        },
+        {
+          "class_id": 87,
+          "class_name": "麦冬",
+          "confidence": 0.07453977316617966
+        },
+        {
+          "class_id": 12,
+          "class_name": "天花粉",
+          "confidence": 0.07449155300855637
+        }
+      ]
+    }
+  ]
+}

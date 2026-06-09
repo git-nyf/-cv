@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "source_decision_table": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_decision_table.json",
+  "source_decision_csv": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_decision_table.csv",
+  "summary": {
+    "status": "waiting_for_manual_decisions",
+    "groups": 34,
+    "records": 68,
+    "pending_decisions": 34,
+    "decided_groups": 0,
+    "needs_expert_review_groups": 0,
+    "deferred_groups": 0,
+    "validation_errors": 0,
+    "planned_operations": 0,
+    "planned_remove_operations": 0,
+    "planned_move_operations": 0,
+    "keep_all_as_is_groups": 0
+  },
+  "action_counts": {
+    "unset": 34
+  },
+  "operations": [],
+  "no_op_groups": [],
+  "validation_errors": [],
+  "boundary_note": "本报告只把人工决策转换为可审计清理计划；不会删除、移动、重命名、重标或复制任何图片。",
+  "recommended_next_steps": [
+    "人工填写所有 pending 决策后重新生成本清理计划。",
+    "仅当 status 为 ready_for_cleanup_execution 且 validation_errors 为 0 时，才可进入真实数据清理执行脚本。",
+    "执行清理后必须重新运行 classification inspection、duplicate audit、训练和独立评估。"
+  ]
+}

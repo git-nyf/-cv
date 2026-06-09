@@ -1,0 +1,169 @@
+# ????????????
+
+- ????: `D:\AAA中药cv\yolo12_tcm_project\data\classification_clean`
+- ?????: 9595
+- ?????: 150
+
+## ????
+
+- extension_content_mismatch: 122
+- load_failed: 3
+- unsupported_content_format: 25
+
+## ????
+
+- train: 126
+- val: 24
+
+## ????
+
+- [extension_content_mismatch] `train/人参/Renshen17.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/人参/Renshen38.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/僵蚕/Jiangcan41.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/全蝎/Quanxie109.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/冬虫夏草/DongchongxiacaoDongchongxiacao117.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/冬虫夏草/DongchongxiacaoDongchongxiacao44.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/冬虫夏草/DongchongxiacaoDongchongxiacao76.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/冬虫夏草/DongchongxiacaoDongchongxiacao80.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/冬虫夏草/DongchongxiacaoDongchongxiacao92.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/北沙参/BeishashenBeishashenBeishashen24.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/北沙参/BeishashenBeishashenBeishashen81.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/合欢皮/HehuanpiHehuanpi23.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/合欢皮/HehuanpiHehuanpi70.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/天麻/Tianma112.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/天麻/Tianma6.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/太子参/Taizishen106.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/山慈菇/Shancigu94.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/山茱萸/Shanzhuyu88.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/川木香/ChuanmuxiangChuanmuxiang90.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/川楝子/ChuanlianziChuanlianzi74.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/干姜/GanjiangGanjiang119(1).jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/干姜/GanjiangGanjiang119.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/干姜/GanjiangGanjiang98(1).jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/干姜/GanjiangGanjiang98.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/木丁香/Mudingxiang101(1).jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/木丁香/Mudingxiang101.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/木丁香/Mudingxiang24(1).jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/木丁香/Mudingxiang24.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/木丁香/Mudingxiang36(1).jpg`: suffix .jpg but content format gif
+- [unsupported_content_format] `train/木丁香/Mudingxiang36.jpg`: suffix .jpg but content format gif
+- [unsupported_content_format] `train/枸杞子/GouqiziGouqizi103(1).jpg`: suffix .jpg but content format gif
+- [unsupported_content_format] `train/枸杞子/GouqiziGouqizi103.jpg`: suffix .jpg but content format gif
+- [unsupported_content_format] `train/枸杞子/GouqiziGouqizi53(1).jpg`: suffix .jpg but content format gif
+- [unsupported_content_format] `train/枸杞子/GouqiziGouqizi53.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/桂枝/GuizhiGuizhiGuizhiGuizhi_39.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/桑寄生/SangjishengSangjishengSangjishengSangjisheng_63.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/桑椹/Sangshen75.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/桑椹/Sangshen79.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/桑椹/Sangshen92.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/桑螵蛸/Sangpiaoxiao75.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/槟榔/BinglangBinglangBinglangBinglang_27.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/橘核/Juhe119.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/沉香/ChenxiangChenxiang37.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/沉香/ChenxiangChenxiang71.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/沉香/ChenxiangChenxiang82.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/沉香/ChenxiangChenxiang93.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/浙贝母/ZhebeimuZhebeimuZhebeimuZhebeimu_103.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/浙贝母/ZhebeimuZhebeimuZhebeimuZhebeimu_25.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/湖北贝母/Hubeibeimu18.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/湖北贝母/Hubeibeimu31.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/灵芝/Lingzhi11.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/灵芝/Lingzhi112.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/灵芝/Lingzhi113.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/灵芝/Lingzhi84.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/瓦楞子/Walengzi116.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/瓦楞子/Walengzi47.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/甘松/GansongGansong95.jpg`: suffix .jpg but content format gif
+- [unsupported_content_format] `train/甘草/GancaoGancaoGancaoGancao_32.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/甘草/GancaoGancaoGancaoGancao_83.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/番泻叶/FanxieyeFanxieye101.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/番泻叶/FanxieyeFanxieye52.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/番泻叶/FanxieyeFanxieye56.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/番泻叶/FanxieyeFanxieye93.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/白前/BaiqianBaiqianBaiqian37.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/白扁豆/BaibiandouBaibiandouBaibiandou85.jpg`: suffix .jpg but content format png
+- [load_failed] `train/白芍/BaishaoBaishaoBaishaoIMG_20200724_180221.jpg`: broken data stream when reading image file
+- [load_failed] `train/白芍/BaishaoBaishaoBaishaoIMG_20200724_180244.jpg`: broken data stream when reading image file
+- [extension_content_mismatch] `train/白芷/BaizhiBaizhiBaizhiBaizhi_33.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/白茅根/BaimaogenBaimaogenBaimaogen103.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/白茅根/BaimaogenBaimaogenBaimaogen54.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/白茅根/BaimaogenBaimaogenBaimaogen59.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/白茅根/BaimaogenBaimaogenBaimaogen60.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/石榴皮/Shiliupi116.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/秦皮/Qinpi105.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/秦皮/Qinpi79.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/稻芽/DaoyaDaoya55.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/竹茹/Zhuru98.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/细辛/XixinXixinXixinXixin_12.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/羌活/QianghuoQianghuoQianghuoQianghuo_38.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/羌活/QianghuoQianghuoQianghuoQianghuo_54.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/肉豆蔻/Roudoukou8.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/肉豆蔻/Roudoukou86.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/自然铜/Zirantong4.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/芥子/Jiezi107.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/芦根/Lugen106.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/芦根/Lugen54.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/荆芥穗/Jingjiesui26.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/草豆蔻/CaodoukouCaodoukouCaodoukou44.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/荔枝核/Lizhihe104.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/荔枝核/Lizhihe78.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/荜拨/BiboBiboBibo25.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/荜拨/BiboBiboBibo35.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/荜澄茄/BichengqieBichengqieBichengqie64.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/莱菔子/Laifuzi88.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/莲子/Lianzi15.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/莲子/Lianzi20.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/莲子/Lianzi26.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/莲子/Lianzi32.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/莲子心/Lianzixin16.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/莲子心/Lianzixin70.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/莲子心/Lianzixin85.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/谷精草/GujingcaoGujingcao60.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/谷芽/GuyaGuya25.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/谷芽/GuyaGuya59.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/路路通/Lulutong88.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/路路通/Lulutong94.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/酸枣仁/SuanzaorenSuanzaorenSuanzaorenSuanzaoren_20.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/酸枣仁/SuanzaorenSuanzaorenSuanzaorenSuanzaoren_51.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/金灯笼/Jindenglong20.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/金灯笼/Jindenglong51.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/金灯笼/Jindenglong54.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/金灯笼/Jindenglong60.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/金钱白花蛇/Jinqianbaihuashe10.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/鸡内金/Jineijin81.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/鸡冠花/Jiguanhua103.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/鸡冠花/Jiguanhua108.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/鸡冠花/Jiguanhua52.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/麦冬/Maidong26.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/麦冬/Maidong49.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/黄芩/HuangqinHuangqinHuangqinHuangqin_11(1).jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/黄芩/HuangqinHuangqinHuangqinHuangqin_11.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/黄芪/HuangqiHuangqi20.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/黄芪/HuangqiHuangqi28.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `train/黄芪/HuangqiHuangqi66.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `train/龙眼肉/Longyanrou69.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `train/龙眼肉/Longyanrou71.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/丝瓜络/Sigualuo29.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/五加皮/WujiapiWujiapiWujiapiWujiapi_4.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `val/北沙参/BeishashenBeishashenBeishashen19.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `val/地龙/DilongDilong1.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/川牛膝/ChuanniuxiChuanniuxi4.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/枸杞子/GouqiziGouqizi6.jpg`: suffix .jpg but content format png
+- [load_failed] `val/桑寄生/SangjishengSangjishengSangjishengIMG_20200724_180506.jpg`: broken data stream when reading image file
+- [unsupported_content_format] `val/淡豆豉/DandouchiDandouchi20.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `val/甘草/GancaoGancaoGancaoGancao_2.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `val/白前/BaiqianBaiqianBaiqian10.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `val/白扁豆/BaibiandouBaibiandouBaibiandou20.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/白茅根/BaimaogenBaimaogenBaimaogen17.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/稻芽/DaoyaDaoya12.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/稻芽/DaoyaDaoya8.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `val/羌活/QianghuoQianghuoQianghuoQianghuo_10.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `val/苦地丁/Kudiding29.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/荆芥穗/Jingjiesui23.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/荜拨/BiboBiboBibo13.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/莲子/Lianzi60.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `val/金钱白花蛇/Jinqianbaihuashe114.jpg`: suffix .jpg but content format gif
+- [extension_content_mismatch] `val/银柴胡/Yinchaihu82.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/鳖甲/BiejiaBiejiaBiejia1.jpg`: suffix .jpg but content format png
+- [extension_content_mismatch] `val/黄芩/HuangqinHuangqinHuangqinHuangqin_7.jpg`: suffix .jpg but content format png
+- [unsupported_content_format] `val/龙眼肉/Longyanrou80.jpg`: suffix .jpg but content format gif

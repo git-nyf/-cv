@@ -1,0 +1,1687 @@
+{
+  "timestamp": "2026-06-07T06:55:16",
+  "python": "D:\\AAA中药cv\\yolo12_tcm_project\\.venv\\Scripts\\python.exe",
+  "checks": [
+    {
+      "name": "exists:README.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\README.md"
+    },
+    {
+      "name": "exists:requirements.txt",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\requirements.txt"
+    },
+    {
+      "name": "exists:configs/train_baseline.yaml",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\configs\\train_baseline.yaml"
+    },
+    {
+      "name": "exists:scripts/train_yolo12.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\train_yolo12.py"
+    },
+    {
+      "name": "exists:backend/app/main.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\backend\\app\\main.py"
+    },
+    {
+      "name": "exists:frontend/src/App.vue",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\frontend\\src\\App.vue"
+    },
+    {
+      "name": "exists:reports/test_report.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\test_report.md"
+    },
+    {
+      "name": "exists:reports/overview_design.pptx",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\overview_design.pptx"
+    },
+    {
+      "name": "exists:reports/submission_checklist.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\submission_checklist.md"
+    },
+    {
+      "name": "exists:reports/strict_classification_training_report.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\strict_classification_training_report.md"
+    },
+    {
+      "name": "exists:reports/strict_classification_evaluation_metrics.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\strict_classification_evaluation_metrics.json"
+    },
+    {
+      "name": "exists:scripts/prepare_completed_classification_dataset.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\prepare_completed_classification_dataset.py"
+    },
+    {
+      "name": "exists:scripts/prepare_detection_annotation_package.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\prepare_detection_annotation_package.py"
+    },
+    {
+      "name": "exists:scripts/validate_detection_annotation_package.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\validate_detection_annotation_package.py"
+    },
+    {
+      "name": "exists:scripts/generate_detection_annotation_contact_sheet.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\generate_detection_annotation_contact_sheet.py"
+    },
+    {
+      "name": "exists:configs/train_cls_93class_smoke.yaml",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\configs\\train_cls_93class_smoke.yaml"
+    },
+    {
+      "name": "exists:reports/classification_93class_completion_report.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_completion_report.json"
+    },
+    {
+      "name": "exists:reports/classification_93class_completion_report.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_completion_report.md"
+    },
+    {
+      "name": "exists:reports/classification_93class_dataset_inspection.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_dataset_inspection.json"
+    },
+    {
+      "name": "exists:reports/classification_93class_dataset_inspection.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_dataset_inspection.md"
+    },
+    {
+      "name": "exists:reports/classification_93class_training_report.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_training_report.md"
+    },
+    {
+      "name": "exists:reports/classification_93class_evaluation_metrics.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_evaluation_metrics.json"
+    },
+    {
+      "name": "exists:reports/detection_annotation_package_report.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\detection_annotation_package_report.json"
+    },
+    {
+      "name": "exists:reports/detection_annotation_package_report.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\detection_annotation_package_report.md"
+    },
+    {
+      "name": "exists:reports/detection_annotation_package_validation.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\detection_annotation_package_validation.json"
+    },
+    {
+      "name": "exists:reports/detection_annotation_package_validation.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\detection_annotation_package_validation.md"
+    },
+    {
+      "name": "exists:reports/detection_annotation_contact_sheet.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\detection_annotation_contact_sheet.json"
+    },
+    {
+      "name": "exists:reports/detection_annotation_contact_sheet.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\detection_annotation_contact_sheet.md"
+    },
+    {
+      "name": "exists:data/detection_annotation_package/ANNOTATION_GUIDE.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\detection_annotation_package\\ANNOTATION_GUIDE.md"
+    },
+    {
+      "name": "exists:data/detection_annotation_package/annotation_manifest.csv",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\detection_annotation_package\\annotation_manifest.csv"
+    },
+    {
+      "name": "exists:data/detection_annotation_package/annotation_manifest.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\detection_annotation_package\\annotation_manifest.json"
+    },
+    {
+      "name": "exists:data/detection_annotation_package/annotation_summary.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\detection_annotation_package\\annotation_summary.md"
+    },
+    {
+      "name": "exists:data/detection_annotation_package/classes.txt",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\detection_annotation_package\\classes.txt"
+    },
+    {
+      "name": "exists:data/detection_annotation_package/data_template.yaml",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\detection_annotation_package\\data_template.yaml"
+    },
+    {
+      "name": "exists:data/detection_annotation_package/labels/README.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\detection_annotation_package\\labels\\README.md"
+    },
+    {
+      "name": "exists:scripts/infer_image_cls.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\infer_image_cls.py"
+    },
+    {
+      "name": "exists:scripts/benchmark_cls.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\benchmark_cls.py"
+    },
+    {
+      "name": "exists:scripts/analyze_classification_errors.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\analyze_classification_errors.py"
+    },
+    {
+      "name": "exists:scripts/generate_error_review_contact_sheet.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\generate_error_review_contact_sheet.py"
+    },
+    {
+      "name": "exists:scripts/audit_class_consistency.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\audit_class_consistency.py"
+    },
+    {
+      "name": "exists:scripts/audit_classification_duplicates.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\audit_classification_duplicates.py"
+    },
+    {
+      "name": "exists:scripts/generate_classification_leakage_review_package.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\generate_classification_leakage_review_package.py"
+    },
+    {
+      "name": "exists:scripts/prepare_leakage_clean_classification_dataset.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\prepare_leakage_clean_classification_dataset.py"
+    },
+    {
+      "name": "exists:scripts/generate_classification_cross_class_review_package.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\generate_classification_cross_class_review_package.py"
+    },
+    {
+      "name": "exists:scripts/generate_classification_cross_class_decision_table.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\generate_classification_cross_class_decision_table.py"
+    },
+    {
+      "name": "exists:scripts/generate_classification_cross_class_decision_review_html.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\generate_classification_cross_class_decision_review_html.py"
+    },
+    {
+      "name": "exists:scripts/generate_classification_cross_class_cleanup_plan.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\generate_classification_cross_class_cleanup_plan.py"
+    },
+    {
+      "name": "exists:scripts/apply_classification_cross_class_cleanup_plan.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\apply_classification_cross_class_cleanup_plan.py"
+    },
+    {
+      "name": "exists:scripts/generate_repro_manifest.py",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\scripts\\generate_repro_manifest.py"
+    },
+    {
+      "name": "exists:reports/class_consistency_audit.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\class_consistency_audit.json"
+    },
+    {
+      "name": "exists:reports/class_consistency_audit.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\class_consistency_audit.md"
+    },
+    {
+      "name": "exists:reports/strict_classification_duplicate_audit.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\strict_classification_duplicate_audit.json"
+    },
+    {
+      "name": "exists:reports/strict_classification_duplicate_audit.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\strict_classification_duplicate_audit.md"
+    },
+    {
+      "name": "exists:reports/classification_leakage_review_package.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_leakage_review_package.json"
+    },
+    {
+      "name": "exists:reports/classification_leakage_review_package.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_leakage_review_package.md"
+    },
+    {
+      "name": "exists:reports/classification_leakage_clean_candidate_report.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_leakage_clean_candidate_report.json"
+    },
+    {
+      "name": "exists:reports/classification_leakage_clean_candidate_report.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_leakage_clean_candidate_report.md"
+    },
+    {
+      "name": "exists:reports/classification_leakage_clean_candidate_inspection.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_leakage_clean_candidate_inspection.json"
+    },
+    {
+      "name": "exists:reports/classification_leakage_clean_candidate_inspection.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_leakage_clean_candidate_inspection.md"
+    },
+    {
+      "name": "exists:reports/classification_leakage_clean_candidate_duplicate_audit.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_leakage_clean_candidate_duplicate_audit.json"
+    },
+    {
+      "name": "exists:reports/classification_leakage_clean_candidate_duplicate_audit.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_leakage_clean_candidate_duplicate_audit.md"
+    },
+    {
+      "name": "exists:reports/classification_cross_class_review_package.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_review_package.json"
+    },
+    {
+      "name": "exists:reports/classification_cross_class_review_package.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_review_package.md"
+    },
+    {
+      "name": "exists:reports/classification_cross_class_decision_table.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_decision_table.json"
+    },
+    {
+      "name": "exists:reports/classification_cross_class_decision_table.csv",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_decision_table.csv"
+    },
+    {
+      "name": "exists:reports/classification_cross_class_decision_table.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_decision_table.md"
+    },
+    {
+      "name": "exists:reports/classification_cross_class_decision_review.html",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_decision_review.html"
+    },
+    {
+      "name": "exists:reports/classification_cross_class_cleanup_plan.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_cleanup_plan.json"
+    },
+    {
+      "name": "exists:reports/classification_cross_class_cleanup_plan.csv",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_cleanup_plan.csv"
+    },
+    {
+      "name": "exists:reports/classification_cross_class_cleanup_plan.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_cleanup_plan.md"
+    },
+    {
+      "name": "exists:reports/classification_93class_duplicate_audit.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_duplicate_audit.json"
+    },
+    {
+      "name": "exists:reports/classification_93class_duplicate_audit.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_duplicate_audit.md"
+    },
+    {
+      "name": "exists:reports/classification_93class_leakage_clean_candidate_report.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_leakage_clean_candidate_report.json"
+    },
+    {
+      "name": "exists:reports/classification_93class_leakage_clean_candidate_report.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_leakage_clean_candidate_report.md"
+    },
+    {
+      "name": "exists:reports/classification_93class_leakage_clean_candidate_inspection.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_leakage_clean_candidate_inspection.json"
+    },
+    {
+      "name": "exists:reports/classification_93class_leakage_clean_candidate_inspection.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_leakage_clean_candidate_inspection.md"
+    },
+    {
+      "name": "exists:reports/classification_93class_leakage_clean_candidate_duplicate_audit.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_leakage_clean_candidate_duplicate_audit.json"
+    },
+    {
+      "name": "exists:reports/classification_93class_leakage_clean_candidate_duplicate_audit.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_leakage_clean_candidate_duplicate_audit.md"
+    },
+    {
+      "name": "exists:reports/repro_manifest.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\repro_manifest.json"
+    },
+    {
+      "name": "exists:reports/repro_manifest.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\repro_manifest.md"
+    },
+    {
+      "name": "exists:reports/strict_classification_error_analysis.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\strict_classification_error_analysis.json"
+    },
+    {
+      "name": "exists:reports/strict_classification_error_analysis.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\strict_classification_error_analysis.md"
+    },
+    {
+      "name": "exists:reports/strict_classification_review_samples.json",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\strict_classification_review_samples.json"
+    },
+    {
+      "name": "exists:reports/strict_classification_review_samples.md",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\strict_classification_review_samples.md"
+    },
+    {
+      "name": "exists:reports/figures/strict_confusion_contact_sheet.png",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\strict_confusion_contact_sheet.png"
+    },
+    {
+      "name": "exists:reports/figures/strict_worst_class_contact_sheet.png",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\strict_worst_class_contact_sheet.png"
+    },
+    {
+      "name": "exists:reports/figures/classification_train_val_leakage_contact_sheet.png",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_train_val_leakage_contact_sheet.png"
+    },
+    {
+      "name": "exists:reports/figures/classification_cross_class_contact_sheet.png",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_cross_class_contact_sheet.png"
+    },
+    {
+      "name": "exists:reports/figures/detection_annotation_contact_sheet.png",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\detection_annotation_contact_sheet.png"
+    },
+    {
+      "name": "exists:configs/train_cls_strict_cpu_30e.yaml",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\configs\\train_cls_strict_cpu_30e.yaml"
+    },
+    {
+      "name": "exists:configs/train_cls_strict_gpu_100e.yaml",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\configs\\train_cls_strict_gpu_100e.yaml"
+    },
+    {
+      "name": "exists:runs/train/strict_classify_yolo12n_cls_cpu_5e/weights/best.pt",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\runs\\train\\strict_classify_yolo12n_cls_cpu_5e\\weights\\best.pt"
+    },
+    {
+      "name": "exists:runs/train/strict_classify_yolo12n_cls_cpu_5e/weights/best.onnx",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\runs\\train\\strict_classify_yolo12n_cls_cpu_5e\\weights\\best.onnx"
+    },
+    {
+      "name": "exists:runs/train/strict_93class_yolo12n_cls_cpu_smoke/weights/best.pt",
+      "passed": true,
+      "detail": "D:\\AAA中药cv\\yolo12_tcm_project\\runs\\train\\strict_93class_yolo12n_cls_cpu_smoke\\weights\\best.pt"
+    },
+    {
+      "name": "file_size:runs/train/strict_classify_yolo12n_cls_cpu_5e/weights/best.pt",
+      "passed": true,
+      "detail": "bytes=3873085, min=1000000"
+    },
+    {
+      "name": "file_size:runs/train/strict_classify_yolo12n_cls_cpu_5e/weights/best.onnx",
+      "passed": true,
+      "detail": "bytes=7410316, min=1000000"
+    },
+    {
+      "name": "file_size:runs/train/strict_93class_yolo12n_cls_cpu_smoke/weights/best.pt",
+      "passed": true,
+      "detail": "bytes=3875389, min=1000000"
+    },
+    {
+      "name": "json_summary:reports/strict_classification_dataset_inspection.json",
+      "passed": true,
+      "detail": "summary={'classes': 92, 'train_images': 7826, 'val_images': 1741, 'test_images': 0, 'total_images': 9567, 'verified_images': 9567, 'errors': 0, 'warnings': 0}, mismatches={}"
+    },
+    {
+      "name": "json_summary:reports/classification_93class_dataset_inspection.json",
+      "passed": true,
+      "detail": "summary={'classes': 93, 'train_images': 7841, 'val_images': 1745, 'test_images': 0, 'total_images': 9586, 'verified_images': 9586, 'errors': 0, 'warnings': 0}, mismatches={}"
+    },
+    {
+      "name": "duplicate_audit:reports/strict_classification_duplicate_audit.json",
+      "passed": true,
+      "detail": {
+        "summary": {
+          "status": "needs_leakage_review",
+          "total_images": 9567,
+          "unique_hashes": 9014,
+          "duplicate_hashes": 546,
+          "duplicate_images": 1099,
+          "duplicate_extra_images": 553,
+          "cross_split_duplicate_hashes": 34,
+          "train_val_leak_hashes": 34,
+          "cross_class_duplicate_hashes": 52,
+          "classes": 92,
+          "splits": {
+            "train": 7826,
+            "val": 1741
+          },
+          "reported_groups": 80
+        },
+        "mismatches": {},
+        "first_group": {
+          "sha256": "e8ec1480e293cc8ec5288ab0b5f38b2a4dbbffbbea755b480320a1bdcd445635",
+          "count": 3,
+          "splits": [
+            "train",
+            "val"
+          ],
+          "classes": [
+            "苍术",
+            "黄芩"
+          ],
+          "cross_split": true,
+          "cross_class": true,
+          "train_val_leak": true,
+          "records": [
+            {
+              "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60(1).jpg",
+              "relative_path": "train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60(1).jpg",
+              "split": "train",
+              "class_name": "黄芩",
+              "filename": "HuangqinHuangqinHuangqinHuangqin_60(1).jpg",
+              "bytes": 36098,
+              "sha256": "e8ec1480e293cc8ec5288ab0b5f38b2a4dbbffbbea755b480320a1bdcd445635"
+            },
+            {
+              "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60.jpg",
+              "relative_path": "train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60.jpg",
+              "split": "train",
+              "class_name": "黄芩",
+              "filename": "HuangqinHuangqinHuangqinHuangqin_60.jpg",
+              "bytes": 36098,
+              "sha256": "e8ec1480e293cc8ec5288ab0b5f38b2a4dbbffbbea755b480320a1bdcd445635"
+            },
+            {
+              "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg\\val\\苍术\\CangzhuCangzhuCangzhuCangzhu_59.jpg",
+              "relative_path": "val\\苍术\\CangzhuCangzhuCangzhuCangzhu_59.jpg",
+              "split": "val",
+              "class_name": "苍术",
+              "filename": "CangzhuCangzhuCangzhuCangzhu_59.jpg",
+              "bytes": 36098,
+              "sha256": "e8ec1480e293cc8ec5288ab0b5f38b2a4dbbffbbea755b480320a1bdcd445635"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "duplicate_audit:reports/classification_93class_duplicate_audit.json",
+      "passed": true,
+      "detail": {
+        "summary": {
+          "status": "needs_leakage_review",
+          "total_images": 9586,
+          "unique_hashes": 9033,
+          "duplicate_hashes": 546,
+          "duplicate_images": 1099,
+          "duplicate_extra_images": 553,
+          "cross_split_duplicate_hashes": 34,
+          "train_val_leak_hashes": 34,
+          "cross_class_duplicate_hashes": 52,
+          "classes": 93,
+          "splits": {
+            "train": 7841,
+            "val": 1745
+          },
+          "reported_groups": 80
+        },
+        "mismatches": {},
+        "first_group": {
+          "sha256": "e8ec1480e293cc8ec5288ab0b5f38b2a4dbbffbbea755b480320a1bdcd445635",
+          "count": 3,
+          "splits": [
+            "train",
+            "val"
+          ],
+          "classes": [
+            "苍术",
+            "黄芩"
+          ],
+          "cross_split": true,
+          "cross_class": true,
+          "train_val_leak": true,
+          "records": [
+            {
+              "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60(1).jpg",
+              "relative_path": "train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60(1).jpg",
+              "split": "train",
+              "class_name": "黄芩",
+              "filename": "HuangqinHuangqinHuangqinHuangqin_60(1).jpg",
+              "bytes": 36098,
+              "sha256": "e8ec1480e293cc8ec5288ab0b5f38b2a4dbbffbbea755b480320a1bdcd445635"
+            },
+            {
+              "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60.jpg",
+              "relative_path": "train\\黄芩\\HuangqinHuangqinHuangqinHuangqin_60.jpg",
+              "split": "train",
+              "class_name": "黄芩",
+              "filename": "HuangqinHuangqinHuangqinHuangqin_60.jpg",
+              "bytes": 36098,
+              "sha256": "e8ec1480e293cc8ec5288ab0b5f38b2a4dbbffbbea755b480320a1bdcd445635"
+            },
+            {
+              "path": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class\\val\\苍术\\CangzhuCangzhuCangzhuCangzhu_59.jpg",
+              "relative_path": "val\\苍术\\CangzhuCangzhuCangzhuCangzhu_59.jpg",
+              "split": "val",
+              "class_name": "苍术",
+              "filename": "CangzhuCangzhuCangzhuCangzhu_59.jpg",
+              "bytes": 36098,
+              "sha256": "e8ec1480e293cc8ec5288ab0b5f38b2a4dbbffbbea755b480320a1bdcd445635"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "classification_leakage_review_package:reports/classification_leakage_review_package.json",
+      "passed": true,
+      "detail": {
+        "summary": {
+          "status": "complete_review_package",
+          "source_audit_status": "needs_leakage_review",
+          "source_total_images": 9567,
+          "leakage_groups": 34,
+          "expected_leakage_groups": 34,
+          "leakage_records": 69,
+          "train_records": 35,
+          "val_records": 34,
+          "same_class_leakage_groups": 16,
+          "cross_class_leakage_groups": 18,
+          "classes_involved": 27,
+          "shared_with_reference_leak_hashes": 34,
+          "figure": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_train_val_leakage_contact_sheet.png"
+        },
+        "groups": 34,
+        "records": 69,
+        "risk_levels": [
+          "high_label_and_split_leak",
+          "split_leak"
+        ],
+        "record_paths_ok": true,
+        "group_ids_ok": true,
+        "manual_decision_ok": true,
+        "figure": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_train_val_leakage_contact_sheet.png",
+        "figure_size": [
+          1112,
+          7942
+        ],
+        "figure_bytes": 2518389,
+        "markdown": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_leakage_review_package.md"
+      }
+    },
+    {
+      "name": "leakage_clean_candidate:reports/classification_leakage_clean_candidate_report.json",
+      "passed": true,
+      "detail": {
+        "report": {
+          "status": "leakage_val_duplicates_removed",
+          "strategy": "copy_all_except_val_exact_duplicates_from_review_package",
+          "source_images": 9567,
+          "output_images": 9533,
+          "removed_images": 34,
+          "requested_val_removals": 34,
+          "missing_requested_removals": 0,
+          "leakage_groups_from_review": 34,
+          "classes": 92,
+          "source_split_counts": {
+            "train": 7826,
+            "val": 1741
+          },
+          "output_split_counts": {
+            "train": 7826,
+            "val": 1707
+          },
+          "removed_split_counts": {
+            "val": 34
+          }
+        },
+        "inspection": {
+          "classes": 92,
+          "train_images": 7826,
+          "val_images": 1707,
+          "test_images": 0,
+          "total_images": 9533,
+          "verified_images": 9533,
+          "errors": 0,
+          "warnings": 0
+        },
+        "duplicate": {
+          "status": "needs_leakage_review",
+          "total_images": 9533,
+          "unique_hashes": 9014,
+          "duplicate_hashes": 513,
+          "duplicate_images": 1032,
+          "duplicate_extra_images": 519,
+          "cross_split_duplicate_hashes": 0,
+          "train_val_leak_hashes": 0,
+          "cross_class_duplicate_hashes": 34,
+          "classes": 92,
+          "splits": {
+            "train": 7826,
+            "val": 1707
+          },
+          "reported_groups": 80
+        },
+        "mismatches": {
+          "report": {},
+          "inspection": {},
+          "duplicate": {}
+        },
+        "output": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_leakage_clean_candidate",
+        "output_exists": true,
+        "removed_records": 34,
+        "removed_paths_absent": true,
+        "markdown": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_leakage_clean_candidate_report.md"
+      }
+    },
+    {
+      "name": "leakage_clean_candidate:reports/classification_93class_leakage_clean_candidate_report.json",
+      "passed": true,
+      "detail": {
+        "report": {
+          "status": "leakage_val_duplicates_removed",
+          "strategy": "copy_all_except_val_exact_duplicates_from_review_package",
+          "source_images": 9586,
+          "output_images": 9552,
+          "removed_images": 34,
+          "requested_val_removals": 34,
+          "missing_requested_removals": 0,
+          "leakage_groups_from_review": 34,
+          "classes": 93,
+          "source_split_counts": {
+            "train": 7841,
+            "val": 1745
+          },
+          "output_split_counts": {
+            "train": 7841,
+            "val": 1711
+          },
+          "removed_split_counts": {
+            "val": 34
+          }
+        },
+        "inspection": {
+          "classes": 93,
+          "train_images": 7841,
+          "val_images": 1711,
+          "test_images": 0,
+          "total_images": 9552,
+          "verified_images": 9552,
+          "errors": 0,
+          "warnings": 0
+        },
+        "duplicate": {
+          "status": "needs_leakage_review",
+          "total_images": 9552,
+          "unique_hashes": 9033,
+          "duplicate_hashes": 513,
+          "duplicate_images": 1032,
+          "duplicate_extra_images": 519,
+          "cross_split_duplicate_hashes": 0,
+          "train_val_leak_hashes": 0,
+          "cross_class_duplicate_hashes": 34,
+          "classes": 93,
+          "splits": {
+            "train": 7841,
+            "val": 1711
+          },
+          "reported_groups": 80
+        },
+        "mismatches": {
+          "report": {},
+          "inspection": {},
+          "duplicate": {}
+        },
+        "output": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\classification_strict_jpeg_93class_leakage_clean_candidate",
+        "output_exists": true,
+        "removed_records": 34,
+        "removed_paths_absent": true,
+        "markdown": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_93class_leakage_clean_candidate_report.md"
+      }
+    },
+    {
+      "name": "cross_class_review_package:reports/classification_cross_class_review_package.json",
+      "passed": true,
+      "detail": {
+        "summary": {
+          "status": "complete_review_package",
+          "source_audit_status": "needs_leakage_review",
+          "source_total_images": 9533,
+          "cross_class_groups": 34,
+          "expected_cross_class_groups": 34,
+          "cross_class_records": 68,
+          "train_records": 62,
+          "val_records": 6,
+          "cross_split_groups": 0,
+          "train_val_leak_groups": 0,
+          "classes_involved": 22,
+          "shared_with_reference_cross_class_hashes": 34,
+          "figure": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_cross_class_contact_sheet.png"
+        },
+        "groups": 34,
+        "records": 68,
+        "risk_levels": [
+          "label_conflict"
+        ],
+        "record_paths_ok": true,
+        "group_ids_ok": true,
+        "manual_decision_ok": true,
+        "figure": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_cross_class_contact_sheet.png",
+        "figure_size": [
+          874,
+          7942
+        ],
+        "figure_bytes": 2415251,
+        "markdown": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_review_package.md"
+      }
+    },
+    {
+      "name": "cross_class_decision_table:reports/classification_cross_class_decision_table.json",
+      "passed": true,
+      "detail": {
+        "summary": {
+          "status": "ready_for_manual_decision",
+          "source_review_status": "complete_review_package",
+          "groups": 34,
+          "records": 68,
+          "pending_decisions": 34,
+          "decided_groups": 0,
+          "needs_expert_review_groups": 0,
+          "deferred_groups": 0,
+          "validation_errors": 0
+        },
+        "decisions": 34,
+        "statuses": [
+          "pending"
+        ],
+        "group_ids_ok": true,
+        "record_paths_ok": true,
+        "csv": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_decision_table.csv",
+        "markdown": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_decision_table.md"
+      }
+    },
+    {
+      "name": "cross_class_decision_review_html:reports/classification_cross_class_decision_review.html",
+      "passed": true,
+      "detail": {
+        "bytes": 163474,
+        "group_cards": 34,
+        "image_refs": 68
+      }
+    },
+    {
+      "name": "cross_class_cleanup_plan:reports/classification_cross_class_cleanup_plan.json",
+      "passed": true,
+      "detail": {
+        "summary": {
+          "status": "waiting_for_manual_decisions",
+          "groups": 34,
+          "records": 68,
+          "pending_decisions": 34,
+          "decided_groups": 0,
+          "needs_expert_review_groups": 0,
+          "deferred_groups": 0,
+          "validation_errors": 0,
+          "planned_operations": 0,
+          "planned_remove_operations": 0,
+          "planned_move_operations": 0,
+          "keep_all_as_is_groups": 0
+        },
+        "operations": 0,
+        "operations_csv": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_cleanup_plan.csv",
+        "markdown": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\classification_cross_class_cleanup_plan.md"
+      }
+    },
+    {
+      "name": "cleanup_execution_blocked:pending_cross_class_plan",
+      "passed": true,
+      "detail": {
+        "returncode": 1,
+        "output_exists": false,
+        "report_exists": false,
+        "markdown_exists": false,
+        "message": "{\n  \"status\": \"cleanup_execution_blocked\",\n  \"error\": \"Cleanup plan is not executable: cleanup plan status must be ready_for_cleanup_execution, got 'waiting_for_manual_decisions'\"\n}"
+      }
+    },
+    {
+      "name": "strict_metrics:reports/strict_classification_evaluation_metrics.json",
+      "passed": true,
+      "detail": "metrics={'top1': 0.17690981924533844, 'top5': 0.4956921339035034, 'fitness': 0.33630097657442093}, mismatches={}"
+    },
+    {
+      "name": "93class_metrics:reports/classification_93class_evaluation_metrics.json",
+      "passed": true,
+      "detail": "metrics={'top1': 0.06647564470767975, 'top5': 0.20859599113464355, 'fitness': 0.13753581792116165}, mismatches={}"
+    },
+    {
+      "name": "error_analysis:reports/strict_classification_error_analysis.json",
+      "passed": true,
+      "detail": {
+        "summary": {
+          "images": 1741,
+          "classes": 92,
+          "top1_correct": 308,
+          "top5_correct": 863,
+          "top1_accuracy": 0.17690982194141297,
+          "top5_accuracy": 0.4956921309592188
+        },
+        "worst_first": "地龙",
+        "best_first": "枸杞子",
+        "confusion_first": {
+          "expected_class": "九香虫",
+          "predicted_class": "木丁香",
+          "count": 12
+        }
+      }
+    },
+    {
+      "name": "class_consistency:reports/class_consistency_audit.json",
+      "passed": true,
+      "detail": {
+        "summary": {
+          "status": "needs_class_completion",
+          "raw_classes": 93,
+          "raw_train_classes": 92,
+          "raw_val_classes": 93,
+          "strict_classes": 92,
+          "classes_missing_from_strict": [
+            "大腹皮"
+          ],
+          "extra_classes_in_strict": [],
+          "train_only_classes": [],
+          "val_only_classes": [
+            "大腹皮"
+          ],
+          "zero_train_classes": [
+            "大腹皮"
+          ],
+          "zero_val_classes": [],
+          "raw_train_images": 7847,
+          "raw_val_images": 1767,
+          "raw_total_images": 9614,
+          "strict_train_images": 7826,
+          "strict_val_images": 1741,
+          "strict_total_images": 9567,
+          "strict_verified_images": 9567,
+          "strict_errors": 0,
+          "strict_warnings": 0,
+          "skipped_images": 28,
+          "converted_to_jpeg": 122,
+          "copied_jpeg": 9445
+        },
+        "mismatches": {},
+        "dafu": {
+          "class_name": "大腹皮",
+          "raw_train": 0,
+          "raw_val": 19,
+          "strict_train": 0,
+          "strict_val": 0,
+          "included_in_strict": false,
+          "skipped_images": 0,
+          "skip_reasons": {}
+        },
+        "skipped_classes": 23
+      }
+    },
+    {
+      "name": "93class_completion:reports/classification_93class_completion_report.json",
+      "passed": true,
+      "detail": {
+        "summary": {
+          "status": "complete",
+          "raw_classes": 93,
+          "output_classes": 93,
+          "train_images": 7841,
+          "val_images": 1745,
+          "total_images": 9586,
+          "skipped_images": 28,
+          "excluded_classes": [],
+          "rebalanced_classes": [
+            "大腹皮"
+          ],
+          "val_only_rebalanced_classes": [
+            "大腹皮"
+          ],
+          "train_only_rebalanced_classes": [],
+          "actions": {
+            "convert_to_jpeg": 122,
+            "copy_jpeg": 9464
+          },
+          "source_formats": {
+            "jpeg": 9464,
+            "png": 122
+          },
+          "strategy_counts": {
+            "preserve_raw_split": 92,
+            "rebalance_val_only": 1
+          }
+        },
+        "mismatches": {},
+        "dafu": {
+          "class_name": "大腹皮",
+          "strategy": "rebalance_val_only",
+          "raw_train": 0,
+          "raw_val": 19,
+          "assigned_train": 15,
+          "assigned_val": 4
+        },
+        "distribution": {
+          "train": 15,
+          "val": 4
+        }
+      }
+    },
+    {
+      "name": "detection_annotation_package:reports/detection_annotation_package_report.json",
+      "passed": true,
+      "detail": {
+        "summary": {
+          "status": "pending_bbox_annotation",
+          "classes": 93,
+          "images": 279,
+          "samples_per_class": 3,
+          "train_per_class": 2,
+          "val_per_class": 1,
+          "labels_expected": 279,
+          "labels_completed": 0,
+          "min_samples_per_class": 3,
+          "max_samples_per_class": 3,
+          "source_split_counts": {
+            "train": 186,
+            "val": 93
+          }
+        },
+        "classes_file_lines": 93,
+        "images": 279,
+        "label_txts": 0,
+        "manifest_samples": 279,
+        "per_class_counts": 93
+      }
+    },
+    {
+      "name": "detection_annotation_validation:reports/detection_annotation_package_validation.json",
+      "passed": true,
+      "detail": {
+        "status": "pending_bbox_annotation",
+        "require_complete": false,
+        "classes": 93,
+        "manifest_classes": 93,
+        "images_expected": 279,
+        "images_present": 279,
+        "missing_images": 0,
+        "labels_expected": 279,
+        "labels_completed": 0,
+        "labels_missing": 279,
+        "labels_empty": 0,
+        "orphan_labels": 0,
+        "boxes": 0,
+        "classes_with_boxes": 0,
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "name": "detection_annotation_contact_sheet:reports/detection_annotation_contact_sheet.json",
+      "passed": true,
+      "detail": {
+        "summary": {
+          "samples": 279,
+          "classes": 93,
+          "labels_expected": 279,
+          "labels_completed": 0,
+          "annotation_status": "pending_bbox_annotation"
+        },
+        "samples": 279,
+        "classes": 93,
+        "source_split_counts": {
+          "train": 186,
+          "val": 93
+        },
+        "figure": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\detection_annotation_contact_sheet.png",
+        "figure_size": [
+          1258,
+          11055
+        ],
+        "figure_bytes": 13246218,
+        "markdown": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\detection_annotation_contact_sheet.md",
+        "image_paths_ok": true,
+        "label_paths_ok": true
+      }
+    },
+    {
+      "name": "repro_manifest:reports/repro_manifest.json",
+      "passed": true,
+      "detail": {
+        "target": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\repro_manifest.json",
+        "artifacts": 94,
+        "commands": 32,
+        "missing_artifacts": [],
+        "sha_missing": [],
+        "dataset": {
+          "classes": 92,
+          "train_images": 7826,
+          "val_images": 1741,
+          "test_images": 0,
+          "total_images": 9567,
+          "verified_images": 9567,
+          "errors": 0,
+          "warnings": 0
+        },
+        "strict_duplicates": {
+          "status": "needs_leakage_review",
+          "total_images": 9567,
+          "unique_hashes": 9014,
+          "duplicate_hashes": 546,
+          "duplicate_images": 1099,
+          "duplicate_extra_images": 553,
+          "cross_split_duplicate_hashes": 34,
+          "train_val_leak_hashes": 34,
+          "cross_class_duplicate_hashes": 52,
+          "classes": 92,
+          "splits": {
+            "train": 7826,
+            "val": 1741
+          },
+          "reported_groups": 80
+        },
+        "leakage_review": {
+          "status": "complete_review_package",
+          "source_audit_status": "needs_leakage_review",
+          "source_total_images": 9567,
+          "leakage_groups": 34,
+          "expected_leakage_groups": 34,
+          "leakage_records": 69,
+          "train_records": 35,
+          "val_records": 34,
+          "same_class_leakage_groups": 16,
+          "cross_class_leakage_groups": 18,
+          "classes_involved": 27,
+          "shared_with_reference_leak_hashes": 34,
+          "figure": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_train_val_leakage_contact_sheet.png"
+        },
+        "leakage_clean": {
+          "status": "leakage_val_duplicates_removed",
+          "strategy": "copy_all_except_val_exact_duplicates_from_review_package",
+          "source_images": 9567,
+          "output_images": 9533,
+          "removed_images": 34,
+          "requested_val_removals": 34,
+          "missing_requested_removals": 0,
+          "leakage_groups_from_review": 34,
+          "classes": 92,
+          "source_split_counts": {
+            "train": 7826,
+            "val": 1741
+          },
+          "output_split_counts": {
+            "train": 7826,
+            "val": 1707
+          },
+          "removed_split_counts": {
+            "val": 34
+          }
+        },
+        "leakage_clean_inspection": {
+          "classes": 92,
+          "train_images": 7826,
+          "val_images": 1707,
+          "test_images": 0,
+          "total_images": 9533,
+          "verified_images": 9533,
+          "errors": 0,
+          "warnings": 0
+        },
+        "leakage_clean_duplicates": {
+          "status": "needs_leakage_review",
+          "total_images": 9533,
+          "unique_hashes": 9014,
+          "duplicate_hashes": 513,
+          "duplicate_images": 1032,
+          "duplicate_extra_images": 519,
+          "cross_split_duplicate_hashes": 0,
+          "train_val_leak_hashes": 0,
+          "cross_class_duplicate_hashes": 34,
+          "classes": 92,
+          "splits": {
+            "train": 7826,
+            "val": 1707
+          },
+          "reported_groups": 80
+        },
+        "cross_class_review": {
+          "status": "complete_review_package",
+          "source_audit_status": "needs_leakage_review",
+          "source_total_images": 9533,
+          "cross_class_groups": 34,
+          "expected_cross_class_groups": 34,
+          "cross_class_records": 68,
+          "train_records": 62,
+          "val_records": 6,
+          "cross_split_groups": 0,
+          "train_val_leak_groups": 0,
+          "classes_involved": 22,
+          "shared_with_reference_cross_class_hashes": 34,
+          "figure": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\classification_cross_class_contact_sheet.png"
+        },
+        "cross_class_decision": {
+          "status": "ready_for_manual_decision",
+          "source_review_status": "complete_review_package",
+          "groups": 34,
+          "records": 68,
+          "pending_decisions": 34,
+          "decided_groups": 0,
+          "needs_expert_review_groups": 0,
+          "deferred_groups": 0,
+          "validation_errors": 0
+        },
+        "cross_class_cleanup": {
+          "status": "waiting_for_manual_decisions",
+          "groups": 34,
+          "records": 68,
+          "pending_decisions": 34,
+          "decided_groups": 0,
+          "needs_expert_review_groups": 0,
+          "deferred_groups": 0,
+          "validation_errors": 0,
+          "planned_operations": 0,
+          "planned_remove_operations": 0,
+          "planned_move_operations": 0,
+          "keep_all_as_is_groups": 0
+        },
+        "class_summary": {
+          "status": "needs_class_completion",
+          "raw_classes": 93,
+          "raw_train_classes": 92,
+          "raw_val_classes": 93,
+          "strict_classes": 92,
+          "classes_missing_from_strict": [
+            "大腹皮"
+          ],
+          "extra_classes_in_strict": [],
+          "train_only_classes": [],
+          "val_only_classes": [
+            "大腹皮"
+          ],
+          "zero_train_classes": [
+            "大腹皮"
+          ],
+          "zero_val_classes": [],
+          "raw_train_images": 7847,
+          "raw_val_images": 1767,
+          "raw_total_images": 9614,
+          "strict_train_images": 7826,
+          "strict_val_images": 1741,
+          "strict_total_images": 9567,
+          "strict_verified_images": 9567,
+          "strict_errors": 0,
+          "strict_warnings": 0,
+          "skipped_images": 28,
+          "converted_to_jpeg": 122,
+          "copied_jpeg": 9445
+        },
+        "completed_93": {
+          "status": "complete",
+          "raw_classes": 93,
+          "output_classes": 93,
+          "train_images": 7841,
+          "val_images": 1745,
+          "total_images": 9586,
+          "skipped_images": 28,
+          "excluded_classes": [],
+          "rebalanced_classes": [
+            "大腹皮"
+          ],
+          "val_only_rebalanced_classes": [
+            "大腹皮"
+          ],
+          "train_only_rebalanced_classes": [],
+          "actions": {
+            "convert_to_jpeg": 122,
+            "copy_jpeg": 9464
+          },
+          "source_formats": {
+            "jpeg": 9464,
+            "png": 122
+          },
+          "strategy_counts": {
+            "preserve_raw_split": 92,
+            "rebalance_val_only": 1
+          }
+        },
+        "completed_93_duplicates": {
+          "status": "needs_leakage_review",
+          "total_images": 9586,
+          "unique_hashes": 9033,
+          "duplicate_hashes": 546,
+          "duplicate_images": 1099,
+          "duplicate_extra_images": 553,
+          "cross_split_duplicate_hashes": 34,
+          "train_val_leak_hashes": 34,
+          "cross_class_duplicate_hashes": 52,
+          "classes": 93,
+          "splits": {
+            "train": 7841,
+            "val": 1745
+          },
+          "reported_groups": 80
+        },
+        "completed_93_leakage_clean": {
+          "status": "leakage_val_duplicates_removed",
+          "strategy": "copy_all_except_val_exact_duplicates_from_review_package",
+          "source_images": 9586,
+          "output_images": 9552,
+          "removed_images": 34,
+          "requested_val_removals": 34,
+          "missing_requested_removals": 0,
+          "leakage_groups_from_review": 34,
+          "classes": 93,
+          "source_split_counts": {
+            "train": 7841,
+            "val": 1745
+          },
+          "output_split_counts": {
+            "train": 7841,
+            "val": 1711
+          },
+          "removed_split_counts": {
+            "val": 34
+          }
+        },
+        "completed_93_leakage_clean_inspection": {
+          "classes": 93,
+          "train_images": 7841,
+          "val_images": 1711,
+          "test_images": 0,
+          "total_images": 9552,
+          "verified_images": 9552,
+          "errors": 0,
+          "warnings": 0
+        },
+        "completed_93_leakage_clean_duplicates": {
+          "status": "needs_leakage_review",
+          "total_images": 9552,
+          "unique_hashes": 9033,
+          "duplicate_hashes": 513,
+          "duplicate_images": 1032,
+          "duplicate_extra_images": 519,
+          "cross_split_duplicate_hashes": 0,
+          "train_val_leak_hashes": 0,
+          "cross_class_duplicate_hashes": 34,
+          "classes": 93,
+          "splits": {
+            "train": 7841,
+            "val": 1711
+          },
+          "reported_groups": 80
+        },
+        "detection_annotation": {
+          "status": "pending_bbox_annotation",
+          "classes": 93,
+          "images": 279,
+          "samples_per_class": 3,
+          "train_per_class": 2,
+          "val_per_class": 1,
+          "labels_expected": 279,
+          "labels_completed": 0,
+          "min_samples_per_class": 3,
+          "max_samples_per_class": 3,
+          "source_split_counts": {
+            "train": 186,
+            "val": 93
+          }
+        },
+        "detection_validation": {
+          "status": "pending_bbox_annotation",
+          "require_complete": false,
+          "classes": 93,
+          "manifest_classes": 93,
+          "images_expected": 279,
+          "images_present": 279,
+          "missing_images": 0,
+          "labels_expected": 279,
+          "labels_completed": 0,
+          "labels_missing": 279,
+          "labels_empty": 0,
+          "orphan_labels": 0,
+          "boxes": 0,
+          "classes_with_boxes": 0,
+          "errors": 0,
+          "warnings": 0
+        },
+        "detection_contact_sheet": {
+          "samples": 279,
+          "classes": 93,
+          "labels_expected": 279,
+          "labels_completed": 0,
+          "annotation_status": "pending_bbox_annotation"
+        },
+        "smoke": {
+          "total": 161,
+          "passed": 161,
+          "failed": 0
+        }
+      }
+    },
+    {
+      "name": "review_samples:reports/strict_classification_review_samples.json",
+      "passed": true,
+      "detail": {
+        "confusion_samples": 18,
+        "worst_class_samples": 18,
+        "figures": [
+          {
+            "path": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\strict_confusion_contact_sheet.png",
+            "size": [
+              860,
+              1822
+            ],
+            "bytes": 1450407
+          },
+          {
+            "path": "D:\\AAA中药cv\\yolo12_tcm_project\\reports\\figures\\strict_worst_class_contact_sheet.png",
+            "size": [
+              860,
+              1822
+            ],
+            "bytes": 1516732
+          }
+        ]
+      }
+    },
+    {
+      "name": "strict_benchmark:runs/benchmarks/strict_classification_latency_20.json",
+      "passed": true,
+      "detail": {
+        "images": 20,
+        "device": "cpu",
+        "imgsz": 224,
+        "latency_ms_mean": 9.75544999964768,
+        "fps_mean": 102.50680389281018
+      }
+    },
+    {
+      "name": "sample_prediction:reports/strict_classification_sample_prediction.json",
+      "passed": true,
+      "detail": {
+        "topk": 5,
+        "expected_class": "丝瓜络",
+        "top1_class_name": "干姜",
+        "predictions": 5
+      }
+    },
+    {
+      "name": "qa_report:reports/backend_qa.json",
+      "passed": true,
+      "detail": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      }
+    },
+    {
+      "name": "qa_report:reports/frontend_qa.json",
+      "passed": true,
+      "detail": {
+        "checks_total": 6,
+        "checks_passed": 6,
+        "relevant_console_errors": 0
+      }
+    },
+    {
+      "name": "text_contains:reports/strict_classification_training_report.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/submission_checklist.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/detection_annotation_package_report.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/detection_annotation_package_validation.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/detection_annotation_contact_sheet.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/strict_classification_error_analysis.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/strict_classification_review_samples.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/class_consistency_audit.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/strict_classification_duplicate_audit.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/classification_leakage_review_package.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/classification_leakage_clean_candidate_report.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/classification_cross_class_review_package.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/classification_cross_class_decision_table.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/classification_cross_class_decision_review.html",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/classification_cross_class_cleanup_plan.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/classification_93class_leakage_clean_candidate_report.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/classification_93class_duplicate_audit.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/classification_93class_completion_report.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/classification_93class_training_report.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/repro_manifest.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:README.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:docs/README.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/test_report.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/submission_checklist.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "text_contains:reports/strict_classification_training_report.md",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "docx_text:reports/test_report.docx",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "name": "pptx:reports/overview_design.pptx",
+      "passed": true,
+      "detail": "slides=10, required_refs=True"
+    },
+    {
+      "name": "python_dep:PIL",
+      "passed": true,
+      "detail": "installed"
+    },
+    {
+      "name": "python_dep:yaml",
+      "passed": true,
+      "detail": "installed"
+    },
+    {
+      "name": "python_dep:fastapi",
+      "passed": true,
+      "detail": "installed"
+    },
+    {
+      "name": "python_dep:uvicorn",
+      "passed": true,
+      "detail": "installed"
+    },
+    {
+      "name": "python_dep:ultralytics",
+      "passed": true,
+      "detail": "installed"
+    },
+    {
+      "name": "python_dep:torch",
+      "passed": true,
+      "detail": "installed"
+    },
+    {
+      "name": "python_dep:pytest",
+      "passed": true,
+      "detail": "installed"
+    },
+    {
+      "name": "python_dep:docx",
+      "passed": true,
+      "detail": "installed"
+    },
+    {
+      "name": "python_dep:playwright",
+      "passed": true,
+      "detail": "installed"
+    },
+    {
+      "name": "python_compile",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "frontend_build",
+      "passed": true,
+      "detail": "> yolo12-tcm-frontend@0.1.0 build\n> vite build\n\n\u001b[36mvite v6.4.3 \u001b[32mbuilding for production...\u001b[36m\u001b[39m\ntransforming...\n\u001b[32m✓\u001b[39m 1561 modules transformed.\nrendering chunks...\ncomputing gzip size...\n\u001b[2mdist/\u001b[22m\u001b[32mindex.html                 \u001b[39m\u001b[1m\u001b[2m 0.42 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.32 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[35massets/index-DU6W7P83.css  \u001b[39m\u001b[1m\u001b[2m 3.74 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  1.36 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/index-CUR6sLjp.js   \u001b[39m\u001b[1m\u001b[2m79.51 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip: 30.90 kB\u001b[22m\n\u001b[32m✓ built in 1.30s\u001b[39m"
+    }
+  ],
+  "summary": {
+    "total": 161,
+    "passed": 161,
+    "failed": 0
+  }
+}

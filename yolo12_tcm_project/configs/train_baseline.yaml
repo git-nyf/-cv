@@ -1,0 +1,19 @@
+project: runs/train
+name: yolo12n_baseline
+model: yolo12n.pt
+data: configs/data.yaml
+epochs: 100
+batch: 16
+imgsz: 640
+optimizer: AdamW
+lr0: 0.001
+weight_decay: 0.0005
+patience: 30
+device: 0
+seed: 42
+workers: 4
+pretrained: true
+cache: false
+single_cls: false
+close_mosaic: 10
+

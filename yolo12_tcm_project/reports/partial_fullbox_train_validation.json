@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "images": 162,
+    "classes_declared": 2,
+    "labels_empty": 0,
+    "orphan_labels": 0,
+    "errors": 0,
+    "warnings": 2
+  },
+  "classes": {
+    "0": "丝瓜络",
+    "1": "九香虫"
+  },
+  "box_distribution": {
+    "0": 82,
+    "1": 80
+  },
+  "image_distribution": {
+    "0": 82,
+    "1": 80
+  },
+  "issues": [
+    {
+      "level": "warning",
+      "file": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\partial_fullbox_yolo\\images\\train\\九香虫\\Jiuxiangchong28.jpg",
+      "message": "发现重复图片 SHA1=6695ef3c4bc4fef99b852de00148f7da0a15b767: D:\\AAA中药cv\\yolo12_tcm_project\\data\\partial_fullbox_yolo\\images\\train\\九香虫\\Jiuxiangchong28.jpg; D:\\AAA中药cv\\yolo12_tcm_project\\data\\partial_fullbox_yolo\\images\\train\\九香虫\\Jiuxiangchong30.jpg"
+    },
+    {
+      "level": "warning",
+      "file": "D:\\AAA中药cv\\yolo12_tcm_project\\data\\partial_fullbox_yolo\\images\\train\\九香虫\\Jiuxiangchong29.jpg",
+      "message": "发现重复图片 SHA1=fc48c885ddfd614a647eb99e16fb517de52da877: D:\\AAA中药cv\\yolo12_tcm_project\\data\\partial_fullbox_yolo\\images\\train\\九香虫\\Jiuxiangchong29.jpg; D:\\AAA中药cv\\yolo12_tcm_project\\data\\partial_fullbox_yolo\\images\\train\\九香虫\\Jiuxiangchong31.jpg"
+    }
+  ]
+}

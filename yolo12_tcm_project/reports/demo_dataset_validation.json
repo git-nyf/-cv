@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "images": 18,
+    "classes_declared": 3,
+    "labels_empty": 0,
+    "orphan_labels": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "classes": {
+    "0": "demo_round_piece",
+    "1": "demo_long_piece",
+    "2": "demo_slice_piece"
+  },
+  "box_distribution": {
+    "0": 18,
+    "1": 18,
+    "2": 18
+  },
+  "image_distribution": {
+    "0": 18,
+    "1": 18,
+    "2": 18
+  },
+  "issues": []
+}
