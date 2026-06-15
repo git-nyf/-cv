@@ -6,7 +6,7 @@ epochs: 150
 batch: 64
 imgsz: 224
 optimizer: AdamW
-lr0: 0.01
+lr0: 0.001
 weight_decay: 0.0005
 patience: 20
 device: 0
